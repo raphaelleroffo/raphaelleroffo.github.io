@@ -3,6 +3,8 @@
 
 **Lecturer: Raphaëlle Roffo**
 
+This course is open sourced under an MIT license. You are more than welcome to use it for learning or teaching GIS, however please make sure to credit my work :)
+
 &nbsp; 
 ## Overview
 It is estimated that 80-90% of all data contain some spatial component (Carl & Hane, 1992). Geographic Information Systems (GIS) are an essential tool to manipulate this data, draw insights and produce visualisations to inform decision-making. This Introduction course aims to familiarise students with the field of Geographic Information Science and with carrying out geospatial analysis using the open-source software QGIS. At the end of the cours, students will be able to source data from open data providers, understand commonly used spatial data structures, and develop start-to-end GIS workflows.

@@ -1,11 +1,11 @@
 
-| &nbsp; &nbsp; [ Data Science Portfolio ](https://raphaelleroffo.github.io/portfolio/) &nbsp; · &nbsp; [ Introduction to GIS ](https://raphaelleroffo.github.io/intro-to-gis) &nbsp; · &nbsp; [ Advanced GIS ](https://raphaelleroffo.github.io/advanced-gis) &nbsp; &nbsp; | 
+| &nbsp; &nbsp; [ Data Science Portfolio ](https://raphaelleroffo.github.io/portfolio/) &nbsp; · &nbsp; [ Introduction to GIS ](https://raphaelleroffo.github.io/intro-to-gis) &nbsp; · &nbsp; [ Advanced GIS ](https://raphaelleroffo.github.io/advanced-gis) &nbsp; · &nbsp; [ Public speaking ](https://raphaelleroffo.github.io/presentations) &nbsp; · &nbsp; [ CV ](https://raphaelleroffo.github.io/cv)&nbsp; &nbsp;| 
 
 
 ---
 ## Welcome to my portfolio!
 
-My name is Raphaëlle, I'm a geospatial data scientist with a background in sustainable development.
+My name is Raphaëlle Roffo, I'm a geospatial data scientist with a background in sustainable development.
 
 In this portfolio, you'll find some open source projects I've worked on. They range from traditional GIS to interfacing using Python Dash or Natural Language Processing.
 
