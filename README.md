@@ -1,4 +1,4 @@
-# Raphaëlle Roffo - Geospatial data scientist
+## Raphaëlle Roffo - Geospatial data scientist
 
 ## Welcome to my portfolio!
 
@@ -6,7 +6,7 @@
 
 
 |[Data Science Portfolio](https://raphaelleroffo.github.io/docs/portfolio/)|[Introduction to GIS](https://raphaelleroffo.github.io/docs/intro-to-gis)|[Advanced GIS](https://raphaelleroffo.github.io/docs/advanced-gis)|
-|---|---|---|
+
 
 
 My name is Raphaëlle, I'm a geospatial data scientist with a background in sustainable development.
