@@ -1,5 +1,3 @@
-## Raphaëlle Roffo - Geospatial data scientist
-
 |[Data Science Portfolio](https://raphaelleroffo.github.io/portfolio/)|[Introduction to GIS](https://raphaelleroffo.github.io/intro-to-gis)|[Advanced GIS](https://raphaelleroffo.github.io/advanced-gis)|
 
 ## Welcome to my portfolio!
