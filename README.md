@@ -1,5 +1,5 @@
 
-|[ Data Science Portfolio ](https://raphaelleroffo.github.io/portfolio/) &nbsp; · &nbsp; [ Introduction to GIS ](https://raphaelleroffo.github.io/intro-to-gis) &nbsp; · &nbsp; [ Advanced GIS ](https://raphaelleroffo.github.io/advanced-gis)| 
+| &nbsp; &nbsp; [ Data Science Portfolio ](https://raphaelleroffo.github.io/portfolio/) &nbsp; · &nbsp; [ Introduction to GIS ](https://raphaelleroffo.github.io/intro-to-gis) &nbsp; · &nbsp; [ Advanced GIS ](https://raphaelleroffo.github.io/advanced-gis) &nbsp; &nbsp; | 
 
 
 ---
