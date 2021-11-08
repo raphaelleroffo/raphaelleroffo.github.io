@@ -36,7 +36,10 @@ Download the long-term release (most stable) version for your OS. This is a stab
 
 **MacOS:**
 
+
+![Book logo](/docs/assets/MacOS_download.png)
 <img src="../img/MacOS_download.png" width="700">
+<img src="../assets/images/MacOS_download.png" width="700">
 
 You may get an error message as the app was not downloaded through the AppStore. You can override the security settings by following [this method](https://support.apple.com/en-sg/HT202491).
 If you own an old Mac, you may need to download an older version of QGIS. If you are unable to download 3.16, try downloading one of the 2.18 releases from [this page](https://qgis.org/downloads/macOS/)
