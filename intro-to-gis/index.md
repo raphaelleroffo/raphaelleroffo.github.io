@@ -24,7 +24,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 ### [Session 1: What is GIS?](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial1.html)
 
 
-*Class Content:*
+*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)*
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*
@@ -42,7 +42,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 2: Sourcing and loading data into GIS](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial2.html)
 
-*Class Content:*
+*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Intro%20to%20GIS%20-%20session%202.pdf)*
 - *Navigating data types (vector and raster) and common data formats (.shp, .geojson, .csv, PostGIS, etc)*
 - *Where to source data and what to look for (metadata, etc)*
 - *Exploring the data structure of typical spatial formats using GeoDa*
@@ -57,7 +57,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 3: Working with vector data: the attribute table](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial3.html)
 
-*Class Content:*
+*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Intro%20to%20GIS%20-%20session%203.pdf)*
 
 - *Understanding the attribute table*
 - *Querying data based on spatial qualities or their attributes*
@@ -72,7 +72,8 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 4: Cartographic design](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)
 
-*Class Content:*
+*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Intro%20to%20GIS%20-%20session%204.pdf)*
+
 - *Kepler.gl tutorial: quick off-the-shelf data visualisation*
 - *Styling a map: basemap choice, preferred symbologies, class breaks definition, scale*
 - *Exporting a map: setting up a layout and adding map elements (north arrow, scale bar, legend, title etc.) 
@@ -86,7 +87,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 5: Working with vector data: geoprocessing](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial5.html)
 
-*Class Content:*
+*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session5/Intro%20to%20GIS%20-%20session%205.pdf)*
 
 - *Use cases; why may you need to buffer, clip, intersect?*
 - *Crossing multiple layers: common geoprocessing tools*

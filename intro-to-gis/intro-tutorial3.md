@@ -1,14 +1,14 @@
 # Session 3: Working with vector data: the attribute table
 
-**Introduction to GIS | Sciences Po Urban School, GETEC Masters | Fall semester 2021-2022**
+**Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
 
 Lecturer: Raphaëlle Roffo
 
 &nbsp; 
 
-## **I. Session 3 Overview** 
+## I. Session 3 Overview
 
-*[See Slides](https://github.com/raphaelleroffo/intro-to-gis/blob/main/Session3/Intro%20to%20GIS%20-%20session%203.pdf)*
+**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Intro%20to%20GIS%20-%20session%203.pdf)**
 
 - *Understanding the attribute table*
 - *Querying data based on their attributes*
@@ -16,9 +16,9 @@ Lecturer: Raphaëlle Roffo
 
 &nbsp; 
 
-## **II. Tutorial**
+## II. Tutorial
 
-## Goals:
+### Goals:
 
 - Load basemaps
 - Access summary statistics about a field
@@ -31,13 +31,11 @@ Lecturer: Raphaëlle Roffo
 
 ### Data:
 
-You can find a geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Session3-London.gpkg)
-And the Schools CSV file [here](https://raw.githubusercontent.com/raphaelleroffo/intro-to-gis/main/Session3/schools.csv) (right click anywhere and `Save as...` to save as a csv file in your folder).
+You can find the geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Session3-London.gpkg) and the Schools CSV file [here](https://raw.githubusercontent.com/raphaelleroffo/intro-to-gis/main/Session3/schools.csv) (right click anywhere on the page and `Save as...` to save it as `Schools.csv` in your folder).
 
 &nbsp; 
 
 ## III. Setting up
-
 
 **Open the project**
 
@@ -64,7 +62,7 @@ Now if you look into your `Browser` panel and scroll down, you will see a `XYZ t
 
 You can drag and drop the basemap you like onto your canvas. In this case I have used `Esri Gray (light)` because its design is quite simple and not overwhelming.
 
-## 2. The statistics summary panel
+## IV. The statistics summary panel
 
 As a means of exploring a layer, you may want to see some form of summary. Let's have a look at the LondonBoroughs layer. In your `Layers` panel, double-click  the LondonBoroughs layer or right-click > `Properties...`. This opens up a very important menu from which you can access a LOT of useful tools to deal with your layer. 
 
@@ -83,7 +81,7 @@ Indeed, we observe that there is huge variance in the size of these boroughs, be
 Try and expore other summary statistics, for example for the LondonBoroughProfile table and look at the demographic fields.
 
 
-## 3. The attribute table
+## V. The attribute table
 
 As seen in the lecture, the attribute table contains **records** for all the **features** present in a vector layer. Let's see in practice what this means for the LondonBoroughs layer.
 
@@ -93,13 +91,11 @@ Click the LondonBoroughs layer in your `Layers` panel so its selected (blue). Yo
 
 Now open your attribute table (right click on LondonBoroughs in your `Layers` panel > `Open attribute table`, or click the icon in your toolbar). You will notice that some rows are highlighted in blue. They are the recors linked to your feature selection. 
 
-
 <img src="../docs/assets/images/S3-06.png" width="700">
 
 If you click on the bottom left filter, you can change the view; you could choose to filter the table to see only the selected features for instance, or you could create a custom filter using an expression, to display in your table only the rows that match certain conditions.
 
 The table contains many fields. Note that the `gss_code` is a unique identifier; each borrow has a unique code in the format `E90000xx`. This is an important one for us because it will allow us to perform an attribute join later.
-
 
 Note that in the Attribute table toolbar, you have access to selecion tools that are also present in your main interface toolbar. You can for instance inverse your selection.
 
@@ -107,18 +103,18 @@ Note that in the Attribute table toolbar, you have access to selecion tools that
 
 To learn more about the selection tool, read up [the documentation page](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/general_tools.html#interacting-with-features) on the various tools available.
 
+&nbsp; 
 
-
-## 4. Identify features
+**The "Identify features" tool**
 
 As seen in the lecture, you can also use the `Identify` tool to click on features and retrieve the record linked to that feature. Make sure you have selected the layer you are interested in in your `Layers` panel.
 
 
 <img src="../docs/assets/images/S3-08.png" width="700">
 
+&nbsp; 
 
-
-## 5. Create a point layer from a `*.csv` file
+## VI. Create a point layer from a `*.csv` file
 
 In this section, we will import a csv file that contains two fields of interest for us: a `longitude` and a `latitude` or `x` and `y`. Please note that an `Eastings` and `Northings` set of fields would be equally useful.
 
@@ -152,7 +148,7 @@ If your non-spatial table does **not** contain geometry, then there are 2 option
 - There is no field that you can in any way link to an existing geometry or location. There is nothing you can do and you can't use this data in your QGIS project.
 
 
-## 6. Create a table join
+## VII. Create a table join
 
 
 A second non-spatial table is available in your geopackage; the `BoroughProfiles` table. I initially downloaded it as a csv file and it only contains tabular data. If you open the attribute table of this layer, you won't find any latitude/longitude or eastings/northings fields. However, you will notice the presence of a `Code` field. It turns out that this code is the same as the `gss_code` present in the `LondonBoroughs` polygon layer. When working on census data, national statistics offices will produce boundary files (vector layers) of each census unit, and will make sure to include a column with a unique ID for each polygon. Then, each data table they produce (e.g. on unemployment rates) will also refer to those unique census blocks by referring to this same unique ID in one column. 
@@ -189,7 +185,9 @@ Save and exit - problem solved!
 
 <img src="../docs/assets/images/S3-17.png" width="700">
 
-## 7. Create a query to select features based on their attributes
+&nbsp; 
+
+## VIII. Create a query to select features based on their attributes
 
 Now that you have all this information about your boroughs, let's query the data. Let's figure out which boroughs have a rather high proportion of population of working age. Open your attribute table for the `LondonBoroughs` polygon layer. Click on the `Select by expression` symbol. The syntax we're going to use here can be found in many other places in QGIS. When in doubt, refer to the [documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/expression.html) - it's very thorough!
 
@@ -205,8 +203,9 @@ To the right, you can "sample" or see all values from that field to know what ki
 
 Press `Select features` and close. You have now selected all the boroughs that match this criteria!
 
+&nbsp; 
 
-## 8. Use queries to only display a subset of your layer's features
+## IX. Use queries to only display a subset of your layer's features
 
 You may use a very similar approach to only display a subset of your dataset's features, directly from the parameters menu of your layer. This time let's play with the school point layer. Double click your `LondonSchoolPoints` layer to open the `Layer properties`. Navigate to the `Source` tab. Below the `Provider Feature Filter`, you should find an empty section. This means no filter is currently applied. Under this white block, click  `Query builder` to create a new filter.
 
@@ -223,7 +222,12 @@ Press OK and exit. You can now see that a filter is applied and your layer only 
 <img src="../docs/assets/images/S3-21.png" width="700">
 
 
-
+&nbsp; 
 
 
 Well done, that's it for today! Try out the various selection tools and try to build other definition query filters to get more familiar with queries. Next week we'll look into symbology.
+
+
+&nbsp; 
+
+&nbsp; 

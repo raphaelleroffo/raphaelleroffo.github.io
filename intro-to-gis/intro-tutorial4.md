@@ -1,14 +1,14 @@
 # Session 4: Cartographic design
 
-**Introduction to GIS | Sciences Po Urban School, GETEC Masters | Fall semester 2021-2022**
+**Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
 
 Lecturer: Raphaëlle Roffo
 
-.
+&nbsp; 
 
-## **I. Session 4 Overview** 
+## I. Session 4 Overview
 
-*[See Slides](https://github.com/raphaelleroffo/intro-to-gis/blob/main/Session4/Intro%20to%20GIS%20-%20session%204.pdf)*
+**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Intro%20to%20GIS%20-%20session%204.pdf)**
 
 - *Cartographic design principles*
 - *Accessibility*
@@ -16,10 +16,11 @@ Lecturer: Raphaëlle Roffo
 - *Choropleths*
 - *Choosing the right class breaks (number, method) and colour palette*
 
-.
-## **II. Tutorial**
+&nbsp; 
 
-## Goals:
+## II. Tutorial
+
+### Goals:
 
 - Loading data from Open Street Map
 - Accessing vector symbology settings
@@ -28,7 +29,10 @@ Lecturer: Raphaëlle Roffo
 - Setting scale-dependent visibility
 - Saving spatial bookmarks
 
-.
+&nbsp; 
+
+
+### Context:
 
 In this tutorial, we will be exploring the theme of cycling to school. In the context of the Covid pandemic, the question of safely getting kids to attend school has become a key element in many countries' economic recovery strategies. Taking into considerations the pressing challenges of reducing carbon emissions, walking and cycling to school represent sustainable and safe ways for children and their parents to get to school, as long as proper cycling infrastructure exists.
 
@@ -36,19 +40,19 @@ We will be focusing on primary schools in Greater London, and will look at exist
 
 In the tutorial 5, we will add another layer to this analysis and use the accessibility to public transport score in the census dataset to add some more context.
 
+&nbsp; 
 
-## 1. Setting up
+### Data:
 
-Download the `Session4-exercise` geopackage from GitHub. It contains the same London data as in Tutorial 3 and some additional layers. Drag and drop the `BoroughsCensus` layer and the `Schools` layer onto your canvas. Make sure the CRS is set to `EPSG:27700`.
+Download the geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Session4-London.gpkg). It contains the same London data as in Tutorial 3 and some additional layers. Drag and drop the `BoroughsCensus` layer and the `Schools` layer onto your canvas. Make sure the CRS is set to `EPSG:27700`.
 
 Pick a basemap of your choice from the `XYZ Tiles` section of your `Browser` panel. I'll be using `CartoDb Positron`.
 
 <img src="../docs/assets/images/S4-01.png" width="700">
 
+&nbsp; 
 
-
-
-## 2. Loading OSM layer
+## III. Loading OSM layer
 
 Now, we have decided we want to look at cycling lanes in the Greater London Metropolitan Area. We will be using crowdsourced data from [OpenStreetMap](https://www.openstreetmap.org/about). In order to access this data, we will use the QGIS `QuickOSM` plugin. You can access it through your top menu: `Plugins` > `Manage and Install Plugins...`. Search "quickosm" in your searchbar, install the plugin and close this window.
 
@@ -92,6 +96,7 @@ The polygon layer also doesn't make much sense and only contains a single record
 
 <img src="../docs/assets/images/S4-11.png" width="700">
 
+&nbsp; 
 
 **Scratch layer Warning!** 
 
@@ -107,10 +112,11 @@ Now that you've saved your cycleway layer (if you refresh your browser, it shoul
 
 <img src="../docs/assets/images/S4-12.png" width="700">
 
+&nbsp; 
 
-## 3. Vector symbology
+## IV. Vector symbology
 
-**3.1. Accessing symbology settings**
+### **4.1. Accessing symbology settings**
 
 For any layer, you can double click to open its `Layer properties` menu and navigate to the `Symbology` tab to access all the settings. Start with your `Schools` point layer. In the top dropdown menu you're given a few options.
 
@@ -124,8 +130,9 @@ These 5 options are common to points, lines and polygons alike (points and polyg
 - **Graduated** = features symbols depend on the value of one of their **numerical** attributes (e.g.length of the cycling lane, population count in a borough, etc)
 - **Rule-based** = you can define more advanced nuances using filters and expressions. For instance you could create 3 rules: 1)if a cycling lane is longer than 2km **and** in a separated lane then apply a certain symbology to it, otherwise 2) if it is between 500m and 2km and on a one-way road applly another symbology, and 3) don't display the rest.
 
+&nbsp; 
 
-**3.2 Exploring single and categorized point symbology**
+### **4.2 Exploring single and categorized point symbology**
 
 Using the single symbol, try to change the opacity, size and colour of your points. Note you can also use presets in the section below.
 
@@ -171,8 +178,9 @@ Note that in the Values list, the last value listed is _"all other values"_. You
 
 <img src="../docs/assets/images/S4-21.png" width="700">
 
+&nbsp; 
 
-**3.3 Creating a rule-based symbology for the schools**
+### **4.3 Creating a rule-based symbology for the schools**
 
 There are still quite a few values (you could use [official information](https://www.gov.uk/types-of-school) to understand the nuances between each type of school). Here we'd like to improve the legibility of our map by reducing the number of categories. To do so we'll do some "data generalization", meaning we will lump together categories that are quite close thanks to `Rule-based Symbology`.
 
@@ -211,9 +219,9 @@ Edit the symbols for `Free schools` and `Community Schools` to paste the same gr
 
 <img src="../docs/assets/images/S4-41.png" width="700">
 
+&nbsp; 
 
-
-**3.4 Styling the cycling lanes**
+### **4.4 Styling the cycling lanes**
 
 Let's now explore the styling of lines. In this case, we have one polyline layer: the OSM cycling lanes layer.
 
@@ -269,8 +277,9 @@ Finally, pick a medium dark blue for the `Planned` lanes. Press OK, then look at
 
 <img src="../docs/assets/images/S4-46.png" width="700">
 
+&nbsp; 
 
-**3.5 Adding and customizing labels**
+### **4.5 Adding and customizing labels**
 
 Now, we'd like to use labels! Double-click your layer to open the `Layer properties` window and go to the `Labels` tab. Use `Single Labels`.
 
@@ -293,8 +302,9 @@ We're done with the line layer! Zoom in and out across London and notice that th
 
 <img src="../docs/assets/images/S4-51.png" width="700">
 
+&nbsp; 
 
-**3.6 Scale Dependent Visibility**
+### **4.6 Scale Dependent Visibility**
 
 This type of rendering behaviour is called "Scale-dependent rendering. You can for instance decide to only display certain features once you're zoomed in beyond a certain level. This allows you to avoid clutter. You could for instance decide that your `CycleRoutes` layer should only be visible once you're zoomed in at Borough level. You can try it by double-clicking your layer, and in the `Rendering` tab checking the `Scale Dependent Visibility` checkbox. Use 1:60000 as the minimum scale.
 
@@ -310,12 +320,15 @@ But if you zoom in, for instance to 1:56461, then your layer re-appears:
 
 This is all for your line layer, now let's move on to your polygon layer.
 
+&nbsp; 
 
-**3.7 Styling polygons**
+### **4.7 Styling polygons**
 
 There are 3 polygon layers in your geopackage. Bring them onto your map canvas.
 
-**3.7.1. Masking with the London boundaries**
+&nbsp; 
+
+**4.7.1. Masking with the London boundaries**
 
 First, let's create a mask to hide what's beyond London boundaries. Double click the `London_Contours` layer and go to your `Symbology` tab. Select `Inverted Polygons`, then select `Shapeburst Fills` as your Symbol Layer Type. 
 
@@ -331,16 +344,17 @@ Set distance to `5.00`, then press OK and admire your new mask!
 
 <img src="../docs/assets/images/S4-57.png" width="700">
 
+&nbsp; 
 
-**3.7.2. Ultra Low Emissions Zones**
+**4.7.2. Ultra Low Emissions Zones**
 
 Next we'll look at the `Ultra_Low_Emission_Zones` layer. We use a simple symbology and pick a bright green colour. We choose to not draw the boundary of this layer.
 
 <img src="../docs/assets/images/S4-58.png" width="700">
 
+&nbsp; 
 
-
-**3.7.3. Context: Borough boundaries**
+**4.7.3. Context: Borough boundaries**
 
 Finally, let's handle the `LondonBoroughs` layer. Because our point and line layers are already quite busy, we want to keep it quite minimal. We'll  keep it transparent and just use display the boundaries between boroughs. Double-click your layer, and in the `Symbology` tab select `Single Symbol`. Click `Simple fill` to access the below customisation options. Choose a transparent fill and a dark gray outline of 0.4mm width.
 
@@ -350,9 +364,9 @@ You're almost there! Make sure your layers are in the right order.
 
 <img src="../docs/assets/images/S4-60.png" width="700">
 
+&nbsp; 
 
-
-## 4. Spatial bookmarks
+## V. Spatial bookmarks
 
 A useful feature of QGIS is the Spatial bookmarks, which allow you to "bookmark" certain zoom areas. Right click your `London Schools` layer and select `Zoom to layer`. We'll bookmark this view first.
 
@@ -368,6 +382,13 @@ Now repeat the operation! Zoom onto a borough of your choice, to a scale at whic
 
 You can find more information on Spatial bookmarks in the [Documentation](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/general_tools.html#spatial-bookmarks)
 
+&nbsp; 
 
 
 **Well done! This is it for this tutorial - in tutorial 5 you will build a choropleth and ue the print layout composer to export your maps.**
+
+&nbsp; 
+
+&nbsp; 
+
+&nbsp; 

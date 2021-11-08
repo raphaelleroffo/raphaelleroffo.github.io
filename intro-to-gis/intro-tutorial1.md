@@ -1,11 +1,12 @@
 # Session 1: What is GIS?
-**Introduction to GIS | Sciences Po Urban School, GETEC Masters | Fall semester 2021-2022**
+
+**Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
 
 Lecturer: Raphaëlle Roffo
 
 &nbsp; 
 
-## **I. Session 1 Overview** 
+## I. Session 1 Overview
 
 **Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)**
 
@@ -19,8 +20,9 @@ Lecturer: Raphaëlle Roffo
 
 &nbsp; 
 
-## **II. Tutorial objectives **
+## II. Tutorial
 
+### Goals:
 
 - Installing QGIS
 - Exploring the QGIS console (or GUI, for Graphical User Interface)
@@ -157,16 +159,16 @@ The QGIS documentation is available at this address: https://qgis.org/en/docs/in
 
 &nbsp; 
 
-Please note:
-1. This course is taught in English but some of you will have a version of QGIS installed that's in a different language. You can overwrite the language of your OS to use QGIS in English by going into `Preferences` > `Options` > `General` > `Override system locale` and select `English`.
+**Please note:**
 
-<img src="../docs/assets/images/S1-00.png" width="700">
+- This course is taught in English but some of you will have a version of QGIS installed that's in a different language. You can overwrite the language of your OS to use QGIS in English by going into `Preferences` > `Options` > `General` > `Override system locale` and select `English`.
+    <img src="../docs/assets/images/S1-00.png" width="700">
    
-2. If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
+- If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
 
 &nbsp; 
 
-2. Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to QGIS version 2.18 https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html 
+- Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to QGIS version 2.18 https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html 
 
 &nbsp; 
 
