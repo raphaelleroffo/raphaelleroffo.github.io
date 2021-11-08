@@ -31,7 +31,7 @@ Lecturer: Raphaëlle Roffo
 
 ## III. Downloading QGIS
 
-Visit https://qgis.org/en/site/forusers/download.html
+Visit [https://qgis.org/en/site/forusers/download.html](https://qgis.org/en/site/forusers/download.html)
 
 Download the long-term release (most stable) version for your OS. This is a stable and relatively bug-free version as opposed to the latest release in which new features were introduced but you may find some bugs.
 
@@ -162,6 +162,7 @@ The QGIS documentation is available at this address: https://qgis.org/en/docs/in
 **Please note:**
 
 - This course is taught in English but some of you will have a version of QGIS installed that's in a different language. You can overwrite the language of your OS to use QGIS in English by going into `Preferences` > `Options` > `General` > `Override system locale` and select `English`.
+  
     <img src="../docs/assets/images/S1-00.png" width="700">
    
 - If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
@@ -173,3 +174,5 @@ The QGIS documentation is available at this address: https://qgis.org/en/docs/in
 &nbsp; 
 
 &nbsp; 
+
+### **[Next Tutorial >](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial2.html)**

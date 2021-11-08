@@ -33,13 +33,13 @@ Lecturer: Raphaëlle Roffo
 
 You can find the geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Session3-London.gpkg) and the Schools CSV file [here](https://raw.githubusercontent.com/raphaelleroffo/intro-to-gis/main/Session3/schools.csv) (right click anywhere on the page and `Save as...` to save it as `Schools.csv` in your folder).
 
+Save both in your documents (again, avoid saving in Dropbox/Cloud folders as it may get QGIS very cranky) under a `Session3` folder. 
+
 &nbsp; 
 
 ## III. Setting up
 
 **Open the project**
-
-In the GitHub repo, go to the [Session3](https://github.com/raphaelleroffo/intro-to-gis/tree/main/Session3) folder and download the `Session3-London.gpkg` file. Save it in your documents (again, avoid saving in Dropbox/Cloud folders as it may get QGIS very cranky) under a `Session3` folder. 
 
 Open QGIS, and open a blank document. In your `Browser` panel, navigate to this `Session3` folder. Click the arrow to see the content of the geopackage. Double click the `London` project file. Data for this project come from the London Datastore. This should automatically load these layers using the same symbology as in this screenshot. You may not have access to the basemap however. QGIS may give you an error message, which you can ignore for now.
 
@@ -231,3 +231,5 @@ Well done, that's it for today! Try out the various selection tools and try to b
 &nbsp; 
 
 &nbsp; 
+
+### **[Next Tutorial >](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)**

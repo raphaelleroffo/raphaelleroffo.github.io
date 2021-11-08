@@ -28,7 +28,7 @@ Lecturer: Raphaëlle Roffo
 
 ### Data:
 
-You can find a geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Session2-Barcelona-data.gpkg).
+In this session we'll be downloading data from an open data portal. If you're running into issues, you can also download the data directly [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Session2-Barcelona-data.gpkg).
 
 &nbsp; 
 
@@ -192,7 +192,7 @@ Finally, you may try and load it into [kepler.gl](https://kepler.gl/demo)
 
 &nbsp; 
 
-## VII. Saving all your data as `*.gpkg`
+## VII. Saving all your data as *.gpkg
 
 Geopackages are now the gold standard for saving and sharing your data in a clean way. To understand why, let's go back to our earlier point on the fact that `*.qgz` files don't actually contain any data.
 
@@ -283,6 +283,7 @@ The QGIS documentation is available at this address: https://qgis.org/en/docs/in
 **Please note:**
 
 - This course is taught in English but some of you will have a version of QGIS installed that's in a different language. You can overwrite the language of your OS to use QGIS in English by going into `Preferences` > `Options` > `General` > `Override system locale` and select `English`.
+  
     <img src="../docs/assets/images/S1-00.png" width="700">
    
 - If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
@@ -294,3 +295,5 @@ The QGIS documentation is available at this address: https://qgis.org/en/docs/in
 &nbsp; 
 
 &nbsp; 
+
+### **[Next Tutorial >](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial3.html)**
