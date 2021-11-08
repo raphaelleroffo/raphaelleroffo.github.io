@@ -1,1 +1,4 @@
+name: Raphaëlle's portfolio
+description: My portfolio and teaching material
 theme: jekyll-theme-cayman
+markdown: kramdown
