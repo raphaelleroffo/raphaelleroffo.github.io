@@ -15,7 +15,9 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### Sessions
 
-**Session 1: What is GIS?**
+
+[**Session 1: What is GIS?**](https://raphaelleroffo.github.io/docs/intro-to-gis/intro-tutorial1.md)
+
 
 *Class Content:*
 
@@ -32,7 +34,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Exploring the QGIS console*
 
 
-**Session 2: Sourcing and loading data into GIS**
+[**Session 2: Sourcing and loading data into GIS**](https://raphaelleroffo.github.io/docs/intro-to-gis/intro-tutorial2.md)
 
 *Class Content:*
 - *Navigating data types (vector and raster) and common data formats (.shp, .geojson, .csv, PostGIS, etc)*
@@ -45,7 +47,8 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Setting the right Coordinate Reference Systems and Projections*
 
 
-**Session 3: Working with vector data: the attribute table**
+
+[**Session 3: Working with vector data: the attribute table**](https://raphaelleroffo.github.io/docs/intro-to-gis/intro-tutorial3.md)
 
 *Class Content:*
 
@@ -59,7 +62,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Joining layers*
 
 
-**Session 4: Cartographic design**
+[**Session 4: Cartographic design**](https://raphaelleroffo.github.io/docs/intro-to-gis/intro-tutorial4.md)
 
 *Class Content:*
 - *Kepler.gl tutorial: quick off-the-shelf data visualisation*
@@ -72,7 +75,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Export maps using layouts*
 
 
-**Session 5: Working with vector data: geoprocessing**
+[**Session 5: Working with vector data: geoprocessing**](https://raphaelleroffo.github.io/docs/intro-to-gis/intro-tutorial5.md)
 
 *Class Content:*
 
@@ -85,7 +88,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Learn about the main geoprocessing tools, and where to find more advanced functionalities*
 
 
-**Session 6: course wrap-up**
+[**Session 6: course wrap-up**](https://raphaelleroffo.github.io/docs/intro-to-gis/intro-tutorial6.md)
 
 *This final session is designed as a Q&A session. Students should have designed a methodology for the final coursework and are encouraged to prepare specific questions. Students will be able to select topics to be revisited in class, or to hear about more advanced GIS techniques if they wish.*
 
