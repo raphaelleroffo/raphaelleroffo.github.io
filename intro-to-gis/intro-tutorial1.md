@@ -3,11 +3,11 @@
 
 Lecturer: Raphaëlle Roffo
 
-.
+&nbsp; 
 
 ## **I. Session 1 Overview** 
 
-*[See Slides](https://github.com/raphaelleroffo/intro-to-gis/blob/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)*
+**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)**
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*
@@ -16,19 +16,18 @@ Lecturer: Raphaëlle Roffo
 - *Common use cases*
 - *GIS and geospatial data science workflows*
 
-.
 
+&nbsp; 
 
-## **II. Tutorial**
+## **II. Tutorial objectives **
 
-### Goals:
 
 - Installing QGIS
 - Exploring the QGIS console (or GUI, for Graphical User Interface)
 
-.
+&nbsp; 
 
-### Downloading QGIS
+## III. Downloading QGIS
 
 Visit https://qgis.org/en/site/forusers/download.html
 
@@ -50,29 +49,33 @@ Once the installer is downloaded and launched, you can follow the steps and use 
 
 <img src="../docs/assets/images/Welcome.png" width="500">
 
-. 
+&nbsp; 
 
-### The QGIS GUI
+## IV The QGIS GUI
 
 Let's explore the QGIS Graphical User Interface (GUI).
 
 <img src="../docs/assets/images/GUI.png" width="700">
 
+&nbsp; 
 
-#### 1. Opening a new project
+### 1. Opening a new project
 
 To launch a new project from scratch, you can  click "new empty project" or the white page icon in the toolbar. You may also click `Project > New` in the top left menu dropdown.
 
 <img src="../docs/assets/images/GUI2.png" width="700">
 
+&nbsp; 
 
-#### 2. The map canvas
+### 2. The map canvas
 
 This is where your maps are displayed (in 2D). You can interact with it using the Map Navigation toolbar. You can pan across using the hand, zoom in and out using the magnifier glass, etc. We will get back to this next session when we start loading data into the project.
 
 <img src="../docs/assets/images/GUI3.png" width="700">
 
-#### 3. The menu bar
+&nbsp; 
+
+### 3. The menu bar
 
 This is the top layer of your interface, and it contains various dropdown menus:
 
@@ -91,7 +94,9 @@ This is the top layer of your interface, and it contains various dropdown menus:
 
 Other menus may be present if you have downloaded or enabled additional plugins (Mesh, Web, Database), but you won't need them for this course.
 
-#### 4. The toolbars
+&nbsp; 
+
+### 4. The toolbars
 
 Toolbars are located below the menu bar. 
 
@@ -105,7 +110,9 @@ Very importantly, you can toggle each of the toolbar on and off by going into yo
 
 <img src="../docs/assets/images/GUI6.png" width="700">
 
-#### 5. The panels
+&nbsp; 
+
+### 5. The panels
 
 The panels are located to the sides of the map canvas (left and right). 
 
@@ -134,18 +141,33 @@ There are three very important panels you need to know about:
 
 <img src="../docs/assets/images/Processing.png" width="200">
 
-#### 6. The status bar
+&nbsp; 
+
+### 6. The status bar
 
 The status bar contains general information about the map view: the zoom level, the coordinates of where you mouse is, the EPSG of the coordinate reference system your map canvas is set to.
 
 <img src="../docs/assets/images/GUI8.png" width="700">
 
-.
+&nbsp; 
 
-### Documentation
+&nbsp; 
+## V. Documentation
 The QGIS documentation is available at this address: https://qgis.org/en/docs/index.html
 
+&nbsp; 
+
 Please note:
-1. This course is taught in English but some of you will have a version of QGIS installed that's in a different language. If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
+1. This course is taught in English but some of you will have a version of QGIS installed that's in a different language. You can overwrite the language of your OS to use QGIS in English by going into `Preferences` > `Options` > `General` > `Override system locale` and select `English`.
+
+<img src="../docs/assets/images/S1-00.png" width="700">
+   
+2. If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
+
+&nbsp; 
 
 2. Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to QGIS version 2.18 https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html 
+
+&nbsp; 
+
+&nbsp; 

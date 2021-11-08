@@ -4,33 +4,38 @@
 
 Lecturer: Raphaëlle Roffo
 
-.
+&nbsp; 
 
 ## **I. Session 2 Overview** 
 
-*[See Slides](https://github.com/raphaelleroffo/intro-to-gis/blob/main/Session2/Intro%20to%20GIS%20-%20session%202.pdf)*
+**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Intro%20to%20GIS%20-%20session%202.pdf)**
 
 - *Last week recap*
 - *Common GIS data formats*
 - *Data sourcing*
 - *Looking at data in kepler.gl*
 
-
-.
+&nbsp; 
 
 
 ## **II. Tutorial**
 
 ### Goals:
 
+
 - Downloading data from an open data portal
 - Setting up a QGIS project 
 - Loading data into QGIS
 - Saving vector data to a different format
 
+
+### Data:
+
+You can find a geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Session2-Barcelona-data.gpkg)
+
 .
 
-### 1. Downloading data from the Barcelona open data portal
+## 1. Downloading data from the Barcelona open data portal
 
 Today we'll look at the city of Barcelona and its green mobility infrastructure. Luckily, an open data portal is available for you to search for data. Go to https://opendata-ajuntament.barcelona.cat/data/en/dataset .
 
@@ -57,7 +62,7 @@ Now you see a list of various datasets. We will be interested in datasets relate
   *We'll actually download both the 2021_2T_ZONES30_CARRERS Zip file, in which the Zone 30 streets are represented as lines, and the 2021_2T_ZONES30_POLIGONS Zip file, where they're grouped in areas (polygons):*
   
   <img src="../docs/assets/images/S2-04.png" width="700">
-  .
+  
 
 
 
@@ -83,10 +88,10 @@ Once all of these files are downloaded, make sure you **unzip everything** befor
 
 Now equipped with these 4 unzipped layers in your `Session2` folder, you are ready to open QGIS!
 
-### 2. Setting up your QGIS project
+## 2. Setting up your QGIS project
 
 Start a new blank project.
-In your browser panel, navigate to the location of your `Session2` folder. Because it's usually hidden in successive folders, I like to add the location as favourite.
+In your browser panel, Hote to the location of your `Session2` folder. Because it's usually hidden in successive folders, I like to add the location as favourite.
 
 <img src="../docs/assets/images/S2-07.png" width="700">
 
@@ -110,7 +115,7 @@ Navigate to your `Session2` folder and save the file using the default extension
 
 
 
-### 3. Loading data into your project
+## 3. Loading data into your project
 
 Now that you have set up your project nicely, it's time to load data.
 
@@ -151,7 +156,7 @@ More on that next week when we work with the attribute table and perform table j
 
 
 
-### 4. Exporting data / Saving in a different format and different CRS
+## 4. Exporting data / Saving in a different format and different CRS
 
 Let's imagine you want to export data in GeoJSON to play with it in kepler.gl ([Kepler only lets you load CSV of GeoJSON, in WGS84](https://docs.kepler.gl/docs/user-guides/b-kepler-gl-workflow/a-add-data-to-the-map#geojson)).
 
@@ -182,7 +187,7 @@ Finally, you may try and load it into [kepler.gl](https://kepler.gl/demo)
 
 
 .
-### 5. Saving all your data as `*.gpkg`
+## 5. Saving all your data as `*.gpkg`
 
 Geopackages are now the gold standard for saving and sharing your data in a clean way. To understand why, let's go back to our earlier point on the fact that `*.qgz` files don't actually contain any data.
 
@@ -258,7 +263,7 @@ You have now reopened your project file, complete with all the layers and the sa
 If you have had difficulties, the final result, packaged in the `Session2-Barcelona-data.gpkg` geopackage, is available for your to download on the GitHub `Session2` folder.
 
 
-### Reminder: QGIS Documentation
+## Reminder: QGIS Documentation
 The QGIS documentation is available at this address: https://qgis.org/en/docs/index.html
 
 Please note:

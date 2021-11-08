@@ -3,20 +3,25 @@
 
 **Lecturer: Raphaëlle Roffo**
 
-### Overview
+&nbsp; 
+## Overview
 It is estimated that 80-90% of all data contain some spatial component (Carl & Hane, 1992). Geographic Information Systems (GIS) are an essential tool to manipulate this data, draw insights and produce visualisations to inform decision-making. This Introduction course aims to familiarise students with the field of Geographic Information Science and with carrying out geospatial analysis using the open-source software QGIS. At the end of the cours, students will be able to source data from open data providers, understand commonly used spatial data structures, and develop start-to-end GIS workflows.
 
+&nbsp; 
 
-### Format
+## Format
 6 sessions of 2 hours. The first session will be a lecture covering GIS as a field of research, typical workflows, data sources and collection methods. Subsequent sessions will follow a more interactive format centred around tutorials and flipped classroom methods.
 
-### Coursework
+&nbsp; 
+## Coursework
 Working in groups of 2 or 3, students will be provided a dataset to explore and will be tasked with carrying out simple geospatial analysis and visualisation. They will produce a technical report detailing the methodology they adopted and the insights they can draw from this data.
 
-### Sessions
+
+&nbsp; 
+## Sessions
 
 
-[**Session 1: What is GIS?**](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial1.html)
+### [Session 1: What is GIS?](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial1.html)
 
 
 *Class Content:*
@@ -33,8 +38,9 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Installing QGIS*
 - *Exploring the QGIS console*
 
+&nbsp; 
 
-[**Session 2: Sourcing and loading data into GIS**](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial2.html)
+### [Session 2: Sourcing and loading data into GIS](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial2.html)
 
 *Class Content:*
 - *Navigating data types (vector and raster) and common data formats (.shp, .geojson, .csv, PostGIS, etc)*
@@ -47,8 +53,9 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Setting the right Coordinate Reference Systems and Projections*
 
 
+&nbsp; 
 
-[**Session 3: Working with vector data: the attribute table**](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial3.html)
+### [Session 3: Working with vector data: the attribute table](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial3.html)
 
 *Class Content:*
 
@@ -61,8 +68,9 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Attribute table operations: generating new fields, refactoring data, geometric operations, etc.*
 - *Joining layers*
 
+&nbsp; 
 
-[**Session 4: Cartographic design**](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)
+### [Session 4: Cartographic design](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)
 
 *Class Content:*
 - *Kepler.gl tutorial: quick off-the-shelf data visualisation*
@@ -74,8 +82,9 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Apply symbology of choice to vector data*
 - *Export maps using layouts*
 
+&nbsp; 
 
-[**Session 5: Working with vector data: geoprocessing**](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial5.html)
+### [Session 5: Working with vector data: geoprocessing](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial5.html)
 
 *Class Content:*
 
@@ -87,13 +96,15 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 *Tutorial:*
 - *Learn about the main geoprocessing tools, and where to find more advanced functionalities*
 
+&nbsp; 
 
-[**Session 6: course wrap-up**](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial6.html)
+### [Session 6: course wrap-up](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial6.html)
 
 *This final session is designed as a Q&A session. Students should have designed a methodology for the final coursework and are encouraged to prepare specific questions. Students will be able to select topics to be revisited in class, or to hear about more advanced GIS techniques if they wish.*
 
+&nbsp; 
 
-### Resources
+## Resources
 
 - Longley, P.A., Goodchild, M.F., Maguire, D.J. and Rhind, D.W., 2005. Geographic information systems and science. John Wiley & Sons.
 - QGIS training guide: https://docs.qgis.org/3.10/en/docs/gentle_gis_introduction/

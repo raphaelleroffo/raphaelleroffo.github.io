@@ -19,7 +19,7 @@ Lecturer: Raphaëlle Roffo
 .
 ## **II. Tutorial**
 
-### Goals:
+## Goals:
 
 - Loading data from Open Street Map
 - Accessing vector symbology settings
@@ -37,7 +37,7 @@ We will be focusing on primary schools in Greater London, and will look at exist
 In the tutorial 5, we will add another layer to this analysis and use the accessibility to public transport score in the census dataset to add some more context.
 
 
-### 1. Setting up
+## 1. Setting up
 
 Download the `Session4-exercise` geopackage from GitHub. It contains the same London data as in Tutorial 3 and some additional layers. Drag and drop the `BoroughsCensus` layer and the `Schools` layer onto your canvas. Make sure the CRS is set to `EPSG:27700`.
 
@@ -48,7 +48,7 @@ Pick a basemap of your choice from the `XYZ Tiles` section of your `Browser` pan
 
 
 
-### 2. Loading OSM layer
+## 2. Loading OSM layer
 
 Now, we have decided we want to look at cycling lanes in the Greater London Metropolitan Area. We will be using crowdsourced data from [OpenStreetMap](https://www.openstreetmap.org/about). In order to access this data, we will use the QGIS `QuickOSM` plugin. You can access it through your top menu: `Plugins` > `Manage and Install Plugins...`. Search "quickosm" in your searchbar, install the plugin and close this window.
 
@@ -108,7 +108,7 @@ Now that you've saved your cycleway layer (if you refresh your browser, it shoul
 <img src="../docs/assets/images/S4-12.png" width="700">
 
 
-### 3. Vector symbology
+## 3. Vector symbology
 
 **3.1. Accessing symbology settings**
 
@@ -352,7 +352,7 @@ You're almost there! Make sure your layers are in the right order.
 
 
 
-### 4. Spatial bookmarks
+## 4. Spatial bookmarks
 
 A useful feature of QGIS is the Spatial bookmarks, which allow you to "bookmark" certain zoom areas. Right click your `London Schools` layer and select `Zoom to layer`. We'll bookmark this view first.
 
