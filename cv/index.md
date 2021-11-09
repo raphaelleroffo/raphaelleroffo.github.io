@@ -2,7 +2,7 @@
 
 &nbsp;
 
-<object data="../assets/pdf/Raphaelle Roffo - CV.pdf" width="1000" height="1000" type='application/pdf'></object>
+<object data="../docs/assets/pdf/Raphaelle Roffo - CV.pdf" width="1000" height="1000" type='application/pdf'></object>
 
 &nbsp;
 
