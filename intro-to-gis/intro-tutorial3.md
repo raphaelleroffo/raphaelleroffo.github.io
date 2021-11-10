@@ -233,3 +233,5 @@ Well done, that's it for today! Try out the various selection tools and try to b
 &nbsp; 
 
 ### **[Next Tutorial >](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)**
+
+### **[Back to the syllabus >](https://raphaelleroffo.github.io/intro-to-gis/index.html)**
