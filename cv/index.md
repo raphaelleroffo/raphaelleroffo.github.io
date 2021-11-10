@@ -1,4 +1,4 @@
-# CV
+# My CV
 
 &nbsp;
 
@@ -6,4 +6,4 @@
 
 &nbsp;
 
-[LinkedIn](https://www.linkedin.com/in/raphaelle-roffo/)
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/raphaelle-roffo/)!
