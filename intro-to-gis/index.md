@@ -3,7 +3,7 @@
 
 **Lecturer: Raphaëlle Roffo**
 
-This course is open sourced under an MIT license. You are more than welcome to use it for learning or teaching GIS, however please make sure to credit my work :)
+This course is open sourced under an MIT license. I hope you enjoy learning GIS and exploring the QGIS software! You are also more than welcome to use this material for teaching; however if you do so, please make sure to credit my work :)
 
 &nbsp; 
 ## Overview
@@ -51,8 +51,10 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 *Tutorial:*
 
-- *Load data into QGIS: .shp and .csv*
-- *Setting the right Coordinate Reference Systems and Projections*
+- *Downloading data from an open data portal*
+- *Setting up a QGIS project*
+- *Loading data into QGIS*
+- *Saving vector data to a different format*
 
 
 &nbsp; 
@@ -66,9 +68,15 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Joining layers: why and how?*
 
 *Tutorial:*
-- *Run spatial and attribute-based queries*
-- *Attribute table operations: generating new fields, refactoring data, geometric operations, etc.*
-- *Joining layers*
+
+- *Loading basemaps*
+- *Accessing summary statistics about a field*
+- *Understanding the attribute table*
+- *Exploring how features and records are related*
+- *Creating a point layer from a CSV file*
+- *Creating a table join*
+- *Creating a query to select features by attribute*
+- *Using queries to only display a subset of your layer's features*
 
 &nbsp; 
 
@@ -81,9 +89,14 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 - *Exporting a map: setting up a layout and adding map elements (north arrow, scale bar, legend, title etc.) 
 
 *Tutorial:*
-- *Source and load basemaps*
-- *Apply symbology of choice to vector data*
-- *Export maps using layouts*
+
+- *Loading data from Open Street Map*
+- *Accessing vector symbology settings*
+- *Creating rule-based symbology*
+- *Adding and styling labels*
+- *Setting scale-dependent visibility*
+- *Saving spatial bookmarks*
+ 
 
 &nbsp; 
 
@@ -91,19 +104,28 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 *[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session5/Intro%20to%20GIS%20-%20session%205.pdf)*
 
-- *Use cases; why may you need to buffer, clip, intersect?*
+- *What are geoprocessing tools?*
 - *Crossing multiple layers: common geoprocessing tools*
-- *Walk-through common mistakes and data errors*
-- *Coursework guidelines*
+- *Use cases; why may you need to buffer, clip, intersect*
 
 *Tutorial:*
-- *Learn about the main geoprocessing tools, and where to find more advanced functionalities*
+
+- *Building a choropleth*
+- *Defining relevant class breaks*
+- *Running simple geoprocessing tools*
+- *Adding map layout elements (legend, title, etc.) using the Print Layout Composer*
+- *Exporting a map as an image, PDF or SVG vector*
+
 
 &nbsp; 
 
 ### [Session 6: course wrap-up](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial6.html)
 
 *This final session is designed as a Q&A session. Students should have designed a methodology for the final coursework and are encouraged to prepare specific questions. Students will be able to select topics to be revisited in class, or to hear about more advanced GIS techniques if they wish.*
+
+*Tutorial:*
+
+- *Carrying out a full analysis on expore to floods in London*
 
 &nbsp; 
 
