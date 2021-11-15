@@ -1,3 +1,3 @@
 # Advanced GIS
 
-Test
+This course will be available online shortly.
