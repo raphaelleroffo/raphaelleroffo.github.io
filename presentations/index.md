@@ -1,7 +1,7 @@
 # Public speaking and publications
 
 
-I really enjoy teaching and sharing learnings with specialist and non-specialists audiences alike; it certainly is a different exercise and challenge !
+I really enjoy teaching and sharing learnings with specialist and non-specialist audiences alike; it certainly is a different exercise and challenge !
 
 &nbsp; 
 ## Public speaking
@@ -46,7 +46,9 @@ The [GIS R UK conference](http://london.gisruk.org/) is a conference that discus
 
 - Sorensen, James PR, et al. ["Tryptophan-like and humic-like fluorophores are extracellular in groundwater: implications as real-time faecal indicators."](https://www.nature.com/articles/s41598-020-72258-2) Scientific reports 10.1 (2020): 1-9
 
-- Roffo, R., (Re)sources. *Eau, énergie et autres services essentiels, plaidoyer pour une approche intégrée*. Editions Descartes & Cie, 2018. *For this book, I interviewed a dozen of experts from the (Re)sources think tank to try and provide a broad overview of the water and energy accessibility landscape in 2018 and ideas about the way forward. The preface is by Kofi Annan. You can find copies online ([Amazon](https://www.amazon.com/Eau-%C3%A9nergie-autres-services-essentiels/dp/2844463258), [Dalloz](https://www.librairiedalloz.fr/livre/9782844463258-eau-energie-et-autres-services-essentiels-plaidoyer-pour-une-approche-integree-collectif/) etc*
+- Roffo, R., (Re)sources. *Eau, énergie et autres services essentiels, plaidoyer pour une approche intégrée*. Editions Descartes & Cie, 2018. 
+    
+    *For this book, I interviewed a dozen of experts from the (Re)sources think tank to try and provide a broad overview of the water and energy accessibility landscape in 2018 and ideas about the way forward. The preface is by Kofi Annan. You can find copies online ([Amazon](https://www.amazon.com/Eau-%C3%A9nergie-autres-services-essentiels/dp/2844463258), [Dalloz](https://www.librairiedalloz.fr/livre/9782844463258-eau-energie-et-autres-services-essentiels-plaidoyer-pour-une-approche-integree-collectif/), etc.)*
 
 - UNDP Strategy for Urban Programming: Asia and the Pacific, UNDP, 2015.
 
