@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Session 3 - Working with vector data & the attribute table &middot; Raphaëlle Roffo
+    
+  </title>
+
+  
+  <link rel="canonical" href="http://localhost:4000/2021/11/16/intro-tutorial3/">
+  
+
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+  
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" >
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A space for sharing my projects, research interests and GIS training material</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://localhost:4000/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/data-science/">Data Science Portfolio</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/presentations/">Public speaking and publications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/teaching/">Teaching</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/tuto1-intro-to-gis/">Tutorials - Intro to GIS</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/tuto2-advanced-gis/">Tutorials - Advanced GIS</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Currently v1.1.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2021. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Raphaëlle Roffo</a>
+            <small>Geospatial data science portfolio & training material</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Session 3 - Working with vector data & the attribute table</h1>
+  <span class="post-date">16 Nov 2021</span>
+  <p><strong>Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022</strong></p>
+
+<p>Lecturer: Raphaëlle Roffo</p>
+
+<p> </p>
+
+<h2 id="i-session-3-overview">I. Session 3 Overview</h2>
+
+<p><strong>Download the <a href="https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Intro%20to%20GIS%20-%20session%203.pdf">slides</a></strong></p>
+
+<ul>
+  <li><em>Understanding the attribute table</em></li>
+  <li><em>Querying data based on their attributes</em></li>
+  <li><em>Joining layers: why and how?</em></li>
+</ul>
+
+<p> </p>
+
+<h2 id="ii-tutorial">II. Tutorial</h2>
+
+<h3 id="goals">Goals:</h3>
+
+<ul>
+  <li>Load basemaps</li>
+  <li>Access summary statistics about a field</li>
+  <li>Understand the attribute table</li>
+  <li>Explore how features and records are related</li>
+  <li>Create a point layer from a <code class="language-plaintext highlighter-rouge">*.csv</code> file</li>
+  <li>Create a table join</li>
+  <li>Create a query to select features by attribute</li>
+  <li>Use queries to only display a subset of your layer’s features</li>
+</ul>
+
+<h3 id="data">Data:</h3>
+
+<p>You can find the geopackage for this session <a href="https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Session3-London.gpkg">here</a> and the Schools CSV file <a href="https://raw.githubusercontent.com/raphaelleroffo/intro-to-gis/main/Session3/schools.csv">here</a> (right click anywhere on the page and <code class="language-plaintext highlighter-rouge">Save as...</code> to save it as <code class="language-plaintext highlighter-rouge">Schools.csv</code> in your folder).</p>
+
+<p>Save both in your documents (again, avoid saving in Dropbox/Cloud folders as it may get QGIS very cranky) under a <code class="language-plaintext highlighter-rouge">Session3</code> folder.</p>
+
+<p> </p>
+
+<h2 id="iii-setting-up">III. Setting up</h2>
+
+<p><strong>Open the project</strong></p>
+
+<p>Open QGIS, and open a blank document. In your <code class="language-plaintext highlighter-rouge">Browser</code> panel, navigate to this <code class="language-plaintext highlighter-rouge">Session3</code> folder. Click the arrow to see the content of the geopackage. Double click the <code class="language-plaintext highlighter-rouge">London</code> project file. Data for this project come from the London Datastore. This should automatically load these layers using the same symbology as in this screenshot. You may not have access to the basemap however. QGIS may give you an error message, which you can ignore for now.</p>
+
+<p><img src="../../../../docs/assets/images/S3-01.png" width="700" /></p>
+
+<p>To load the basemap, we’re going to use Python.</p>
+
+<p><strong>Load basemaps</strong></p>
+
+<p>One way to add basemaps in QGIS is to connect to a tile service from some online server. You can do that very quickly using the Python console!
+Visit this <a href="https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py">link</a>. Select &amp; copy the entire text on that page (press Ctrl+A or ⌘+A, then Ctrl+C or ⌘+C).</p>
+
+<p>Now go back to QGIS, and open the Python Console by clicking the Python icon in your toolbar, or going to your <code class="language-plaintext highlighter-rouge">Plugins</code> Menu &gt; <code class="language-plaintext highlighter-rouge">Python Console</code>. This opens a new panel, usually located below your map canvas. Simply paste the script that you just copied (Ctrl + V or ⌘+V) and press enter. That’s it!
+Now if you look into your <code class="language-plaintext highlighter-rouge">Browser</code> panel and scroll down, you will see a <code class="language-plaintext highlighter-rouge">XYZ tiles</code> section. Click to open and you’ll see a list of basemaps ready to use! You can close the Python console. Note that you only need to create this connection once, and the basemaps will now always be available in your QGIS console even when you work on a different project.</p>
+
+<p><img src="../../../../docs/assets/images/S3-02.png" width="700" /></p>
+
+<p>You can drag and drop the basemap you like onto your canvas. In this case I have used <code class="language-plaintext highlighter-rouge">Esri Gray (light)</code> because its design is quite simple and not overwhelming.</p>
+
+<h2 id="iv-the-statistics-summary-panel">IV. The statistics summary panel</h2>
+
+<p>As a means of exploring a layer, you may want to see some form of summary. Let’s have a look at the LondonBoroughs layer. In your <code class="language-plaintext highlighter-rouge">Layers</code> panel, double-click  the LondonBoroughs layer or right-click &gt; <code class="language-plaintext highlighter-rouge">Properties...</code>. This opens up a very important menu from which you can access a LOT of useful tools to deal with your layer.</p>
+
+<p>The first tab <code class="language-plaintext highlighter-rouge">Information</code> gives you some basic details about the layer: what’s the path to the actual dataset on your computer, what format is it in (geopackage), the encoding, the type of layer (Polygon), the Coordinate Reference System (British NAtional Grid), the extent (maximum x and y coordinates, so basically the bounding box that contains your layer), the unit (meters) and the feature count (how many polygons=features are there in this layer, whcih is equivalent to asking how many rows=records in the attribute table).</p>
+
+<p><img src="../../../../docs/assets/images/S3-03.png" width="700" /></p>
+
+<p>Close this menu and press Ctrl+6 or ⌘+6 , or navigate to your menu <code class="language-plaintext highlighter-rouge">View</code> &gt; <code class="language-plaintext highlighter-rouge">Panels</code> &gt; tick <code class="language-plaintext highlighter-rouge">Statistics</code>. A new menu appears. It’s a bit squished in the bottom left corner so I will undock it (click the top of the panel, drag it towards your map canvas) and make it a bit larger. I then select the LondonBoroughs layer, and pick a field I’m interested in. For example, I’m curious to look at summary statistics about the average land size for the London boroughs.</p>
+
+<p><img src="../../../../docs/assets/images/S3-04.png" width="700" /></p>
+
+<p>Indeed, we observe that there is huge variance in the size of these boroughs, between 315 hectares and 15,000 hectares. The median size is 3,857 hectares.</p>
+
+<p>Try and expore other summary statistics, for example for the LondonBoroughProfile table and look at the demographic fields.</p>
+
+<h2 id="v-the-attribute-table">V. The attribute table</h2>
+
+<p>As seen in the lecture, the attribute table contains <strong>records</strong> for all the <strong>features</strong> present in a vector layer. Let’s see in practice what this means for the LondonBoroughs layer.</p>
+
+<p>Click the LondonBoroughs layer in your <code class="language-plaintext highlighter-rouge">Layers</code> panel so its selected (blue). You have now access, in your toolbar, to the <code class="language-plaintext highlighter-rouge">Selection</code> tools. Use <code class="language-plaintext highlighter-rouge">Select feature(s)</code> and click on one polygon; it turns yellow. Now press your Ctrl/⌘ key or shift key to select a few polygons at once. The features that are added to your selection turn yellow.</p>
+
+<p><img src="../../../../docs/assets/images/S3-05.png" width="700" /></p>
+
+<p>Now open your attribute table (right click on LondonBoroughs in your <code class="language-plaintext highlighter-rouge">Layers</code> panel &gt; <code class="language-plaintext highlighter-rouge">Open attribute table</code>, or click the icon in your toolbar). You will notice that some rows are highlighted in blue. They are the recors linked to your feature selection.</p>
+
+<p><img src="../../../../docs/assets/images/S3-06.png" width="700" /></p>
+
+<p>If you click on the bottom left filter, you can change the view; you could choose to filter the table to see only the selected features for instance, or you could create a custom filter using an expression, to display in your table only the rows that match certain conditions.</p>
+
+<p>The table contains many fields. Note that the <code class="language-plaintext highlighter-rouge">gss_code</code> is a unique identifier; each borrow has a unique code in the format <code class="language-plaintext highlighter-rouge">E90000xx</code>. This is an important one for us because it will allow us to perform an attribute join later.</p>
+
+<p>Note that in the Attribute table toolbar, you have access to selecion tools that are also present in your main interface toolbar. You can for instance inverse your selection.</p>
+
+<p><img src="../../../../docs/assets/images/S3-07.png" width="700" /></p>
+
+<p>To learn more about the selection tool, read up <a href="https://docs.qgis.org/3.16/en/docs/user_manual/introduction/general_tools.html#interacting-with-features">the documentation page</a> on the various tools available.</p>
+
+<p> </p>
+
+<p><strong>The “Identify features” tool</strong></p>
+
+<p>As seen in the lecture, you can also use the <code class="language-plaintext highlighter-rouge">Identify</code> tool to click on features and retrieve the record linked to that feature. Make sure you have selected the layer you are interested in in your <code class="language-plaintext highlighter-rouge">Layers</code> panel.</p>
+
+<p><img src="../../../../docs/assets/images/S3-08.png" width="700" /></p>
+
+<p> </p>
+
+<h2 id="vi-create-a-point-layer-from-a-csv-file">VI. Create a point layer from a <code class="language-plaintext highlighter-rouge">*.csv</code> file</h2>
+
+<p>In this section, we will import a csv file that contains two fields of interest for us: a <code class="language-plaintext highlighter-rouge">longitude</code> and a <code class="language-plaintext highlighter-rouge">latitude</code> or <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>. Please note that an <code class="language-plaintext highlighter-rouge">Eastings</code> and <code class="language-plaintext highlighter-rouge">Northings</code> set of fields would be equally useful.</p>
+
+<p>In QGIS, you can load spatial <strong>and</strong> non-spatial tables. Vector layers are spatial tables; each vector layer contains a geometry and an attribute table. But you can also load <strong>delimited text files</strong> in your QGIS projects (files such as <code class="language-plaintext highlighter-rouge">*.csv</code>, <code class="language-plaintext highlighter-rouge">*.txt</code>, <code class="language-plaintext highlighter-rouge">*.dat</code> or <code class="language-plaintext highlighter-rouge">*.wkt</code>). They may only contain text, or they may contain coordinates / geometries that you could want to utilize.</p>
+
+<p><strong>If geometry is present in the csv</strong>
+In your geopackage you have a <code class="language-plaintext highlighter-rouge">schools</code> layer that contains coordinate fields. It is already loaded in our project as a simple table. As you can see, you can easily access the attribute table of this layer but there is no geometry attached. That’s why in the <code class="language-plaintext highlighter-rouge">Layers</code> panel the icon is a table and you don’t have the option to tick or untick that layer; it can’t be added to teh map canvas anyway.</p>
+
+<p>Let’s turn it into a point layer (the final result will be that <code class="language-plaintext highlighter-rouge">LondonSchoolPoints</code> layer that is present in the geopackage; as you can see the icon for that layer indicates that it is a <strong>point</strong> vector layer).</p>
+
+<p><img src="../../../../docs/assets/images/S3-09.png" width="700" /></p>
+
+<p>Go back to the GitHub repository and download the file <code class="language-plaintext highlighter-rouge">schools.csv</code> into your <code class="language-plaintext highlighter-rouge">Session3</code> folder. Back in QGIS, in your top menu, navigate to <code class="language-plaintext highlighter-rouge">Layer</code> &gt; <code class="language-plaintext highlighter-rouge">Add layer</code> &gt; <code class="language-plaintext highlighter-rouge">Add Delimited Text Layer...</code>.</p>
+
+<p>Use the three dots to navigate to the <code class="language-plaintext highlighter-rouge">schools.csv</code> file location, and fill the parameters as in the screenshot below. Notice that QGIS has automatically detected the presence of <code class="language-plaintext highlighter-rouge">Eastings</code> and <code class="language-plaintext highlighter-rouge">Northings</code> fields and used them to populate the geometry fields. Be careful, this time we are working in the <strong>British National Grid</strong> - CRS (EPSG 27700)!</p>
+
+<p><img src="../../../../docs/assets/images/S3-10.png" width="700" /></p>
+
+<p>Click <code class="language-plaintext highlighter-rouge">Add</code> and close. You now have a point layer where each point is a school!</p>
+
+<p><img src="../../../../docs/assets/images/S3-11.png" width="700" /></p>
+
+<p>If you open the attribute table of that point layer, you will find the same information and the same number of rows as in the initial table.</p>
+
+<p><strong>If your non-spatial table doesn’t contain geometry</strong></p>
+
+<p>If your non-spatial table does <strong>not</strong> contain geometry, then there are 2 options:</p>
+<ul>
+  <li>One of the fields is a unique ID that you can join to an existing geometry layer: see next section.</li>
+  <li>There is no field that you can in any way link to an existing geometry or location. There is nothing you can do and you can’t use this data in your QGIS project.</li>
+</ul>
+
+<h2 id="vii-create-a-table-join">VII. Create a table join</h2>
+
+<p>A second non-spatial table is available in your geopackage; the <code class="language-plaintext highlighter-rouge">BoroughProfiles</code> table. I initially downloaded it as a csv file and it only contains tabular data. If you open the attribute table of this layer, you won’t find any latitude/longitude or eastings/northings fields. However, you will notice the presence of a <code class="language-plaintext highlighter-rouge">Code</code> field. It turns out that this code is the same as the <code class="language-plaintext highlighter-rouge">gss_code</code> present in the <code class="language-plaintext highlighter-rouge">LondonBoroughs</code> polygon layer. When working on census data, national statistics offices will produce boundary files (vector layers) of each census unit, and will make sure to include a column with a unique ID for each polygon. Then, each data table they produce (e.g. on unemployment rates) will also refer to those unique census blocks by referring to this same unique ID in one column.</p>
+
+<p><img src="../../../../docs/assets/images/S3-12.png" width="700" /></p>
+
+<p>In this case, data is aggregated at the <strong>borough</strong> level and you have a code to link back each borough polygon with the demographic data that was collected about this borough.</p>
+
+<p><img src="../../../../docs/assets/images/S3-13.png" width="700" /></p>
+
+<p>Close the attribute tables. Double-click your <code class="language-plaintext highlighter-rouge">LondonBoroughs</code> polygon layer in the <code class="language-plaintext highlighter-rouge">Layers</code> menu to open the <code class="language-plaintext highlighter-rouge">Layers properties</code>. Go to the <code class="language-plaintext highlighter-rouge">Joins</code> tab. The section is empty; click on the green <strong>+</strong> sign to add a new table join.</p>
+
+<p>The table you want to join is the <code class="language-plaintext highlighter-rouge">london-borough-profile</code> table and you want to join using the column <code class="language-plaintext highlighter-rouge">gss_code</code> from your polygon layer and the <code class="language-plaintext highlighter-rouge">Code</code> from your non-spatial table. Press OK, then press <code class="language-plaintext highlighter-rouge">Apply</code> or OK and close your Properties.</p>
+
+<p><img src="../../../../docs/assets/images/S3-14.png" width="700" /></p>
+
+<p>That’s it! If you reopen the attribute table, you now have many more fields available about each borrow! Using the <code class="language-plaintext highlighter-rouge">Identify features</code> tool you can now get much more information about each individual borough.</p>
+
+<p><img src="../../../../docs/assets/images/S3-15.png" width="700" /></p>
+
+<p>Actually, it is really difficult to read these extra information as they all start with a <code class="language-plaintext highlighter-rouge">london-borough-profile</code> prefix. You can fix that! Go back to the <code class="language-plaintext highlighter-rouge">Joins</code> tab in your London Boroughs layer properties. Double click the join you’ve just created.</p>
+
+<p>Now tick the <code class="language-plaintext highlighter-rouge">Custom field name prefix</code> and replace it by something shorter or even nothing at all.</p>
+
+<p><img src="../../../../docs/assets/images/S3-16.png" width="700" /></p>
+
+<p>Save and exit - problem solved!</p>
+
+<p><img src="../../../../docs/assets/images/S3-17.png" width="700" /></p>
+
+<p> </p>
+
+<h2 id="viii-create-a-query-to-select-features-based-on-their-attributes">VIII. Create a query to select features based on their attributes</h2>
+
+<p>Now that you have all this information about your boroughs, let’s query the data. Let’s figure out which boroughs have a rather high proportion of population of working age. Open your attribute table for the <code class="language-plaintext highlighter-rouge">LondonBoroughs</code> polygon layer. Click on the <code class="language-plaintext highlighter-rouge">Select by expression</code> symbol. The syntax we’re going to use here can be found in many other places in QGIS. When in doubt, refer to the <a href="https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/expression.html">documentation</a> - it’s very thorough!</p>
+
+<p><img src="../../../../docs/assets/images/S3-18.png" width="700" /></p>
+
+<p>In the left section is the area where you <strong>write your expression</strong>. At the bottom, it indicates whether you are typing a valid or invalid expression.</p>
+
+<p>In the middle section, you have different families of functions. Click <code class="language-plaintext highlighter-rouge">Fields and values</code> to have access to all the fields names from that attribute table. Double click the name of a field to add it to your query expression.</p>
+
+<p>To the right, you can “sample” or see all values from that field to know what kind of values are present in this column. I’m only interested in boroughs where more than 18% of the population is of working age.</p>
+
+<p><strong>IMPORTANT:</strong> here, because the field is of type string (you can see a little <code class="language-plaintext highlighter-rouge">abc</code> symbol), it looks like QGIS is treating each numerical value like a string. We will see next week how to solve that issue. For now, just type ‘18’ between simple quote marks. Field names use double quote marks and strings single quote marks.</p>
+
+<p>Press <code class="language-plaintext highlighter-rouge">Select features</code> and close. You have now selected all the boroughs that match this criteria!</p>
+
+<p> </p>
+
+<h2 id="ix-use-queries-to-only-display-a-subset-of-your-layers-features">IX. Use queries to only display a subset of your layer’s features</h2>
+
+<p>You may use a very similar approach to only display a subset of your dataset’s features, directly from the parameters menu of your layer. This time let’s play with the school point layer. Double click your <code class="language-plaintext highlighter-rouge">LondonSchoolPoints</code> layer to open the <code class="language-plaintext highlighter-rouge">Layer properties</code>. Navigate to the <code class="language-plaintext highlighter-rouge">Source</code> tab. Below the <code class="language-plaintext highlighter-rouge">Provider Feature Filter</code>, you should find an empty section. This means no filter is currently applied. Under this white block, click  <code class="language-plaintext highlighter-rouge">Query builder</code> to create a new filter.</p>
+
+<p><img src="../../../../docs/assets/images/S3-19.png" width="700" /></p>
+
+<p>You can for instance write a query (a <code class="language-plaintext highlighter-rouge">WHERE</code> clause if we’re using the SQL vocabulary) to find out which mixed-gender primary schools are located in the wards of Wimbledon, Whitechapel or Upminster. Note that, similarly to the <code class="language-plaintext highlighter-rouge">Select by expression</code> box from the previous section, you can double-click on field names and the values that you get from sampling the values. You can use the <code class="language-plaintext highlighter-rouge">Test</code> button to figure out if your expression is correct and how many features it returns.</p>
+
+<p><img src="../../../../docs/assets/images/S3-20.png" width="700" /></p>
+
+<p>Press OK and exit. You can now see that a filter is applied and your layer only contains 28 features. A little filter has also appeared and allows you to directlya ccess and edit your definition query. To remove the filter, erase the expression.</p>
+
+<p><img src="../../../../docs/assets/images/S3-21.png" width="700" /></p>
+
+<p> </p>
+
+<p>Well done, that’s it for today! Try out the various selection tools and try to build other definition query filters to get more familiar with queries. Next week we’ll look into symbology.</p>
+
+<p> </p>
+
+<p> </p>
+
+<h3 id="next-tutorial-"><strong><a href="https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html">Next Tutorial &gt;</a></strong></h3>
+
+<h3 id="back-to-the-syllabus-"><strong><a href="https://raphaelleroffo.github.io/intro-to-gis/index.html">Back to the syllabus &gt;</a></strong></h3>
+
+</div>
+
+
+<div class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/11/16/intro-tutorial6/">
+            Session 6 - Wrap-up
+            <small>16 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/11/16/intro-tutorial5/">
+            Session 5 - Choropleths & Vector geoprocessing
+            <small>16 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/11/16/intro-tutorial4/">
+            Session 4 - Cartographic design
+            <small>16 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

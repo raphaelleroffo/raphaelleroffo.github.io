@@ -1,17 +1,25 @@
-title: Raphaëlle's portfolio
-description: Geospatial data science portfolio & training material
-theme: jekyll-theme-cayman
+# Setup
+title:               Raphaëlle Roffo
+tagline:             'Geospatial data science portfolio & training material'
+description:         'A space for sharing my projects, research interests and GIS training material'
+url:                 https://raphaelleroffo.github.io/
+baseurl:             ''
+paginate:            5
+permalink:           pretty
+
+collections:
+  course:
+
+# About/contact
+author:
+  name:              Raphaëlle Roffo
+  url:               https://twitter.com/feili_rf
+  email:             raphaelle.roffo@gmail.com
+
+# Gems
 plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - CONTRIBUTING.md
-  - README.md
-  - LICENSE.md
-  - COPYING.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - ISSUE_TEMPLATE.md
-  - PULL_REQUEST_TEMPLATE.md
+  - jekyll-paginate
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y

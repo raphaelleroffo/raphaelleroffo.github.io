@@ -1,0 +1,384 @@
+I"�~<p><strong>Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022</strong></p>
+
+<p>Lecturer: Raphaëlle Roffo</p>
+
+<p> </p>
+
+<h2 id="i-session-4-overview">I. Session 4 Overview</h2>
+
+<p><strong>Download the <a href="https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Intro%20to%20GIS%20-%20session%204.pdf">slides</a></strong></p>
+
+<ul>
+  <li><em>Cartographic design principles</em></li>
+  <li><em>Accessibility</em></li>
+  <li><em>Elements of a Map Layout</em></li>
+  <li><em>Choropleths</em></li>
+  <li><em>Choosing the right class breaks (number, method) and colour palette</em></li>
+</ul>
+
+<p> </p>
+
+<h2 id="ii-tutorial">II. Tutorial</h2>
+
+<h3 id="goals">Goals:</h3>
+
+<ul>
+  <li>Loading data from Open Street Map</li>
+  <li>Accessing vector symbology settings</li>
+  <li>Creating rule-based symbology</li>
+  <li>Adding and styling labels</li>
+  <li>Setting scale-dependent visibility</li>
+  <li>Saving spatial bookmarks</li>
+</ul>
+
+<p> </p>
+
+<h3 id="context">Context:</h3>
+
+<p>In this tutorial, we will be exploring the theme of cycling to school. In the context of the Covid pandemic, the question of safely getting kids to attend school has become a key element in many countries’ economic recovery strategies. Taking into considerations the pressing challenges of reducing carbon emissions, walking and cycling to school represent sustainable and safe ways for children and their parents to get to school, as long as proper cycling infrastructure exists.</p>
+
+<p>We will be focusing on primary schools in Greater London, and will look at existing and planned major cycling routes, in the context of the GLA (Greater London Authority) plan for reducing carbon emissions, in particular with an expansion on the <a href="https://data.london.gov.uk/dataset/ultra_low_emissions_zone_expansion_new">Ultra Low Emission Zone</a> since 25 October 2021.</p>
+
+<p>In the tutorial 5, we will add another layer to this analysis and use the accessibility to public transport score in the census dataset to add some more context.</p>
+
+<p> </p>
+
+<h3 id="data">Data:</h3>
+
+<p>Download the geopackage for this session <a href="https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Session4-London.gpkg">here</a>. It contains the same London data as in Tutorial 3 and some additional layers. Drag and drop the <code class="language-plaintext highlighter-rouge">BoroughsCensus</code> layer and the <code class="language-plaintext highlighter-rouge">Schools</code> layer onto your canvas. Make sure the CRS is set to <code class="language-plaintext highlighter-rouge">EPSG:27700</code>.</p>
+
+<p>Pick a basemap of your choice from the <code class="language-plaintext highlighter-rouge">XYZ Tiles</code> section of your <code class="language-plaintext highlighter-rouge">Browser</code> panel. I’ll be using <code class="language-plaintext highlighter-rouge">CartoDb Positron</code>.</p>
+
+<p><img src="../../../../docs/assets/images/S4-01.png" width="700" /></p>
+
+<p> </p>
+
+<h2 id="iii-loading-osm-layer">III. Loading OSM layer</h2>
+
+<p>Now, we have decided we want to look at cycling lanes in the Greater London Metropolitan Area. We will be using crowdsourced data from <a href="https://www.openstreetmap.org/about">OpenStreetMap</a>. In order to access this data, we will use the QGIS <code class="language-plaintext highlighter-rouge">QuickOSM</code> plugin. You can access it through your top menu: <code class="language-plaintext highlighter-rouge">Plugins</code> &gt; <code class="language-plaintext highlighter-rouge">Manage and Install Plugins...</code>. Search “quickosm” in your searchbar, install the plugin and close this window.</p>
+
+<p><img src="../../../../docs/assets/images/S4-02.png" width="700" /></p>
+
+<p>Now, to access the plugin, you can either click the icon that appeared in your toolbar, or access it via your top menu: <code class="language-plaintext highlighter-rouge">Vector</code> &gt; <code class="language-plaintext highlighter-rouge">QuickOSM</code>.</p>
+
+<p><img src="../../../../docs/assets/images/S4-03.png" width="700" /></p>
+
+<p>This plugin basically enables you to query the (very large!) OpenStreetMap SQL database and load layers of your choice onto your map canvas. You can learn more about what you’re querying <a href="https://docs.3liz.org/QuickOSM/">at this address</a>. Today, we will load all the <code class="language-plaintext highlighter-rouge">cycleway</code> features and we will see later what kind of filtering we might want to do using the values (are they one-way, shared lanes, etc), so leave the <code class="language-plaintext highlighter-rouge">Value</code> box blank for now.</p>
+
+<p><img src="../../../../docs/assets/images/S4-04.png" width="700" /></p>
+
+<p>Scroll down in the menu (maybe use the vertical scroll bar) and select the spatial extent of your Boroughs layer as the query extent. It means you only want to download cycleways that are within the Greater London boundaries. Press <code class="language-plaintext highlighter-rouge">Run query</code>.</p>
+
+<p><img src="../../../../docs/assets/images/S4-05.png" width="700" /></p>
+
+<p>After a few seconds to a few minutes, you shold get a success message, a 100% blue prorgess bar, and notice that 4 new layers were loaded onto your canvas. Great! You can now close the query window.</p>
+
+<p><img src="../../../../docs/assets/images/S4-06.png" width="700" /></p>
+
+<p>Note that QuickOSM is a very powerful way for you to get access to feature geometries! However attributes can sometimes be a bit messy or lack consistency (same feature types might be given different names), which may make them tedious to navigate.</p>
+
+<p>Let’s have a look at those layers. For cycling lane you would expect to work with lines, however QuickOSM also loaded a point layer. If you double-click the attribute table, you will notice that those points are actually <em>nodes</em> and don’t contain especially useful attributes. We can’t really use this layer to do anything so we will just remove it from our project.</p>
+
+<p><img src="../../../../docs/assets/images/S4-08.png" width="700" /></p>
+
+<p>The polygon layer also doesn’t make much sense and only contains a single record.</p>
+
+<p><img src="../../../../docs/assets/images/S4-10.png" width="700" /></p>
+
+<p>The layer with a single line in it will also not be useful to us.</p>
+
+<p><img src="../../../../docs/assets/images/S4-09.png" width="700" /></p>
+
+<p>We will also remove those two layers from our project, and only keep the polyline layer that contains 8296 features.</p>
+
+<p><img src="../../../../docs/assets/images/S4-11.png" width="700" /></p>
+
+<p> </p>
+
+<p><strong>Scratch layer Warning!</strong></p>
+
+<p>When you create a new layer using a geoprocessing tool (or in this case the QuickOSM plugin), QGIS will produce a temporary layer, aka “scratch layer”. This layer only exists for you in <em>this</em> open session of QGIS and <strong>is not saved anywhere on your computer</strong>. This means unless you do something about it, the layer will be gone next time you reopen this project. Make sure you avoid this rookie mistake by checking that none of your layers display the little hairy box sign. If they do (like in this case, the layers you just queries from OSM) double click and save the layers you want to keep into your project geopackage (give each layer a meaningful name) or as a new shapefile in your project folder. The little hairy box icon will disappear after you save the layer somewhere on your computer.</p>
+
+<p><img src="../../../../docs/assets/images/S4-07.png" width="700" /></p>
+
+<p>In this case, simply save the polyline cycleway layer, and remove the three others from your Layers section if you haven’t already.</p>
+
+<p>Now that you’ve saved your cycleway layer (if you refresh your browser, it should appear in your geopackage), let’s move on to the symbology step.</p>
+
+<p><img src="../../../../docs/assets/images/S4-12.png" width="700" /></p>
+
+<p> </p>
+
+<h2 id="iv-vector-symbology">IV. Vector symbology</h2>
+
+<h3 id="41-accessing-symbology-settings"><strong>4.1. Accessing symbology settings</strong></h3>
+
+<p>For any layer, you can double click to open its <code class="language-plaintext highlighter-rouge">Layer properties</code> menu and navigate to the <code class="language-plaintext highlighter-rouge">Symbology</code> tab to access all the settings. Start with your <code class="language-plaintext highlighter-rouge">Schools</code> point layer. In the top dropdown menu you’re given a few options.</p>
+
+<p><img src="../../../../docs/assets/images/S4-13.png" width="700" /></p>
+
+<p>These 5 options are common to points, lines and polygons alike (points and polygons have a few additional symbology options of their own):</p>
+
+<ul>
+  <li><strong>No symbols</strong> = nothing is displayed on the map</li>
+  <li><strong>Single symbol</strong> = all features are displayed the same way</li>
+  <li><strong>Categorized</strong> = features symbols depend on the value of one of their <strong>categorical</strong> attributes (e.g. which type of school, which type of cycling lane)</li>
+  <li><strong>Graduated</strong> = features symbols depend on the value of one of their <strong>numerical</strong> attributes (e.g.length of the cycling lane, population count in a borough, etc)</li>
+  <li><strong>Rule-based</strong> = you can define more advanced nuances using filters and expressions. For instance you could create 3 rules: 1)if a cycling lane is longer than 2km <strong>and</strong> in a separated lane then apply a certain symbology to it, otherwise 2) if it is between 500m and 2km and on a one-way road applly another symbology, and 3) don’t display the rest.</li>
+</ul>
+
+<p> </p>
+
+<h3 id="42-exploring-single-and-categorized-point-symbology"><strong>4.2 Exploring single and categorized point symbology</strong></h3>
+
+<p>Using the single symbol, try to change the opacity, size and colour of your points. Note you can also use presets in the section below.</p>
+
+<p><img src="../../../../docs/assets/images/S4-14.png" width="700" /></p>
+
+<p>Now click on the <code class="language-plaintext highlighter-rouge">Simple Marker</code> to access further customization options. A few useful ones include the size and colour of stroke, and the shape of your marker.</p>
+
+<p><img src="../../../../docs/assets/images/S4-15.png" width="700" /></p>
+
+<p>Note that you can even use common logos or import your own SVG or raster symbols to use as markers - for instance here under <code class="language-plaintext highlighter-rouge">Symbol layer type</code> select <code class="language-plaintext highlighter-rouge">SVG marker</code> , scroll down and you have access to a large array of logos, including this school logo. You can try it out, notice that it is not the right choice in this case and then please reverse back to a simple marker symbology of size 2mm and grey colour.</p>
+
+<p><img src="../../../../docs/assets/images/S4-16.png" width="700" /></p>
+
+<p>Now that you know more about the symbology customization, let’s move on to something more useful for understanding our data. We decide we actually only want to work on primary schools that are currently operational (not closed, not opening in the future). To do so, we want to edit the definition query of our layer so that we only display the open primary school features. Navigate to your <code class="language-plaintext highlighter-rouge">Source</code> tab, and click <code class="language-plaintext highlighter-rouge">Query builder</code>. Find out what values are available for different fields. For instance select <code class="language-plaintext highlighter-rouge">STATUS</code> and click on Sample <code class="language-plaintext highlighter-rouge">All</code> values. You can double click a field, an operator and a value to directly add them into your expression. Use <code class="language-plaintext highlighter-rouge">Test</code> to see if your expression has any syntax error.
+Write the query that keeps primary schools that are still open, click OK to close this window, click <code class="language-plaintext highlighter-rouge">Apply</code> in the <code class="language-plaintext highlighter-rouge">Source</code> tab and go back to your <code class="language-plaintext highlighter-rouge">Symbology</code> tab.</p>
+
+<p><img src="../../../../docs/assets/images/S4-17.png" width="700" /></p>
+
+<p>We are now interested in displaying the different types of schools in different colours, to see if there is any geographical pattern as to where certain types of schools can be found. To do so, we will use a <code class="language-plaintext highlighter-rouge">Categorized</code> symbology and pick <code class="language-plaintext highlighter-rouge">TYPE</code> as our value.</p>
+
+<p><img src="../../../../docs/assets/images/S4-18.png" width="700" /></p>
+
+<p>Click <code class="language-plaintext highlighter-rouge">Classify</code> to load the Types values into your legend. Note that you can update your base symbol (click on the <code class="language-plaintext highlighter-rouge">Symbol</code> dropdown arrow then <code class="language-plaintext highlighter-rouge">Configure symbol</code>):</p>
+
+<p><img src="../../../../docs/assets/images/S4-19.png" width="700" /></p>
+
+<p>By default, QGIS has a assigned random colours to each point. You can also choose a specific colour ramp from the many available by clicking on the <code class="language-plaintext highlighter-rouge">Color Ramp</code> dropdown arrow. Because we are using categorical variables here, we prefer to avoid using a sequential palette which would imply some form of order among the values (there is no order here, they’re just three different values).</p>
+
+<p><img src="../../../../docs/assets/images/S4-20.png" width="700" /></p>
+
+<p>You can explore the many options available to you in the colour ramp including shuffling the colours currently assigned to your values, creating your own random colour palette or editing existing ones.</p>
+
+<p><img src="../../../../docs/assets/images/S4-22.png" width="700" /></p>
+
+<p>You can also edit each symbol individually, one by one, by clicking on them directly. You then get access to the same customisation options as you had under <code class="language-plaintext highlighter-rouge">Single symbol</code> earlier.</p>
+
+<p><img src="../../../../docs/assets/images/S4-23.png" width="700" /></p>
+
+<p>Note that in the Values list, the last value listed is <em>“all other values”</em>. You can decide which values you want to keep or remove, and we will just get rid of this one using the red “minus” button.</p>
+
+<p><img src="../../../../docs/assets/images/S4-21.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="43-creating-a-rule-based-symbology-for-the-schools"><strong>4.3 Creating a rule-based symbology for the schools</strong></h3>
+
+<p>There are still quite a few values (you could use <a href="https://www.gov.uk/types-of-school">official information</a> to understand the nuances between each type of school). Here we’d like to improve the legibility of our map by reducing the number of categories. To do so we’ll do some “data generalization”, meaning we will lump together categories that are quite close thanks to <code class="language-plaintext highlighter-rouge">Rule-based Symbology</code>.</p>
+
+<p><img src="../../../../docs/assets/images/S4-31.png" width="700" /></p>
+
+<p>The values that were loaded from your <code class="language-plaintext highlighter-rouge">Categorical symbology</code> are still here. You can either delete them all and start from scratch, or edit the existing ones. We’ll start with Academies. Double-click the first value; the epsilon symbol is where you can go to define your expression. Here, we want to create a single category for Academy converter and Academy Sponsor Led:</p>
+
+<p><img src="../../../../docs/assets/images/S4-32.png" width="700" /></p>
+
+<p>Press OK, then make sure to give a new name to this category (here: <code class="language-plaintext highlighter-rouge">Academies</code>).</p>
+
+<p><img src="../../../../docs/assets/images/S4-33.png" width="700" /></p>
+
+<p>We also want to touch up the symbology by making the outline gray rather than black. Below, in the symbology section, click the <code class="language-plaintext highlighter-rouge">Simple marker</code> then scroll down to find the outline colour. Click to select a gray (you can also make it a bit transparent by reducing the opacity). Once you’ve found the gray you like, click <code class="language-plaintext highlighter-rouge">Copy color</code>; we’ll be re-using it.</p>
+
+<p><img src="../../../../docs/assets/images/S4-39.png" width="700" /></p>
+
+<p>Finally, change the Size of the marker to <strong>1.6</strong> instead of 2.0, then press OK.</p>
+
+<p>Now let’s repeat this process to lump together the Foundation schools and the two types of Voluntary schools. Click on <code class="language-plaintext highlighter-rouge">Foundation School</code>, then find the Epsilon sign and write an <code class="language-plaintext highlighter-rouge">OR</code> statement to combine these three categories. Press OK, then don’t forget to rename it to <code class="language-plaintext highlighter-rouge">Foundation/Voluntary Schools</code>:</p>
+
+<p><img src="../../../../docs/assets/images/S4-37.png" width="700" /></p>
+
+<p>Now on the symbology: again, scroll down to edit the <code class="language-plaintext highlighter-rouge">Simple marker</code>. Change the size to 1.6, then in the outline colour you can simply paste the colour you used previously!</p>
+
+<p><img src="../../../../docs/assets/images/S4-40.png" width="700" /></p>
+
+<p>You can delete the extra categories (the two types of <code class="language-plaintext highlighter-rouge">Voluntary school</code> and the <code class="language-plaintext highlighter-rouge">Academy Sponsor led</code>) since we don’t need it anymore. You should be left with only 4 categories:</p>
+
+<p><img src="../../../../docs/assets/images/S4-38.png" width="700" /></p>
+
+<p>Edit the symbols for <code class="language-plaintext highlighter-rouge">Free schools</code> and <code class="language-plaintext highlighter-rouge">Community Schools</code> to paste the same gray onto their outline colour, and to change the marker size to 1.6. If the 4 colours are too similar, you can also change them manually to make sure they can be easily distinguished. You can now press OK, we are done with the point layer!</p>
+
+<p><img src="../../../../docs/assets/images/S4-41.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="44-styling-the-cycling-lanes"><strong>4.4 Styling the cycling lanes</strong></h3>
+
+<p>Let’s now explore the styling of lines. In this case, we have one polyline layer: the OSM cycling lanes layer.</p>
+
+<p>If you open the <code class="language-plaintext highlighter-rouge">Cycleway</code> attribute table, you will notice that a lot of fields are actually empty and that it’s difficult to identify a single field that would make it easy to base our symbology on.</p>
+
+<p><img src="../../../../docs/assets/images/S4-24.png" width="700" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">cycleway</code> field seemed promising, but using the <code class="language-plaintext highlighter-rouge">Summary statistics</code> tool (Press <code class="language-plaintext highlighter-rouge">Ctrl + 6</code> or <code class="language-plaintext highlighter-rouge">⌘ + 6</code>, or go into your menu <code class="language-plaintext highlighter-rouge">View</code> &gt; <code class="language-plaintext highlighter-rouge">Panels</code> &gt; <code class="language-plaintext highlighter-rouge">Statistics</code>) you can see that there are 28 different distinct values in this field.</p>
+
+<p><img src="../../../../docs/assets/images/S4-25.png" width="700" /></p>
+
+<p>Double-click your <code class="language-plaintext highlighter-rouge">Cycleway</code> layer to open your <code class="language-plaintext highlighter-rouge">Layer properties</code> and the <code class="language-plaintext highlighter-rouge">Symbology</code> tab. If we pick a <code class="language-plaintext highlighter-rouge">Categorized</code> symbology and choose <code class="language-plaintext highlighter-rouge">cycleway</code> as the Value, we end up with way too many different colours and our map becomes illegible. Would you, as a map reader, be able to understand the values of each line if the Cycleway legend contained 28 items?</p>
+
+<p><img src="../../../../docs/assets/images/S4-26.png" width="700" /></p>
+
+<p>We also can’t use <code class="language-plaintext highlighter-rouge">Graduated</code> symbology <em>(In fact, QGIS may even crash if you try to use <code class="language-plaintext highlighter-rouge">Graduated</code> symbology because it doesn’t have values to work with)</em> because our fields contain <code class="language-plaintext highlighter-rouge">string</code> values (text), as you can see by clicking in the <code class="language-plaintext highlighter-rouge">Fields</code> tab :</p>
+
+<p><img src="../../../../docs/assets/images/S4-27.png" width="700" /></p>
+
+<p>In fact, we are now seeing that this layer is going to be very difficult to use, and that the geometries also look very scattered around. It’s time to change gears and look for another dataset.</p>
+
+<p>Let’s see if we can find a dataset that’s better suited to working with the attribute table. The reference provider for these questions in the Geeater London Metropolitan Area is <em>Transport for London</em>; we’ll use <a href="https://cycling.data.tfl.gov.uk/">their cycling data</a>. On this page, download the <code class="language-plaintext highlighter-rouge">CycleRoutes.kml</code> file (<em>the page is very packed, just use <code class="language-plaintext highlighter-rouge">Ctrl + F</code> or <code class="language-plaintext highlighter-rouge">⌘ + F</code> to jump to the file</em>). Save it into your Session4 working folder (if you’re having issues, a copy of it is also available in the geopackage on the GitHub as <code class="language-plaintext highlighter-rouge">Tfl_CycleRoutes</code>).</p>
+
+<p><img src="../../../../docs/assets/images/S4-28.png" width="700" /></p>
+
+<p>KML files are vector files, you can easily drag and drop the layer onto your map canvas.</p>
+
+<p><img src="../../../../docs/assets/images/S4-29.png" width="700" /></p>
+
+<p>If you look into the layer’s attribute table, you’ll find that two fields are actually quite interesting: the <code class="language-plaintext highlighter-rouge">Status</code> and <code class="language-plaintext highlighter-rouge">Programme</code> tell us about the completion status of the cycle routes, and which initiative they fall under.</p>
+
+<p><img src="../../../../docs/assets/images/S4-30.png" width="700" /></p>
+
+<p>Double-click your layer and navigate to the <code class="language-plaintext highlighter-rouge">Symbology</code> tab. We will use the <code class="language-plaintext highlighter-rouge">Status</code> as our value. You can delete the <code class="language-plaintext highlighter-rouge">all other values...</code>.</p>
+
+<p><img src="../../../../docs/assets/images/S4-42.png" width="700" /></p>
+
+<p>Click on the Symbol (not the arrow, but the Symbol button itself) to access all the customization options. Increase the line size to 0.5 and decrease teh opacity to 80%:</p>
+
+<p><img src="../../../../docs/assets/images/S4-43.png" width="700" /></p>
+
+<p>We’ll now edit each symbol individually, starting with the <code class="language-plaintext highlighter-rouge">Open</code> lanes. We’ll use a dark green and copy the colour.</p>
+
+<p><img src="../../../../docs/assets/images/S4-44.png" width="700" /></p>
+
+<p>Next: cycle routes <code class="language-plaintext highlighter-rouge">In Progress</code>. Paste the green you just copied from the open lanes and make it slightly more transparent. Now, click on the line symbol to edit the type of line; we will use a dashed line to symbolize the progression.</p>
+
+<p><img src="../../../../docs/assets/images/S4-45.png" width="700" /></p>
+
+<p>Finally, pick a medium dark blue for the <code class="language-plaintext highlighter-rouge">Planned</code> lanes. Press OK, then look at your map canvas; you can zoom onto specific areas to get a clearer view. This symbology for the cycling lanes works pretty well because the nuance is subtle at the London scale and just gives us a general sense of where the main cycling routes are, but once you zoom onto a specific area you get a better sense of what routes are yet to be completed.</p>
+
+<p><img src="../../../../docs/assets/images/S4-46.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="45-adding-and-customizing-labels"><strong>4.5 Adding and customizing labels</strong></h3>
+
+<p>Now, we’d like to use labels! Double-click your layer to open the <code class="language-plaintext highlighter-rouge">Layer properties</code> window and go to the <code class="language-plaintext highlighter-rouge">Labels</code> tab. Use <code class="language-plaintext highlighter-rouge">Single Labels</code>.</p>
+
+<p><img src="../../../../docs/assets/images/S4-47.png" width="700" /></p>
+
+<p>Now, select <code class="language-plaintext highlighter-rouge">Programme</code> as your value.</p>
+
+<p><img src="../../../../docs/assets/images/S4-48.png" width="700" /></p>
+
+<p>The font works pretty well, we’ll just edit a couple settings. First, let’s add a buffer around the text so that it “pops” better from the background.</p>
+
+<p><img src="../../../../docs/assets/images/S4-49.png" width="700" /></p>
+
+<p>Next, in the placement settings change the placement mode to <code class="language-plaintext highlighter-rouge">Curved</code> so that the text actually follows along the lines nicely.</p>
+
+<p><img src="../../../../docs/assets/images/S4-50.png" width="700" /></p>
+
+<p>We’re done with the line layer! Zoom in and out across London and notice that the rendering of the lines depends on the current map scale (the more you zoom in, the more line labels you can read).</p>
+
+<p><img src="../../../../docs/assets/images/S4-51.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="46-scale-dependent-visibility"><strong>4.6 Scale Dependent Visibility</strong></h3>
+
+<p>This type of rendering behaviour is called “Scale-dependent rendering. You can for instance decide to only display certain features once you’re zoomed in beyond a certain level. This allows you to avoid clutter. You could for instance decide that your <code class="language-plaintext highlighter-rouge">CycleRoutes</code> layer should only be visible once you’re zoomed in at Borough level. You can try it by double-clicking your layer, and in the <code class="language-plaintext highlighter-rouge">Rendering</code> tab checking the <code class="language-plaintext highlighter-rouge">Scale Dependent Visibility</code> checkbox. Use 1:60000 as the minimum scale.</p>
+
+<p><img src="../../../../docs/assets/images/S4-52.png" width="700" /></p>
+
+<p>Now if you’re zoomed out to see all of London (scale 1:3), the layer is not rendered on your map.</p>
+
+<p><img src="../../../../docs/assets/images/S4-53.png" width="700" /></p>
+
+<p>But if you zoom in, for instance to 1:56461, then your layer re-appears:</p>
+
+<p><img src="../../../../docs/assets/images/S4-54.png" width="700" /></p>
+
+<p>This is all for your line layer, now let’s move on to your polygon layer.</p>
+
+<p> </p>
+
+<h3 id="47-styling-polygons"><strong>4.7 Styling polygons</strong></h3>
+
+<p>There are 3 polygon layers in your geopackage. Bring them onto your map canvas.</p>
+
+<p> </p>
+
+<p><strong>4.7.1. Masking with the London boundaries</strong></p>
+
+<p>First, let’s create a mask to hide what’s beyond London boundaries. Double click the <code class="language-plaintext highlighter-rouge">London_Contours</code> layer and go to your <code class="language-plaintext highlighter-rouge">Symbology</code> tab. Select <code class="language-plaintext highlighter-rouge">Inverted Polygons</code>, then select <code class="language-plaintext highlighter-rouge">Shapeburst Fills</code> as your Symbol Layer Type.</p>
+
+<p><img src="../../../../docs/assets/images/S4-55.png" width="700" /></p>
+
+<p>Use <code class="language-plaintext highlighter-rouge">Two color</code> so that QGIS creates a light feathering effect, the first colour being Transparent and the second a 60% opaque white.</p>
+
+<p><img src="../../../../docs/assets/images/S4-56.png" width="700" /></p>
+
+<p>Set distance to <code class="language-plaintext highlighter-rouge">5.00</code>, then press OK and admire your new mask!</p>
+
+<p><img src="../../../../docs/assets/images/S4-57.png" width="700" /></p>
+
+<p> </p>
+
+<p><strong>4.7.2. Ultra Low Emissions Zones</strong></p>
+
+<p>Next we’ll look at the <code class="language-plaintext highlighter-rouge">Ultra_Low_Emission_Zones</code> layer. We use a simple symbology and pick a bright green colour. We choose to not draw the boundary of this layer.</p>
+
+<p><img src="../../../../docs/assets/images/S4-58.png" width="700" /></p>
+
+<p> </p>
+
+<p><strong>4.7.3. Context: Borough boundaries</strong></p>
+
+<p>Finally, let’s handle the <code class="language-plaintext highlighter-rouge">LondonBoroughs</code> layer. Because our point and line layers are already quite busy, we want to keep it quite minimal. We’ll  keep it transparent and just use display the boundaries between boroughs. Double-click your layer, and in the <code class="language-plaintext highlighter-rouge">Symbology</code> tab select <code class="language-plaintext highlighter-rouge">Single Symbol</code>. Click <code class="language-plaintext highlighter-rouge">Simple fill</code> to access the below customisation options. Choose a transparent fill and a dark gray outline of 0.4mm width.</p>
+
+<p><img src="../../../../docs/assets/images/S4-59.png" width="700" /></p>
+
+<p>You’re almost there! Make sure your layers are in the right order.</p>
+
+<p><img src="../../../../docs/assets/images/S4-60.png" width="700" /></p>
+
+<p> </p>
+
+<h2 id="v-spatial-bookmarks">V. Spatial bookmarks</h2>
+
+<p>A useful feature of QGIS is the Spatial bookmarks, which allow you to “bookmark” certain zoom areas. Right click your <code class="language-plaintext highlighter-rouge">London Schools</code> layer and select <code class="language-plaintext highlighter-rouge">Zoom to layer</code>. We’ll bookmark this view first.</p>
+
+<p>Select the menu <code class="language-plaintext highlighter-rouge">View</code> &gt; ` New Spatial Bookmark…<code class="language-plaintext highlighter-rouge">, (or press </code>Ctrl+B<code class="language-plaintext highlighter-rouge"> </code>⌘ + B <code class="language-plaintext highlighter-rouge">) to open the Bookmark Editor dialog. Give it the name </code>Greater-London<code class="language-plaintext highlighter-rouge"> and save it in the</code> Project bookmarks<code class="language-plaintext highlighter-rouge">. By saving it here instead of in the </code>User bookmarks`, you save it in the project file itself and it will be available to otehr users if you share this file.</p>
+
+<p><img src="../../../../docs/assets/images/S4-61.png" width="700" /></p>
+
+<p>The Spatial Bookmarks can be found in your browser window. If you click on it, your map canvas will automatically “jump” back into this specific map extent and scale.</p>
+
+<p>Now repeat the operation! Zoom onto a borough of your choice, to a scale at which your cycle routes are displayed, and save a new spatial bookmark in your Project bookmarks.</p>
+
+<p><img src="../../../../docs/assets/images/S4-62.png" width="700" /></p>
+
+<p>You can find more information on Spatial bookmarks in the <a href="https://docs.qgis.org/3.16/en/docs/user_manual/introduction/general_tools.html#spatial-bookmarks">Documentation</a></p>
+
+<p> </p>
+
+<p><strong>Well done! This is it for this tutorial - in tutorial 5 you will build a choropleth and ue the print layout composer to export your maps.</strong></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<h3 id="next-tutorial-"><strong><a href="https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial5.html">Next Tutorial &gt;</a></strong></h3>
+
+<h3 id="back-to-the-syllabus-"><strong><a href="https://raphaelleroffo.github.io/intro-to-gis/index.html">Back to the syllabus &gt;</a></strong></h3>
+:ET

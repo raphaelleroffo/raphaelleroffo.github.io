@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Session 1 - What is GIS? &middot; Raphaëlle Roffo
+    
+  </title>
+
+  
+  <link rel="canonical" href="http://localhost:4000/2021/11/16/intro-tutorial1/">
+  
+
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="http://localhost:4000/atom.xml">
+
+  
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox" >
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A space for sharing my projects, research interests and GIS training material</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="http://localhost:4000/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/data-science/">Data Science Portfolio</a>
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/presentations/">Public speaking and publications</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/teaching/">Teaching</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/tuto1-intro-to-gis/">Tutorials - Intro to GIS</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="http://localhost:4000/tuto2-advanced-gis/">Tutorials - Advanced GIS</a>
+        
+      
+    
+
+    <span class="sidebar-nav-item">Currently v1.1.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2021. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Raphaëlle Roffo</a>
+            <small>Geospatial data science portfolio & training material</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Session 1 - What is GIS?</h1>
+  <span class="post-date">16 Nov 2021</span>
+  <p><strong>Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022</strong></p>
+
+<p>Lecturer: Raphaëlle Roffo</p>
+
+<p> </p>
+
+<h2 id="i-session-1-overview">I. Session 1 Overview</h2>
+
+<p><strong>Download the <a href="https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf">slides</a></strong></p>
+
+<ul>
+  <li><em>Course overview and objectives</em></li>
+  <li><em>GIS as a field of research and a tool</em></li>
+  <li><em>Why is spatial special?</em></li>
+  <li><em>Issues with 2D representations of the Earth surface: Coordinate Reference Systems and Projections</em></li>
+  <li><em>Common use cases</em></li>
+  <li><em>GIS and geospatial data science workflows</em></li>
+</ul>
+
+<p> </p>
+
+<h2 id="ii-tutorial">II. Tutorial</h2>
+
+<h3 id="goals">Goals:</h3>
+
+<ul>
+  <li>Installing QGIS</li>
+  <li>Exploring the QGIS console (or GUI, for Graphical User Interface)</li>
+</ul>
+
+<p> </p>
+
+<h2 id="iii-downloading-qgis">III. Downloading QGIS</h2>
+
+<p>Visit <a href="https://qgis.org/en/site/forusers/download.html">https://qgis.org/en/site/forusers/download.html</a></p>
+
+<p>Download the long-term release (most stable) version for your OS. This is a stable and relatively bug-free version as opposed to the latest release in which new features were introduced but you may find some bugs.</p>
+
+<p><strong>MacOS:</strong></p>
+
+<p><img src="../../../../docs/assets/images/MacOS_download.png" width="700" /></p>
+
+<p>You may get an error message as the app was not downloaded through the AppStore. You can override the security settings by following <a href="https://support.apple.com/en-sg/HT202491">this method</a>.
+If you own an old Mac, you may need to download an older version of QGIS. If you are unable to download 3.16, try downloading one of the 2.18 releases from <a href="https://qgis.org/downloads/macOS/">this page</a></p>
+
+<p><strong>Windows users:</strong> download the QGIS Standalone installer, you won’t need the OSGeo4W setup for your usage.</p>
+
+<p><img src="../../../../docs/assets/images/Windows_download.png" width="700" /></p>
+
+<p>Once the installer is downloaded and launched, you can follow the steps and use the default options offered in each step. You’re then ready to start mapping!</p>
+
+<p><img src="../../../../docs/assets/images/Welcome.png" width="500" /></p>
+
+<p> </p>
+
+<h2 id="iv-the-qgis-gui">IV The QGIS GUI</h2>
+
+<p>Let’s explore the QGIS Graphical User Interface (GUI).</p>
+
+<p><img src="../../../../docs/assets/images/GUI.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="1-opening-a-new-project">1. Opening a new project</h3>
+
+<p>To launch a new project from scratch, you can  click “new empty project” or the white page icon in the toolbar. You may also click <code class="language-plaintext highlighter-rouge">Project &gt; New</code> in the top left menu dropdown.</p>
+
+<p><img src="../../../../docs/assets/images/GUI2.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="2-the-map-canvas">2. The map canvas</h3>
+
+<p>This is where your maps are displayed (in 2D). You can interact with it using the Map Navigation toolbar. You can pan across using the hand, zoom in and out using the magnifier glass, etc. We will get back to this next session when we start loading data into the project.</p>
+
+<p><img src="../../../../docs/assets/images/GUI3.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="3-the-menu-bar">3. The menu bar</h3>
+
+<p>This is the top layer of your interface, and it contains various dropdown menus:</p>
+
+<p><img src="../../../../docs/assets/images/GUI4.png" width="700" /></p>
+
+<ul>
+  <li>The <code class="language-plaintext highlighter-rouge">Project</code> menu allows you to access project files and export them, with tools to open an existing file, create a new one, close a project, save a project to various formats, export the map canvas as an image export with the <code class="language-plaintext highlighter-rouge">print layout</code> tools, etc.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Edit</code> menu allows you to edit a layer’s attributes or geometry, as well as to select features from a layer.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">View</code> menu is a very rich menu. Most importantly, this is where you can toggle on and off the various toolbars and panels that are visible in your interface (more on this in the next section). It also allows you to create new map views next to the main map canvas, to interact with the map canvas (zoom, pan, etc), to get access to the <code class="language-plaintext highlighter-rouge">Measure</code> tools and <code class="language-plaintext highlighter-rouge">Statistical Summary</code>, to preview your map as seen by a colourblind person or as printed in B&amp;W, to show or hide layers, and more.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Layer</code> menu allows you to interact with data sources (layers). You will mostly use it to load layers onto your map canvas.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Settings</code> menu: you should not need to use user profiles or any of the options in this menu.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Plugins</code> menu: it contains the <code class="language-plaintext highlighter-rouge">Manage and Install Plugins…</code> tool, which is basically a library in which you can pick new plugins you can add to QGIS. Those are open source tools that developers are sharing with the community. The <code class="language-plaintext highlighter-rouge">Python console</code> allows you to interact with QGIS using Python script. We will use it once this semester, to load basemaps!</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Vector</code> menu contains tools for dealing with vector data: geoprocessing tools, geometry tools, but also analysis, data management and research tools.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Raster</code> menu contains tools for dealing with raster data. You will mostly use the raster calculator, conversion tools and analysis tools.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Processing</code> menu contains shortcuts to the Processing toolbox, your processing history and other functions you won’t need.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">Help</code> menu links to the official QGIS documentation</li>
+</ul>
+
+<p>Other menus may be present if you have downloaded or enabled additional plugins (Mesh, Web, Database), but you won’t need them for this course.</p>
+
+<p> </p>
+
+<h3 id="4-the-toolbars">4. The toolbars</h3>
+
+<p>Toolbars are located below the menu bar.</p>
+
+<p><img src="../../../../docs/assets/images/GUI5.png" width="700" /></p>
+
+<p>They can be moved by clicking the grey dots to the left, and you can rearrange them in the order you find best for your workflows. You can also unpin any toolbar out of the toolbar area, by clicking the grey dots and dragging it out of the top area; I would however advise against this as you might lose track of where your toolbars went.</p>
+
+<p><img src="../../../../docs/assets/images/GUI5bis.png" width="700" /></p>
+
+<p>Very importantly, you can toggle each of the toolbar on and off by going into your menu <code class="language-plaintext highlighter-rouge">View</code> &gt; <code class="language-plaintext highlighter-rouge">Toolbars</code> and ticking or unticking the toolbars you want to show or hide.</p>
+
+<p><img src="../../../../docs/assets/images/GUI6.png" width="700" /></p>
+
+<p> </p>
+
+<h3 id="5-the-panels">5. The panels</h3>
+
+<p>The panels are located to the sides of the map canvas (left and right).</p>
+
+<p><img src="../../../../docs/assets/images/GUI7.png" width="700" /></p>
+
+<p>Similarly to the toolbars, you can toggle each of the panels on and off by going into your menu <code class="language-plaintext highlighter-rouge">View</code> &gt; <code class="language-plaintext highlighter-rouge">Panels</code> and ticking or unticking the toolbars you want to show or hide.</p>
+
+<p><img src="../../../../docs/assets/images/GUI7bis.png" width="700" /></p>
+
+<p>They can be rearranged by dragging the top of a panel and moving it. This may lead to the panel being unpinned from the side and just floating on top of your interface. To pin back to either side, it depends on which version of QGIS you’re working with and which OS. You can try dragging it back into its place until it becomes blue and snaps back, or double clicking the title of that panel.</p>
+
+<p>Sometimes when you snap a panel back where a panel already exists, it will create two tabs. You can click a tab and drag it to reposition it where you want.</p>
+
+<p>There are three very important panels you need to know about:</p>
+
+<p><u>Browser</u>: This panel allows you to navigate in your computer’s file system, and in particular to load data onto your map canvas by simply dragging &amp; dropping it. More info on the <a href="https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/opening_data.html#browser-panel">official documentation</a></p>
+
+<p><img src="../../../../docs/assets/images/Browser.png" width="200" /></p>
+
+<p><u>Layers</u>: This panel displays a list of the layers that are loaded onto your map canvas. From there, you can show to hide any given layer, you can edit the order in which they are layered, and you can access a layer’s properties window.</p>
+
+<p><img src="../../../../docs/assets/images/Layers.png" width="200" /></p>
+
+<p><u>Processing toolbox</u>: The processing toolbox contains all of QGIS algorithms, and a search bar for you to access them.</p>
+
+<p><img src="../../../../docs/assets/images/Processing.png" width="200" /></p>
+
+<p> </p>
+
+<h3 id="6-the-status-bar">6. The status bar</h3>
+
+<p>The status bar contains general information about the map view: the zoom level, the coordinates of where you mouse is, the EPSG of the coordinate reference system your map canvas is set to.</p>
+
+<p><img src="../../../../docs/assets/images/GUI8.png" width="700" /></p>
+
+<p> </p>
+
+<p> </p>
+<h2 id="v-documentation">V. Documentation</h2>
+<p>The QGIS documentation is available at this address: <a href="https://qgis.org/en/docs/index.html">https://qgis.org/en/docs/index.html</a></p>
+
+<p> </p>
+
+<p><strong>Please note:</strong></p>
+
+<ul>
+  <li>
+    <p>This course is taught in English but some of you will have a version of QGIS installed that’s in a different language. You can overwrite the language of your OS to use QGIS in English by going into <code class="language-plaintext highlighter-rouge">Preferences</code> &gt; <code class="language-plaintext highlighter-rouge">Options</code> &gt; <code class="language-plaintext highlighter-rouge">General</code> &gt; <code class="language-plaintext highlighter-rouge">Override system locale</code> and select <code class="language-plaintext highlighter-rouge">English</code>.</p>
+
+    <p><img src="../../../../docs/assets/images/S1-00.png" width="700" /></p>
+  </li>
+  <li>
+    <p>If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing <code class="language-plaintext highlighter-rouge">/en/</code> by <code class="language-plaintext highlighter-rouge">/fr/</code> for French, or <code class="language-plaintext highlighter-rouge">/es/</code> for Spanish, <code class="language-plaintext highlighter-rouge">/zh-Hans/</code> for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html</p>
+  </li>
+</ul>
+
+<p> </p>
+
+<ul>
+  <li>Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you’re using, by changing <code class="language-plaintext highlighter-rouge">/3.16/</code> . For instance from QGIS version 3.16 https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to QGIS version 2.18 https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html</li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+
+<h3 id="next-tutorial-"><strong><a href="https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial2.html">Next Tutorial &gt;</a></strong></h3>
+
+<h3 id="back-to-the-syllabus-"><strong><a href="https://raphaelleroffo.github.io/intro-to-gis/index.html">Back to the syllabus &gt;</a></strong></h3>
+
+</div>
+
+
+<div class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/11/16/intro-tutorial6/">
+            Session 6 - Wrap-up
+            <small>16 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/11/16/intro-tutorial5/">
+            Session 5 - Choropleths & Vector geoprocessing
+            <small>16 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/11/16/intro-tutorial4/">
+            Session 4 - Cartographic design
+            <small>16 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script src='/public/js/script.js'></script>
+  </body>
+</html>

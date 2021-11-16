@@ -1,0 +1,71 @@
+I"�<p>I really enjoy teaching and sharing learnings with specialist and non-specialist audiences alike; it certainly is a different exercise and challenge !</p>
+
+<p> </p>
+
+<h2 id="public-speaking">Public speaking</h2>
+
+<h3 id="dealing-with-geospatial-data-datakind-uk">Dealing with Geospatial data, DataKind UK</h3>
+
+<p>I’m a DataKind UK volunteer, and I gave this presentation to other volunteers and charity partners to give them a taste of what it’s like to work with geospatial data. It’s a presentation that’s aimed at data scientists and data analysts who may not be familiar with the overall workflow and tools of geospatial analysis. There is no recording but you can find the slides <a href="https://raw.githubusercontent.com/raphaelleroffo/raphaelleroffo.github.io/main/docs/assets/pdf/Dealing%20with%20Geospatial%20Data%20-%20DataKind%20presentation%2004_05_2020.pdf">here</a>.</p>
+
+<p> </p>
+
+<h3 id="dataday-mexico-mexico-city-2020">DataDay Mexico, Mexico City 2020</h3>
+
+<p><a href="https://sg.com.mx/datadays/">DataDays Mexico</a> is a data conference that tries to adopt a healthy dose of scepticism into the discussion of data science projects and products, and encourages speakers to also speak about things that did not always work as well as they wished for. My presentation was a reflection on my MSc dissertation project, and the big lessons it taught me in terms of using the tools of data science in a domain where I have limited expertise. It’s called: <a href="https://raw.githubusercontent.com/raphaelleroffo/raphaelleroffo.github.io/main/docs/assets/pdf/DataDay%20Mexico%202020-08-06.pdf">“Lessons learned working with real-life data in resource constrained settings, with limited domain knowledge”</a>.</p>
+
+<p> </p>
+
+<iframe width="797" height="448" src="https://www.youtube.com/embed/UduySECADNY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p> </p>
+
+<h3 id="gis-r-uk-london-2020">GIS R UK, London 2020</h3>
+
+<p>The <a href="http://london.gisruk.org/">GIS R UK conference</a> is a conference that discusses the use of the statistical software R in carrying out geospatial analysis. I submitted a <a href="http://london.gisruk.org/gisruk2020_proceedings/GISRUK2020_paper_20.pdf">paper that was basically a shorter version of my MSc dissertation</a>, called <em>“Mapping risks of faecal contamination of shallow groundwater in Dakar, Senegal: an evaluation of culture- based methods and a real-time technique using tryptophan-like fluorescence”</em> . I was also invited to give a <a href="https://raw.githubusercontent.com/raphaelleroffo/raphaelleroffo.github.io/main/docs/assets/pdf/GISRUK_Presentation.pdf">presentation</a>, but unfortunately the recording isn’t available.</p>
+
+<p> </p>
+
+<h3 id="other-public-speaking">Other public speaking:</h3>
+
+<ul>
+  <li>
+    <p><a href="https://sustainabledevelopment.un.org/content/documents/9349Asia%20Pacific%20Meetings%20Engagement%20Report.pdf">Asia Pacific Youth Assembly (APUFY)</a>, Jakarta 2015, UNDP panelist: “Challenges to Democratic Youth Engagement in East Asia”</p>
+  </li>
+  <li>
+    <p><a href="http://www.thinktank-resources.com/en/events/seminars/affordablt-water-for-all-in-developing-countries">Colloque (Re)sources: L’eau abordable pour tous dans les pays en développement</a>, Paris 2014: “Expérience du tarif social de l’eau à Bogota et à Santiago du Chili”</p>
+  </li>
+</ul>
+
+<p>  
+ </p>
+
+<h2 id="publications">Publications</h2>
+
+<ul>
+  <li>
+    <p>Sorensen, James PR, et al. <a href="https://www.sciencedirect.com/science/article/pii/S0048969720329363">“In-situ fluorescence spectroscopy indicates total bacterial abundance and dissolved organic carbon.”</a> Science of the Total Environment 738 (2020): 139419., Sorensen et al., Science of The Total Environment, 2020.</p>
+  </li>
+  <li>
+    <p>Sorensen, James PR, et al. <a href="https://www.nature.com/articles/s41598-020-72258-2">“Tryptophan-like and humic-like fluorophores are extracellular in groundwater: implications as real-time faecal indicators.”</a> Scientific reports 10.1 (2020): 1-9</p>
+  </li>
+  <li>
+    <p>Roffo, R., (Re)sources. <em>Eau, énergie et autres services essentiels, plaidoyer pour une approche intégrée</em>. Editions Descartes &amp; Cie, 2018.</p>
+
+    <p><em>For this book, I interviewed a dozen of experts from the (Re)sources think tank to try and provide a broad overview of the water and energy accessibility landscape in 2018 and ideas about the way forward. The preface is by Kofi Annan. You can find copies online (<a href="https://www.amazon.com/Eau-%C3%A9nergie-autres-services-essentiels/dp/2844463258">Amazon</a>, <a href="https://www.librairiedalloz.fr/livre/9782844463258-eau-energie-et-autres-services-essentiels-plaidoyer-pour-une-approche-integree-collectif/">Dalloz</a>, etc.)</em></p>
+  </li>
+  <li>
+    <p>UNDP Strategy for Urban Programming: Asia and the Pacific, UNDP, 2015.</p>
+  </li>
+  <li>
+    <p>Auby, J. B., Le Gaudu, J., Roffo, R., del Galy, A. S., &amp; Vitale, T. <a href="https://www.researchgate.net/publication/316650019_Acces_a_l'eau_potable_dans_les_pays_en_developpement_Les_composantes_des_systemes_tarifaires_a_visee_sociale_et_leurs_reels_impacts_sur_les_populations_cibles_Comment_mettre_en_place_un_veritable_tari"><em>Accès à l’eau potable dans les pays en développement : Les composantes des systèmes tarifaires à visée sociale et leurs réels impacts sur les populations cibles. Comment mettre en place un véritable tarif social ?</em></a> Sciences Po, 2013.</p>
+  </li>
+  <li>
+    <p>Le Gaudu, J., Roffo, R., del Galy, A. S., &amp; Vitale, T. <em>Safe and continuous Water Indicators</em>, Sciences Po, Veolia Water India, 2013.</p>
+  </li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+:ET
