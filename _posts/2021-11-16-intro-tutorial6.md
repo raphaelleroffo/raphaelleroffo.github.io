@@ -3,8 +3,6 @@ layout: post
 title: Session 6 - Wrap-up
 --- 
 
-# Session 6: 
-
 **Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
 
 Lecturer: Raphaëlle Roffo
@@ -50,7 +48,7 @@ Data sources:
 
 ## III. Joining the census data to the London LSOA boundaries
 
-In the geopackage, open the `Session6-Start` file. On your Layers list you can find the LSOA boundaries (they are the smallest census unit, like the IRIS zones in France), the census table for London at LSOA level, the flood risk zones and the Greater London boundaries. You can start a new QGIS project to save your progression using your top menu `Project` > `Save to...` > `Geopackage` and in your Session6 geopackage, saving for instance as `Session6-Progress`. This will allow you to go back to the start if you encounter too many problems, but also to pick up from where you left off if you're interrupted while doing this tutorial.
+In the geopackage, open the `Session6-Start` project file. On your Layers list you can find the LSOA boundaries (they are the smallest census unit, like the IRIS zones in France), the census table for London at LSOA level, the flood risk zones and the Greater London boundaries. You can start a new QGIS project to save your progression using your top menu `Project` > `Save to...` > `Geopackage` and in your Session6 geopackage, saving for instance as `Session6-Progress`. This will allow you to go back to a clean version of `Session6-Start` if you encounter too many problems, but also to pick up from where you left off using `Session6-Progress` if you're interrupted while doing this tutorial. Remember to save your changes often using the flapdisk icon.
 
 <img src="../../../../docs/assets/images/S6-01.png" width="700">
 
@@ -288,9 +286,6 @@ Your map is ready for you to explore! Use the Zoom to look into specific neighbo
 &nbsp;
 
 **Congratulations, you have now completed the *Introduction to GIS* course. Hopefully, this course and series of tutorials have picked your interest and you're now ready to go further and start building more advanced analysis workflows. The *Advanced GIS* course will give you some new tools and methods to go further in your GIS practise - see you then!**
-
-
-<img src="../../../../docs/assets/images/S6-.png" width="700">
 
 
 ### **[Back to the syllabus >](../../../..//tuto1-intro-to-gis/)**
