@@ -396,6 +396,6 @@ You can find more information on Spatial bookmarks in the [Documentation](https:
 
 &nbsp; 
 
-### **[Next Tutorial >](_posts/2021-11-16-intro-tutorial5.md)**
+### **[Next Tutorial >](../intro-tutorial5/)**
 
-### **[Back to the syllabus >](../_site/tuto1-intro-to-gis/index.html)**
+### **[Back to the syllabus >](../../../..//tuto1-intro-to-gis/)**

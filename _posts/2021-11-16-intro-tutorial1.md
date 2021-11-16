@@ -179,6 +179,6 @@ The QGIS documentation is available at this address: [https://qgis.org/en/docs/i
 
 &nbsp; 
 
-### **[Next Tutorial >](_posts/2021-11-16-intro-tutorial2.md)**
+### **[Next Tutorial >](../intro-tutorial2/)**
 
-### **[Back to the syllabus >](../_site/tuto1-intro-to-gis/index.html)**
+### **[Back to the syllabus >](../../../..//tuto1-intro-to-gis/)**

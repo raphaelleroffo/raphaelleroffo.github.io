@@ -525,6 +525,6 @@ That's it, you now have successfully exported your map!
 &nbsp; 
 
 
-### **[Next Tutorial >](_posts/2021-11-16-intro-tutorial6.md)**
+### **[Next Tutorial >](../intro-tutorial6/)**
 
-### **[Back to the syllabus >](../_site/tuto1-intro-to-gis/index.html)**
+### **[Back to the syllabus >](../../../..//tuto1-intro-to-gis/)**
