@@ -134,6 +134,9 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 &nbsp; 
 
+&nbsp; 
+
+
 ## Resources
 
 - Longley, P.A., Goodchild, M.F., Maguire, D.J. and Rhind, D.W., 2005. Geographic information systems and science. John Wiley & Sons.
