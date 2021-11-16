@@ -28,9 +28,8 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 ## Sessions
 
 
-### [Session 1: What is GIS?](https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tutorial1/)
-https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tutorial1/
-[test](_posts/2021-11-16-intro-tutorial1.md)
+### [Session 1: What is GIS?](_posts/2021-11-16-intro-tutorial1.md)
+
 
 *[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)*
 
@@ -48,7 +47,7 @@ https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tuto
 
 &nbsp; 
 
-### [Session 2: Sourcing and loading data into GIS](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial2.html)
+### [Session 2: Sourcing and loading data into GIS](_posts/2021-11-16-intro-tutorial2.md)
 
 *[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Intro%20to%20GIS%20-%20session%202.pdf)*
 - *Navigating data types (vector and raster) and common data formats (.shp, .geojson, .csv, PostGIS, etc)*
@@ -65,7 +64,7 @@ https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tuto
 
 &nbsp; 
 
-### [Session 3: Working with vector data: the attribute table](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial3.html)
+### [Session 3: Working with vector data: the attribute table](_posts/2021-11-16-intro-tutorial3.md)
 
 *[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session3/Intro%20to%20GIS%20-%20session%203.pdf)*
 
@@ -86,7 +85,7 @@ https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tuto
 
 &nbsp; 
 
-### [Session 4: Cartographic design](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)
+### [Session 4: Cartographic design](_posts/2021-11-16-intro-tutorial4.md)
 
 *[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Intro%20to%20GIS%20-%20session%204.pdf)*
 
@@ -106,7 +105,7 @@ https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tuto
 
 &nbsp; 
 
-### [Session 5: Working with vector data: geoprocessing](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial5.html)
+### [Session 5: Working with vector data: geoprocessing](_posts/2021-11-16-intro-tutorial5.md)
 
 *[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session5/Intro%20to%20GIS%20-%20session%205.pdf)*
 
@@ -125,7 +124,7 @@ https://raphaelleroffo.github.io/raphaelle-roffo.github.io/2021/11/16/intro-tuto
 
 &nbsp; 
 
-### [Session 6: course wrap-up](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial6.html)
+### [Session 6: course wrap-up](_posts/2021-11-16-intro-tutorial6.md)
 
 *This final session is designed as a Q&A session. Students should have designed a methodology for the final coursework and are encouraged to prepare specific questions. Students will be able to select topics to be revisited in class, or to hear about more advanced GIS techniques if they wish.*
 

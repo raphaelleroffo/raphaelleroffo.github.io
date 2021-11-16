@@ -13,8 +13,8 @@ I have been lecturing at the Sciences Po Urban School since September 2020. I te
 <table>
   <thead>
     <tr>
-      <th><a href="https://raphaelleroffo.github.io/intro-to-gis/">Introduction to GIS</a> </th>
-      <th> &nbsp; &nbsp; <a href="https://raphaelleroffo.github.io/advanced-gis/">Advanced GIS</a> &nbsp; &nbsp; </th>
+      <th><a href="https://raphaelleroffo.github.io//tuto1-intro-to-gis/">Introduction to GIS</a> </th>
+      <th> &nbsp; &nbsp; <a href="https://raphaelleroffo.github.io//tuto2-advanced-gis/">Advanced GIS</a> &nbsp; &nbsp; </th>
     </tr>
   </thead>
 </table>
