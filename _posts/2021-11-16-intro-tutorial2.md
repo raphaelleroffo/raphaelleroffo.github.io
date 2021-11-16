@@ -299,6 +299,6 @@ The QGIS documentation is available at this address: [https://qgis.org/en/docs/i
 
 &nbsp; 
 
-### **[Next Tutorial >](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial3.html)**
+### **[Next Tutorial >](_posts/2021-11-16-intro-tutorial3.md)**
 
-### **[Back to the syllabus >](https://raphaelleroffo.github.io/intro-to-gis/index.html)**
+### **[Back to the syllabus >](../_site/tuto1-intro-to-gis/index.html)**

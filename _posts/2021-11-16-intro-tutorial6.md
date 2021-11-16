@@ -32,4 +32,4 @@ Lecturer: Raphaëlle Roffo
 <img src="../../../../docs/assets/images/S6-.png" width="700">
 
 
-### **[Back to the syllabus >](https://raphaelleroffo.github.io/intro-to-gis/index.html)**
+### **[Back to the syllabus >](../_site/tuto1-intro-to-gis/index.html)**
