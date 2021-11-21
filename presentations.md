@@ -3,6 +3,7 @@ layout: page
 title: Public speaking and publications
 ---
 
+&nbsp;
 
 I really enjoy teaching and sharing learnings with specialist and non-specialist audiences alike; it certainly is a different exercise and challenge !
 

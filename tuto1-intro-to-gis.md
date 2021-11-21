@@ -3,6 +3,7 @@ layout: page
 title: Tutorials - Intro to GIS
 ---
 
+&nbsp;
 
 **Sciences Po Urban School, GETEC Masters, Fall semester 2021-2022**
 
