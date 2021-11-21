@@ -36,19 +36,21 @@ What are the demographic characteristics of these areas (age, education, employm
 
 ### Data:
 
-Please download all the data in the [Session 6 geopackage](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session6/Session6-London.gpkg). Make sure the CRS is set to `EPSG:27700` and try to use a basemap of your choice from the `XYZ Tiles` section of your `Browser` panel (go back to the Session 3 tutorial for more information on how to load basemaps). I'm using `CartoDb Positron`.
+Please download all the data in the [Session 6 geopackage](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session6/Session6-London.gpkg.zip) and unzip it.
 
 Data sources:
 
-- **flood_zones:** Flood Risk Zones: https://data.london.gov.uk/dataset/flood-risk-zones 
-- **census:** Census data for London https://data.london.gov.uk/dataset/lsoa-atlas It’s a csv file (not geographic) and comes at the LSOA (Lower Super Output area) level…
-- ... so we also need the LSOA geographic boundaries **lsoa**: https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-boundaries-ew-bfe-1 This LSOA dataset is national so... 
-- **greater_london:** ... we need the Greater London boundaries to only keep the LSOAs we need https://data.london.gov.uk/dataset/inner-and-outer-london-boundaries-london-plan-consultation-2009 
+- [**flood_zones:**](https://data.london.gov.uk/dataset/flood-risk-zones) Flood Risk Zones. 
+- [**census:**](https://data.london.gov.uk/dataset/lsoa-atlas) Census data for London. It’s a csv file (not geographic) and comes at the LSOA (Lower Super Output area; they are the smallest census unit, like the IRIS zones in France) level…
+- ... so we also need the LSOA geographic boundaries: the [**lsoa**](https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-boundaries-full-extent-bfe-ew-v3/explore). And because this LSOA dataset is national... 
+- ... we need the [**Greater London boundaries**](https://data.london.gov.uk/dataset/inner-and-outer-london-boundaries-london-plan-consultation-2009 ), to only keep the LSOAs we need.
 
 
 ## III. Joining the census data to the London LSOA boundaries
 
-In the geopackage, open the `Session6-Start` project file. On your Layers list you can find the LSOA boundaries (they are the smallest census unit, like the IRIS zones in France), the census table for London at LSOA level, the flood risk zones and the Greater London boundaries. You can start a new QGIS project to save your progression using your top menu `Project` > `Save to...` > `Geopackage` and in your Session6 geopackage, saving for instance as `Session6-Progress`. This will allow you to go back to a clean version of `Session6-Start` if you encounter too many problems, but also to pick up from where you left off using `Session6-Progress` if you're interrupted while doing this tutorial. Remember to save your changes often using the flapdisk icon.
+In the geopackage, open the `Session6-Start` file. Because the LSOA layer is too heavy, I could not add it onto the geopackage. Go [**download it as a shapefile**](https://geoportal.statistics.gov.uk/datasets/lower-layer-super-output-areas-december-2011-boundaries-full-extent-bfe-ew-v3/explore) from the ONS Geoportal.
+
+Now, on your Layers list, you should have the LSOA boundaries, the census table for London at LSOA level, the flood risk zones and the Greater London boundaries.  Make sure the CRS is set to `EPSG:27700`. You can start a new QGIS project to save your progression using your top menu `Project` > `Save to...` > `Geopackage` and in your Session6 geopackage, saving for instance as `Session6-Progress`. This will allow you to go back to the start if you encounter too many problems, but also to pick up from where you left off if you're interrupted while doing this tutorial. Remember to save your changes often using the flapdisk icon.
 
 <img src="../../../../docs/assets/images/S6-01.png" width="700">
 
