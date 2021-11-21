@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Dissertation – Mapping risks of faecal contamination of shallow groundwater in Dakar, Senegal
+category: data-science
+description: As part of my MSc dissertation, I carried out two months of fieldwork in Dakar, Senegal, collecting and analysing close to a hundred groundwater samples using two different methods for detecting faecal contamination.
 ---
 
-&nbsp; 
 
 I was incredibly lucky to join the AfriWatSan project as part of my MSc dissertation, and to carry out 2 months of fieldwork in Dakar, Senegal, collecting and analysing close to a hundred groundwater samples. This poster summarizes my research and results.
 

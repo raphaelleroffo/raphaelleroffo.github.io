@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Session 4 - Cartographic design
+category: teaching
 ---
 
 **Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**

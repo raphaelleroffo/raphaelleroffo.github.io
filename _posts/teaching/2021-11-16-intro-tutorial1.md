@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Session 1 - What is GIS?
+category: teaching
 ---
 
 
