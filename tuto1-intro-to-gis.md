@@ -131,7 +131,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 *Tutorial:*
 
-- *Carrying out a full analysis on expore to floods in London*
+- *Carrying out a full visualisation exercise of exposure to flood risk in London*
 
 &nbsp; 
 
