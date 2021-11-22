@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  Session 3 - Working with vector data & the attribute table
-category: teaching
 ---
 
 **Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
