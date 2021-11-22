@@ -11,7 +11,7 @@ title: Data Science Portfolio
   <ul>
     {% for data-science in site.categories.data-science %}
       <li>
-        <a href="">{{data-science.title}}</a>
+        <a href="{{data-science.url}}">{{data-science.title}}</a>
         <p>{{data-science.description}}</p>
       </li>
     {% endfor %}

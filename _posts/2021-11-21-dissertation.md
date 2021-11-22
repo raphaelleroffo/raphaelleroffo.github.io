@@ -10,7 +10,7 @@ I was incredibly lucky to join the AfriWatSan project as part of my MSc disserta
 
 &nbsp; 
 
-[<img src="../../../../docs/assets/images/dissertation.png">](https://raphaelleroffo.github.io/docs/assets/images/dissertation.png)
+[<img src="../../../../../docs/assets/images/dissertation.png">](../../../../../docs/assets/images/dissertation.png)
 
 &nbsp; 
 
