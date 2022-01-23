@@ -5,7 +5,7 @@ title: Tutorials - Intro to GIS
 
 &nbsp;
 
-**Sciences Po Urban School, GETEC Masters, Fall semester 2021-2022**
+**Sciences Po Urban School, GLM Masters, Spring semester 2021-2022**
 
 **Lecturer: Raphaëlle Roffo**
 

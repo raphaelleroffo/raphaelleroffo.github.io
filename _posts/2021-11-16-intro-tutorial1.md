@@ -4,7 +4,7 @@ title: Session 1 - What is GIS?
 ---
 
 
-**Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
+**Introduction to GIS  ·  Sciences Po Urban School**
 
 Lecturer: Raphaëlle Roffo
 

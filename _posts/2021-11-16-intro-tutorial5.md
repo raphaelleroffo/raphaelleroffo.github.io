@@ -3,7 +3,7 @@ layout: post
 title:  Session 5 - Choropleths & Vector geoprocessing
 --- 
 
-**Introduction to GIS  ·  Sciences Po Urban School, GETEC Masters  ·  Fall semester 2021-2022**
+**Introduction to GIS  ·  Sciences Po Urban School**
 
 Lecturer: Raphaëlle Roffo
 
