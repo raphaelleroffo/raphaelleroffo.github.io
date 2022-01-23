@@ -17,15 +17,18 @@ This course is open sourced under an MIT license. I hope you enjoy learning GIS 
 
 &nbsp; 
 ## Overview
+
 It is estimated that 80-90% of all data contain some spatial component (Carl & Hane, 1992). Geographic Information Systems (GIS) are an essential tool to manipulate this data, draw insights and produce visualisations to inform decision-making. This Introduction course aims to familiarise students with the field of Geographic Information Science and with carrying out geospatial analysis using the open-source software QGIS. At the end of the cours, students will be able to source data from open data providers, understand commonly used spatial data structures, and develop start-to-end GIS workflows.
 
 &nbsp; 
 
 ## Format
+
 6 sessions of 2 hours. The first session will be a lecture covering GIS as a field of research, typical workflows, data sources and collection methods. Subsequent sessions will follow a more interactive format centred around tutorials and flipped classroom methods.
 
 &nbsp; 
 ## Coursework
+
 Working in groups of 2 or 3, students will be provided a dataset to explore and will be tasked with carrying out simple geospatial analysis and visualisation. They will produce a technical report detailing the methodology they adopted and the insights they can draw from this data.
 
 
@@ -96,7 +99,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 - *Kepler.gl tutorial: quick off-the-shelf data visualisation*
 - *Styling a map: basemap choice, preferred symbologies, class breaks definition, scale*
-- *Exporting a map: setting up a layout and adding map elements (north arrow, scale bar, legend, title etc.) 
+- *Exporting a map: setting up a layout and adding map elements (north arrow, scale bar, legend, title etc.)* 
 
 *Tutorial:*
 
