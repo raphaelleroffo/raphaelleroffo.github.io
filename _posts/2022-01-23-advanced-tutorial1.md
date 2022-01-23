@@ -51,27 +51,22 @@ We are interested in London. By default, the map is centered on Siouxville in th
 
 ![](../../../../docs/assets/images/adv-s1.png)
 
-![img](../docs/assets/images/adv-s1.png)
-
-hello!
-
-<img src="../../../../docs/assets/images/adv-s1.png" width="700">
 
 &nbsp; 
 
+Click on `Use map`; when you zoom out, you'll notice it has set four pins to determine a bounding box around your previous zoom level. This determines the zone in which you will be looking for data. Click `Results` 
 
+![](../../../../docs/assets/images/adv-s2.png)
 
+In the bottom set of parameters, select dates 01-01-2022 to 23-01-2022. You can actually retrieve Sentinel data all the way back to November 2015 when it was first launched.
 
+In the next tab `Cloud Cover`, set the slider to only keep images with a 0-30% cloud cover range, and exclude images with range unknown.
 
+![](../../../../docs/assets/images/adv-s3.png)
 
+Next, press `Data Sets`. On the new panel, select Sentinel > Sentinel-2 data then press `Results`.
 
-
-
-
-
-
-
-
+![](../../../../docs/assets/images/adv-s4.png)
 
 
 
