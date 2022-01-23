@@ -49,6 +49,11 @@ Visit [https://ers.cr.usgs.gov/login](hhttps://ers.cr.usgs.gov/login) and create
 
 We are interested in London. By default, the map is centered on Siouxville in the US, but scroll out and navigate to the UK, then zoom onto London, roughly to this extent:
 
+![](../../../../docs/assets/images/adv-s1.png)
+
+![img](../docs/assets/images/adv-s1.png)
+
+hello!
 
 <img src="../../../../docs/assets/images/adv-s1.png" width="700">
 
