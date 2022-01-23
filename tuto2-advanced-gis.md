@@ -104,7 +104,8 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 *[Class Content:](.)*
 
 - *Building a multi criteria analysis using GIS*
-- *Weightung criteria and working with scores*
+- *Weighting criteria and working with scores*
+- *Advanced attribute table operations*
 
 *Tutorial:*
 
@@ -118,7 +119,8 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 *[Class Content:](.)*
 
 - *Building a multi criteria analysis using GIS*
-- *Weightung criteria and working with scores*
+- *Weighting criteria and working with scores*
+- *Advanced attribute table operations*
 
 *Tutorial:*
 

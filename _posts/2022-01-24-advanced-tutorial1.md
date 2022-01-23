@@ -12,7 +12,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 1 Overview
 
-**Download the [slides](../docs/assets/pdf/advanced-session1-getec2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/advanced-session1-getec2022.pdf)**
 
 - *Course overview and objectives*
 - *Raster data in GIS*
