@@ -12,8 +12,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 1 Overview
 
-**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)**
-[Slides](https://raphaelleroffo.github.io/docs/assets/pdf/intro-session1-glm2022.pdf)
+**Download the [slides](https://raphaelleroffo.github.io/docs/assets/pdf/intro-session1-glm2022.pdf)**
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*
