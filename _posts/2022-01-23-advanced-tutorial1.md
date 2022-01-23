@@ -30,9 +30,46 @@ Lecturer: Raphaëlle Roffo
 
 &nbsp; 
 
-## III. Sourcing the data
+## III. The NDVI
 
-Visit [https://qgis.org/en/site/forusers/download.html](https://qgis.org/en/site/forusers/download.html)
+The Normalized Difference Vegetation Index (NDVI) is a widely used index that can be computed from remote sensing data, allowing researchers to monitor vegetation health and land use remotely. Put simply, every surface on the planet absorbs and reflects certain ranges from the electromagnetic spectrum. Plants appear green to the human eye because the wavelengths that correspond to the colour green bounce off the chlorophyll pigments while the colour red is absorbed. So we know that **a healthy plant will reflect absorb red light**.
+
+We also know that during photosynthesis, plants develop more cell structures that happen to reflect near-infrared (NIR) waves. So **when a plant is growing and healthy, it will also reflect more NIR.**
+
+The NDVI is simply  a way of observing the relationship between the amount of red light and NIR waves captured by remote sensors such as satellites. It is calculated using this formula:
+
+**NDVI = (NIR-Red) / (NIR+Red)**
+
+
+Now, using QGIS, we are able to 
+
+## IV. Sourcing the data
+
+Visit [https://ers.cr.usgs.gov/login](hhttps://ers.cr.usgs.gov/login) and create a new account. Once you've successfully created an account and are logged in, go to the [Earth Explorer page](https://earthexplorer.usgs.gov). This is one of many platforms from which you can download public satellite data, for free.
+
+We are interested in London. By default, the map is centered on Siouxville in the US, but scroll out and navigate to the UK, then zoom onto London, roughly to this extent:
+
+
+<img src="../../../../docs/assets/images/adv-s1.png" width="700">
+
+&nbsp; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Download the long-term release (most stable) version for your OS. This is a stable and relatively bug-free version as opposed to the latest release in which new features were introduced but you may find some bugs.
 

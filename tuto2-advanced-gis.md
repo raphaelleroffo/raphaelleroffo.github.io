@@ -46,7 +46,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 ## Sessions
 
 
-### [Session 1: Introduction and Raster Analysis](_posts/2022-01-24-advanced-tutorial1.md)
+### [Session 1: Introduction and Raster Analysis](_posts/2022-01-23-advanced-tutorial1.md)
 
 
 *[Class Content:](docs/assets/pdf/advanced-session1-getec2022.pdf)*
@@ -61,7 +61,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 &nbsp; 
 
-### [Session 2: Digitization and georeferencing of raster data](_posts/2022-01-24-advanced-tutorial2.md)
+### [Session 2: Digitization and georeferencing of raster data](_posts/2022-01-23-advanced-tutorial2.md)
 
 *[Class Content:](.)*
 - *Digitization*
@@ -74,7 +74,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 &nbsp; 
 
-### [Session 3: Bivariate choropleths](_posts/2022-01-24-advanced-tutorial3.md)
+### [Session 3: Bivariate choropleths](_posts/2022-01-23-advanced-tutorial3.md)
 
 *[Class Content:](.)*
 
@@ -86,7 +86,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 &nbsp; 
 
-### [Session 4: Cartograms](_posts/2022-01-24-advanced-tutorial4.md)
+### [Session 4: Cartograms](_posts/2022-01-23-advanced-tutorial4.md)
 
 *[Class Content:](.)*
 
@@ -99,7 +99,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 &nbsp; 
 
-### [Session 5: Weighted overlays and MCDM](_posts/2022-01-24-advanced-tutorial5.md)
+### [Session 5: Weighted overlays and MCDM](_posts/2022-01-23-advanced-tutorial5.md)
 
 *[Class Content:](.)*
 
@@ -114,7 +114,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 &nbsp; 
 
-### [Session 6: Weighted overlays - continued](_posts/2022-01-24-advanced-tutorial6.md)
+### [Session 6: Weighted overlays - continued](_posts/2022-01-23-advanced-tutorial6.md)
 
 *[Class Content:](.)*
 
