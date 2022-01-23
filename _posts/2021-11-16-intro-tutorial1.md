@@ -13,6 +13,7 @@ Lecturer: Raphaëlle Roffo
 ## I. Session 1 Overview
 
 **Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)**
+[Slides](https://raphaelleroffo.github.io/docs/assets/pdf/intro-session1-glm2022.pdf)
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*
@@ -169,11 +170,11 @@ The QGIS documentation is available at this address: [https://qgis.org/en/docs/i
   
     <img src="../../../../docs/assets/images/S1-00.png" width="700">
    
-- If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
+- If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: [https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html) to French: [https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html)
 
 &nbsp; 
 
-- Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to QGIS version 2.18 https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html 
+- Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 [https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html) to QGIS version 2.18 [https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html) 
 
 &nbsp; 
 

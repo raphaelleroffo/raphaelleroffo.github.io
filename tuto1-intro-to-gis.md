@@ -5,9 +5,13 @@ title: Tutorials - Intro to GIS
 
 &nbsp;
 
-**Sciences Po Urban School, GLM Masters, Spring semester 2021-2022**
+**Sciences Po Urban School**
 
-**Lecturer: Raphaëlle Roffo**
+* GETEC Masters - Fall Semester 2020
+* GETEC Masters - Fall Semester 2021
+* GLM Masters - Spring Semester 2022
+
+
 
 This course is open sourced under an MIT license. I hope you enjoy learning GIS and exploring the QGIS software! You are also more than welcome to use this material for teaching; however if you do so, please make sure to credit my work :)
 
@@ -32,7 +36,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 ### [Session 1: What is GIS?](_posts/2021-11-16-intro-tutorial1.md)
 
 
-*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session1/Intro%20to%20GIS%20-%20session%201.pdf)*
+*[Class Content:](https://raphaelleroffo.github.io/docs/assets/pdf/intro-session1-glm2022.pdf)*
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*

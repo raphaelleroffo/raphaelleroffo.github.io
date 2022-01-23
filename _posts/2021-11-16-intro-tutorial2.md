@@ -37,7 +37,7 @@ In this session we'll be downloading data from an open data portal. If you're ru
 
 ## III. Downloading data from the Barcelona open data portal
 
-Today we'll look at the city of Barcelona and its green mobility infrastructure. Luckily, an open data portal is available for you to search for data. Go to https://opendata-ajuntament.barcelona.cat/data/en/dataset .
+Today we'll look at the city of Barcelona and its green mobility infrastructure. Luckily, an open data portal is available for you to search for data. Go to [https://opendata-ajuntament.barcelona.cat/data/en/dataset](https://opendata-ajuntament.barcelona.cat/data/en/dataset) .
 
 On the side panel, you can select the data formats you're interested in. Here, these could be SHP (shapefiles), GeoJSON and GPKG (geopackages). However there is a bug on this portal as you can't select multiple formats at once ; if you select GeoJSON and SHP it will look for datasets that have both GeoJSON *and* SHP formats available. Instead, you have to look at each format one by one. In this tutorial we'll stick to SHP as it's the most widely available format (23 datasets available) and in fact datasets available as GeoJSON are also available as SHP.
 
@@ -49,7 +49,7 @@ Now you see a list of various datasets. We will be interested in datasets relate
 
 **These are the datasets we will be working with:**
 
-- **Zones 30** (cars limited to 30km/h speed) https://opendata-ajuntament.barcelona.cat/data/en/dataset/zones30-carrers 
+- **Zones 30** (cars limited to 30km/h speed) [https://opendata-ajuntament.barcelona.cat/data/en/dataset/zones30-carrers](https://opendata-ajuntament.barcelona.cat/data/en/dataset/zones30-carrers) 
   
   
 
@@ -67,14 +67,14 @@ Now you see a list of various datasets. We will be interested in datasets relate
 
 &nbsp; 
 
-- **Cycle paths** : https://opendata-ajuntament.barcelona.cat/data/en/dataset/vies-ciclables
+- **Cycle paths** : [https://opendata-ajuntament.barcelona.cat/data/en/dataset/vies-ciclables](https://opendata-ajuntament.barcelona.cat/data/en/dataset/vies-ciclables)
   
   *Download the 2021_2T zip file:*
 
   <img src="../../../../docs/assets/images/S2-02.png" width="700">
 
 
-- **Bike corridors** https://opendata-ajuntament.barcelona.cat/data/en/dataset/corredors-bici-bcn
+- **Bike corridors** [https://opendata-ajuntament.barcelona.cat/data/en/dataset/corredors-bici-bcn](https://opendata-ajuntament.barcelona.cat/data/en/dataset/corredors-bici-bcn)
   
   *Download the zip file for T2.*
   
@@ -289,11 +289,11 @@ The QGIS documentation is available at this address: [https://qgis.org/en/docs/i
   
     <img src="../../../../docs/assets/images/S1-00.png" width="700">
    
-- If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to French: https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html
+- If you are trying to understand how a function translates into that language, at any time when navigating the documentation you can change the language of the page directly in the url (by replacing `/en/` by `/fr/` for French, or `/es/` for Spanish, `/zh-Hans/` for Mandarin Chinese etc.): For instance to go from English: [https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html) to French: [https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/3.16/fr/docs/user_manual/introduction/qgis_gui.html)
 
 &nbsp; 
 
-- Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html to QGIS version 2.18 https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html 
+- Similarly, you might have a version installed that is not 3.16 ; you can also edit the version directly in the URL to match the release you're using, by changing `/3.16/` . For instance from QGIS version 3.16 [https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_gui.html) to QGIS version 2.18 [https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html](https://docs.qgis.org/2.18/en/docs/user_manual/introduction/qgis_gui.html) 
 
 &nbsp; 
 
