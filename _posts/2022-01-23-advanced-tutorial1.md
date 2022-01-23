@@ -66,10 +66,10 @@ In the next tab `Cloud Cover`, set the slider to only keep images with a 0-30% c
 
 Next, press `Data Sets`. On the new panel, select Sentinel > Sentinel-2 data then press `Results`.
 
-![](../../../../docs/assets/images/adv-s4.png)
+<img src="../../../../docs/assets/images/adv-s4.png" width="700">
 
 
-
+Note that the download is launched from a pop-up window. If nothing happens after you click `Download`, your browser might be blocking the pop-up - 
 
 Download the long-term release (most stable) version for your OS. This is a stable and relatively bug-free version as opposed to the latest release in which new features were introduced but you may find some bugs.
 
