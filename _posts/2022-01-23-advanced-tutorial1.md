@@ -41,7 +41,7 @@ The NDVI is simply  a way of observing the relationship between the amount of re
 **NDVI = (NIR-Red) / (NIR+Red)**
 
 
-Now, using QGIS, we are able to calculate this ratio at the level of each pixel, using 
+Now, using QGIS, we are able to calculate this ratio at the level of each pixel, using the two bands that map to the colour Red and the near-infrared wavelengths.
 
 ## IV. Sourcing the data
 
