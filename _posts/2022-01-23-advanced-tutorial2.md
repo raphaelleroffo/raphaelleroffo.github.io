@@ -182,7 +182,8 @@ Explore the angles of your image, turn your layer on and off to see whether your
 ## V. Digitizing
 
 
-As a final step, let's illustrate
+As a final step, let's illustrate how you can create a vector layer uding the digitizing toolbox. Let's imagine you want to create a dataset of the boats that were present on the Thames at the time the picture was taken. 
+
 ![](../../../../docs/assets/images/adv2-18.png)
 
 &nbsp; 
