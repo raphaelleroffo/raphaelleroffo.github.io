@@ -184,6 +184,13 @@ Explore the angles of your image, turn your layer on and off to see whether your
 
 As a final step, let's illustrate how you can create a vector layer uding the digitizing toolbox. Let's imagine you want to create a dataset of the boats that were present on the Thames at the time the picture was taken. 
 
+Navigate to the coordinates (-8906,6710902) to find the large boat in the London Bridge area. In your top menu, click Layer > `Create new Geopackage layer`. Create a database location for your geopackage (I called mine `Session2.gpkg` and saved it in the `Advanced-Session2` folder), give the layer a name and select Polygons as the Geometry type. Make sure the CRS is set to the Project CRS (EPSG:3857). You can then define the architecture of your attribute table by adding new fields. For instance we can add:
+- a field `Docked` of type `Boolean`, where we will indicate if the boat is docked or not, 
+- a field `Size` of type `Text data` where we will indicate the size of the boat (small, medium, large). 
+- a field `Year` of type `Date`, which we will set to `2008` for all of these boats as our picture dates from 2008.
+
+You can leave the `Maximum length` field empty each time and just press `Add to Fields list` to add your field to the table. 
+
 ![](../../../../docs/assets/images/adv2-18.png)
 
 &nbsp; 
