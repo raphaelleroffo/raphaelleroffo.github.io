@@ -36,8 +36,8 @@ Lecturer: Raphaëlle Roffo
 
 Create an `Advanced-Session2` folder, and download the data in this folder. Add the folder to your Favourites in QGIS to have an easy access to it.
 
-- Output from [Session 1](../../../../docs/assets/data/advanced/session1.zip)
-- [Satellite imagery](../../../../docs/assets/data/advanced/sat.tif)
+- Output from [Session 1](https://drive.google.com/file/d/1iYP5bENzwruD6Y9o7EhkccAv4LHbRhY1/view?usp=sharing)
+- [Satellite imagery](https://drive.google.com/file/d/1iVC2loEeBCNQCYxh7_SJwwfmdTVgwMDN/view?usp=sharing)
 
 
 ## III. Polygonize
