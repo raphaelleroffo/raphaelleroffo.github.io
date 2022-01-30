@@ -76,7 +76,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 3: Bivariate choropleths](_posts/2022-01-23-advanced-tutorial3.md)
 
-*[Class Content:](.)*
+*[Class Content:](docs/assets/pdf/advanced-session3-getec2022.pdf)*
 
 - *Analysing relative trends using bivariate choropleths*
 
@@ -88,7 +88,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 4: Cartograms](_posts/2022-01-23-advanced-tutorial4.md)
 
-*[Class Content:](.)*
+*[Class Content:](docs/assets/pdf/advanced-session4-getec2022.pdf)*
 
 - *Building cartograms to create impactful visualisations* 
 
@@ -101,7 +101,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 5: Weighted overlays and MCDM](_posts/2022-01-23-advanced-tutorial5.md)
 
-*[Class Content:](.)*
+*[Class Content:](docs/assets/pdf/advanced-session5-getec2022.pdf)*
 
 - *Building a multi criteria analysis using GIS*
 - *Weighting criteria and working with scores*
@@ -116,7 +116,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 6: Weighted overlays - continued](_posts/2022-01-23-advanced-tutorial6.md)
 
-*[Class Content:](.)*
+*[Class Content:](docs/assets/pdf/advanced-session6-getec2022.pdf)*
 
 - *Building a multi criteria analysis using GIS*
 - *Weighting criteria and working with scores*

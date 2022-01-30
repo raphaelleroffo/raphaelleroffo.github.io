@@ -39,7 +39,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 ### [Session 1: What is GIS?](_posts/2021-11-16-intro-tutorial1.md)
 
 
-*[Class Content:](https://raphaelleroffo.github.io/docs/assets/pdf/intro-session1-glm2022.pdf)*
+*[Class Content:](docs/assets/pdf/intro-session1-glm2022.pdf)*
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*
@@ -57,7 +57,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 2: Sourcing and loading data into GIS](_posts/2021-11-16-intro-tutorial2.md)
 
-*[Class Content:](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Intro%20to%20GIS%20-%20session%202.pdf)*
+*[Class Content:](docs/assets/pdf/intro-session2-glm2022.pdf)*
 - *Navigating data types (vector and raster) and common data formats (.shp, .geojson, .csv, PostGIS, etc)*
 - *Where to source data and what to look for (metadata, etc)*
 - *Exploring the data structure of typical spatial formats using GeoDa*

@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 2 Overview
 
-**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session2/Intro%20to%20GIS%20-%20session%202.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session2-glm2022.pdf)**
 
 - *Last week recap*
 - *Common GIS data formats*
