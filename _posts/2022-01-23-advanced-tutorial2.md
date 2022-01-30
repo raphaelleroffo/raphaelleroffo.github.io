@@ -130,6 +130,8 @@ Next, click on the yelow cogwheel to open the `Transformation Settings`. We will
 
 &nbsp; 
 
+### 4.3 Defining Ground Control Points
+
 Now at the bottom of your window you can see a summary of the transformation. We will be monitoring the transformation error (RMSE); for now its value is `None` as no Ground Control Points have been set. For now, use the white glove to pan across your image and zoom in and out with your mouse scroll. Find some notable points that you could easily spot on your basemap. For instance, the edge of bridges, a crossroads, the corner of a large building or a landmark can be easy points to match. We will aim to find 4 to 6 points, nicely distributed across the picture (this is important to reduce error).
 
 
@@ -167,12 +169,20 @@ Once you're happy with your GCPs, you can press the `Start georeferencing` butto
 
 &nbsp; 
 
+### 4.4 Exploring the georeferenced image
+
 Explore the angles of your image, turn your layer on and off to see whether your georeferencing is accurate. If not, you can go back to your georeferencer and edit your GCPs. You could also, if you were working with another type of image and you noticed strong gaps, consider other transformation types that model different transformations across your image (this is especially useful if you work with old maps that can have slightly distorted boundaries or coastlines compared to reality).
 
 ![](../../../../docs/assets/images/adv2-17.png)
 
 &nbsp; 
 
+
+
+## V. Digitizing
+
+
+As a final step, let's illustrate
 ![](../../../../docs/assets/images/adv2-18.png)
 
 &nbsp; 
