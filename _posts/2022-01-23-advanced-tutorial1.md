@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Session 2 - What is GIS?
+title: Session 1 - Introduction and Raster Analysis
 ---
 
 

@@ -63,7 +63,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 2: Digitization and georeferencing of raster data](_posts/2022-01-23-advanced-tutorial2.md)
 
-*[Class Content:](.)*
+*[Class Content:](docs/assets/pdf/advanced-session2-getec2022.pdf)*
 - *Digitization*
 - *Georeferencing*
 
