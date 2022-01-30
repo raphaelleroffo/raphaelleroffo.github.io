@@ -184,43 +184,78 @@ Explore the angles of your image, turn your layer on and off to see whether your
 
 As a final step, let's illustrate how you can create a vector layer uding the digitizing toolbox. Let's imagine you want to create a dataset of the boats that were present on the Thames at the time the picture was taken. 
 
-Navigate to the coordinates (-8906,6710902) to find the large boat in the London Bridge area. In your top menu, click Layer > `Create new Geopackage layer`. Create a database location for your geopackage (I called mine `Session2.gpkg` and saved it in the `Advanced-Session2` folder), give the layer a name and select Polygons as the Geometry type. Make sure the CRS is set to the Project CRS (EPSG:3857). You can then define the architecture of your attribute table by adding new fields. For instance we can add:
+Navigate to the coordinates (-8906,6710902) to find the large boat in the London Bridge area. In your top menu, click Layer > `Create new Geopackage layer`. 
+
+
+![](../../../../docs/assets/images/adv2-18.png)
+
+&nbsp; 
+
+Create a database location for your geopackage (I called mine `Session2.gpkg` and saved it in the `Advanced-Session2` folder), give the layer a name and select Polygons as the Geometry type. Make sure the CRS is set to the Project CRS (EPSG:3857). You can then define the architecture of your attribute table by adding new fields. For instance we can add:
 - a field `Docked` of type `Boolean`, where we will indicate if the boat is docked or not, 
 - a field `Size` of type `Text data` where we will indicate the size of the boat (small, medium, large). 
 - a field `Year` of type `Date`, which we will set to `2008` for all of these boats as our picture dates from 2008.
 
 You can leave the `Maximum length` field empty each time and just press `Add to Fields list` to add your field to the table. 
 
-![](../../../../docs/assets/images/adv2-18.png)
+![](../../../../docs/assets/images/adv2-19.png)
+
+&nbsp; 
+
+Once you have the three fields ready, you can press OK. A new `Boats` layer is created and appears in your Layer list panel. In yur top View panel > Toolbars, make your that your `Digitizing toolbar` is ticked. You will spot in in your top toolbars area. 
+
+
+
+![](../../../../docs/assets/images/adv2-20.png)
+
+&nbsp; 
+
+You can start an editing session by pressing the yellow pencil button (you can now make edits to the dataset!) - make sure you have selected `Boats` in your layer list before pressing the pencil; this is the layer you want to work on. You can then click on the green blob button to `Add Polygon feature`.
+
+![](../../../../docs/assets/images/adv2-21.png)
+
+&nbsp; 
+
+Draw the contours of the boat by clicking on its vertices. 
+
+
+![](../../../../docs/assets/images/adv2-22.png)
+
+&nbsp; 
+
+When you've positioned your last point, right click and a pop up window will ask you to fill the values of the attribute table. Leave `fid` to Autogenerate, tick the `Docked` checkbox because this boat is indeed docked, set the size to `Large` and the date to 2018-01-01. 
+
+![](../../../../docs/assets/images/adv2-23.png)
+
+&nbsp; 
+
+Press OK; your polygon is now part of your dataset! Try to repeat the process with another boat. If you are not satisfied with the boundaries of one of your polygons, use the `Vertex tool` to edit the position of the points!
+
+![](../../../../docs/assets/images/adv2-25.png)
 
 &nbsp; 
 
 
-![](../../../../docs/assets/images/adv2-15.png)
+When you are done, you can press the yellow pencil button to close your editing session and save your changes.
+
+
+![](../../../../docs/assets/images/adv2-26.png)
+
+&nbsp; 
+Now if you open the attribute table of the `Boats` layer, you'll find that it contains the data you have just created and has generated unique id in the first column. You can always reopen the editing session and add more boats, edit or remove existing ones or their attribute table.
+
+![](../../../../docs/assets/images/adv2-27.png)
+
+&nbsp; 
 
 &nbsp; 
 
 
-![](../../../../docs/assets/images/adv2-15.png)
-
-&nbsp; 
-![](../../../../docs/assets/images/adv2-15.png)
-
-
+To go further, you can experiment digitizing other types of features (lines for roads, points). For example, you can digitize the position of certain trees in the parks, or of footpaths. You can also digitize features from the satellite imagery basemap, which is more recent than our georeferenced image.
 
 &nbsp; 
 
-&nbsp; 
-
-## IV. 
-
-
-&nbsp; 
-
-### 1. 
-
-&nbsp; 
-
+Congrats, you have successfully completed this tutorial!
 
 &nbsp; 
 
