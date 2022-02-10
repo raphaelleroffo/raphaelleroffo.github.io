@@ -15,9 +15,7 @@ Lecturer: Raphaëlle Roffo
 **Download the [slides](../../../../docs/assets/pdf/advanced-session3-getec2022.pdf)**
 
 - *Additional raster dataset examples*
-- *Georeferencing: use cases*
-- *Georeferencing: understanding the different types of transformation*
-- *Digitization*
+- *Bivariate choropleths*
 
 
 &nbsp; 
