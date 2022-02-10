@@ -135,9 +135,10 @@ Now can be a good time to save a copy of this "super" LSOA Census layer in your 
 
 ### 3.2.4. Fixing the data type
 
-Now that our data is ready, it's time to explore the variables and find two variables that we could cross in the bivariate choropleth. Here, we choose to explore how the `Census_Car or van availability;Cars per household;2011` and `Census_Public Transport Accessibility Levels (2014);Average Score;` variables interact across London. 
+Now that our data is ready, it's time to explore the variables and find two variables that we could cross in the bivariate choropleth. Here, we choose to explore how the `Census_Car or van availability;Cars per household;2011` and `Census_Public Transport Accessibility Levels (2014);Average Score;` variables interact across London. Our hypothesis is that richer area, where a larger number or households own a car, are also well connected to public transport (in areas such as Westminster and Kensington), and that poorer area have less access to public transport while simultaneously having low car ownership rates. But what is the situation like in the more remote boroughs of Greater London?
 
-- The Cars per household is an average rate basedon car ownership in the LSOA. 
+- The Cars per household is an average rate based on car ownership in the LSOA. 
+
 - Public Transport Accessibility Levels is a score ranging from 0 to 6b, where a score of 0, 1a or 1b is very poor access to public transport, and 6a or 6b is excellent access to public transport. The score in this column reflects the average score of household in that LSOA. Due to the deduplication of 1a/1b and 6a/6b, the data in this field actually ranges from 0 to 8: 
   - 0,1,2 = Scores of 0, 1a or 1b = Poor access
   - 3, 4, 5 = Scores or 2, 3, 4 = Average access
@@ -243,9 +244,48 @@ The final step in this process is to build your symbology. Pick one of the palet
 
 &nbsp; 
 
+Go to your `Symbology` tab and select `Categorized symbology`. Pick `bivariate` as your variable (you may need to scroll a bit down the list of variables). Click `Classify` to bring up all the values. You can delete the extra row without value using the red Minus sign.
+
+<img src="../../../../docs/assets/images/adv3-17.png" width="800">
+
+&nbsp; 
+
+Now our values starting with A have a low Public Transport Accessibility Level, and those ending with 1 have a low car ownership level. Whichever colour scheme you picked, we are using the bottom left corner of the colour matrix as the A1 value and the darkest, top right corner as C3.
+
+<img src="../../../../docs/assets/images/adv3-18.png" width="800">
 
 
 &nbsp; 
+
+On your colour ramp, click on each colour individually and use the rgb code to edit the colour to the exact one you need:
+
+<img src="../../../../docs/assets/images/adv3-19.png" width="800">
+
+&nbsp; 
+
+As a final step, click on the overarching symbol, then on its Fill properties to make the polygon stroke transparent.
+
+<img src="../../../../docs/assets/images/adv3-20.png" width="800">
+
+&nbsp; 
+
+
+## 4.4 Results
+
+
+Congrats, you have successfully created your first bivariate choropleth! 
+
+<img src="../../../../docs/assets/images/adv3-21.png" width="800">
+
+&nbsp; 
+
+The map we obtain is in line with the hypothesis we initially formulated. In wealthier areas of West London, the car ownership rate is high and simultaneously the public transportation levels are very high. This is in sharp contrast with East London, for instance in the Tower Hamlets area, where mobility seems to be very limited. In the outskirts of Greater London, car ownership rates are quite logically high as the public transportation offer gets very limited.
+
+<img src="../../../../docs/assets/images/adv3-22.png" width="800">
+
+&nbsp; 
+
+Try replicating this analysis with other variables of your choice!
 
 
 &nbsp; 
