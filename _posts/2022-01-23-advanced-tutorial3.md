@@ -36,7 +36,7 @@ Create an `Advanced-Session3` folder, and download the following data in this fo
 
 - [**Census:**](https://data.london.gov.uk/dataset/lsoa-atlas) Census data for the Greater London Metropolitan Area. It’s comes as a CSV file (tabular,non-geographic data) and comes at the LSOA level. Choose the `Current LSOA boundaries post-2011` [file in CSV format](https://data.london.gov.uk/download/lsoa-atlas/0193f884-2ccd-49c2-968e-28aa3b1c480d/lsoa-data.csv) (NOT as `.xlsx`!). If when you click `Download` you land on a page that looks like this, simply press `Ctrl + S` or  `⌘ + S` to save the file, and make sure you give it a `.csv` extension.
 
-<img src="../../../../docs/assets/images/adv3-1.png" width="700">
+<img src="../../../../docs/assets/images/adv3-1.png" width="800">
 
 &nbsp; 
 
@@ -65,7 +65,7 @@ If you get stuck, don't panic as the following section walks you through this pr
 
 Open a blank QGIS project. Make sure the CRS is set to `EPSG:27700`, then drag and drop your Census CSV file, LSOA boundaries and Greater London boundaries onto your map canvas. Save your project as a QGZ file for now, for instance `Advanced-Session3.qgz`. Remember to save your changes often using the flapdisk icon.
 
-<img src="../../../../docs/assets/images/adv3-2.png" width="700">
+<img src="../../../../docs/assets/images/adv3-2.png" width="800">
 
 &nbsp; 
 
@@ -82,7 +82,7 @@ But notice that, while we are only interested in the Greater London Metropolitan
 
 That’s why in this case and more generally speaking, it can be a good idea to only keep the features of the geographic area you’re interested in before running slightly intensive algorithms such as table joins or geoprocessing. This will speed up the processing time for the following steps.
 
-<img src="../../../../docs/assets/images/adv3-3.png" width="700">
+<img src="../../../../docs/assets/images/adv3-3.png" width="800">
 
 &nbsp; 
 
@@ -90,13 +90,13 @@ That’s why in this case and more generally speaking, it can be a good idea to 
 
 First, we want to create a subset of the LSOA layer that only contains LSOAs in the GLMA. Use the `Clip` tool to get a neat, cookie-cutter like selection of LSOAs within the GLMA boundaries. Find the `Clip` in your Processing toolbox and set it up to clip your LSOAs to the shape of `Greater London Boundaries`. Set the output to be saved as a geopackage layer. You can call this geopackage `Advanced-Session3` and then the layer to be called `Greater London LSOA`. Press `Run`.
 
-<img src="../../../../docs/assets/images/adv3-4.png" width="700">
+<img src="../../../../docs/assets/images/adv3-4.png" width="800">
 
 &nbsp; 
 
 You can now remove the `England & Wales LSOA Boundaries` and `Greater London Boundaries` layers from your map canvas, and save the changes.
 
-<img src="../../../../docs/assets/images/adv3-5.png" width="700">
+<img src="../../../../docs/assets/images/adv3-5.png" width="800">
 
 &nbsp; 
 
@@ -111,7 +111,7 @@ If we look at the attribute table for the `Census LSOA London` table, it contain
 
 Note that the `LSOA11NM` and `Names` columns would also seem to be good matches as Key fields for the join; however names are more prone to spelling differences (a space or apostrophe might be present in one table and not the other). That's why when available, you should alwyays opt for the standardised code instead!
 
-<img src="../../../../docs/assets/images/adv3-6.png" width="700">
+<img src="../../../../docs/assets/images/adv3-6.png" width="800">
 
 &nbsp; 
 
@@ -119,40 +119,129 @@ Double-click the `Greater London LSOA` layer to access the `Layers properties`, 
 
 Press `OK` in that window, then `OK` again to close the Layer properties. If you open your attribute table you will now see the additional fields for taht layer.
 
-<img src="../../../../docs/assets/images/adv3-7.png" width="700">
+<img src="../../../../docs/assets/images/adv3-7.png" width="800">
 
 &nbsp; 
 
 Now can be a good time to save a copy of this "super" LSOA Census layer in your geopackage. Right-click your London LSOA layer, `Export` > `Save Features as...` , save it in your `Advanced-Session3` geopackage and give it a descriptive name, for instance `LSOA-with-Census`. Make sure the CRS is British National Grid. You can then remove the two other layers. You can also import a basemap as backdrop to your project. If you do not have basemaps under the `XYZ Tiles` section of your browser, refer to the [Intro to GIS Session 3 tutorial](../2021/11/16/intro-tutorial3/) to set it up.
 
-<img src="../../../../docs/assets/images/adv3-8.png" width="700">
+<img src="../../../../docs/assets/images/adv3-8.png" width="800">
+
 
 &nbsp; 
 
 &nbsp; 
 
-## IV. Population density choropleth
+
+### 3.2.4. Fixing the data type
+
+Now that our data is ready, it's time to explore the variables and find two variables that we could cross in the bivariate choropleth. Here, we choose to explore how the `Census_Car or van availability;Cars per household;2011` and `Census_Public Transport Accessibility Levels (2014);Average Score;` variables interact across London. 
+
+- The Cars per household is an average rate basedon car ownership in the LSOA. 
+- Public Transport Accessibility Levels is a score ranging from 0 to 6b, where a score of 0, 1a or 1b is very poor access to public transport, and 6a or 6b is excellent access to public transport. The score in this column reflects the average score of household in that LSOA. Due to the deduplication of 1a/1b and 6a/6b, the data in this field actually ranges from 0 to 8: 
+  - 0,1,2 = Scores of 0, 1a or 1b = Poor access
+  - 3, 4, 5 = Scores or 2, 3, 4 = Average access
+  - 6, 7, 8 = Scores of 5, 6a, 6b = Good access
 
 
-### 4.1. Fixing the data type
+However, if you observe your `Fields` in the `Layer Properties`, you will notice that these two fields are stored as String and are not being read by QGIS as figures. This is problematic because we cannot build a choropleth with categorical data, we need continuous, decimal numbers.
 
-Now, among all the variables in the census, we are interested in population density, present in the field `Population density; Persons per hectare 2013`. We want to build a choropleth of population density, which we will later on combine with flood risks exposure.
+You could use the Field Calculator to add new columns that are a copy of these fields, except in real numbers format. This time, try to use the `Refactor Fields` tool instead. This tool allows you to batch edit the attribute table. You can for instance choose to only keep the fields you are interested in, and save them as real numbers. 
 
-The field is not available for the use of graduated symbology. Can you guess why?
-
-<img src="../../../../docs/assets/images/S6-16.png" width="700">
+<img src="../../../../docs/assets/images/adv3-9.png" width="800">
 
 &nbsp; 
 
-If you recall from our previous tutorial, the problem comes from the data type of the field. In your `Layer symbology`, under the `Fields` tab, open the field calculator and see if you can figure out which expression you need to write to obtain a numerical `PopDensity` field.
-
-<img src="../../../../docs/assets/images/S6-17.png" width="700">
+<img src="../../../../docs/assets/images/adv3-10.png" width="800">
 
 &nbsp; 
 
-Once your field is created, remember to exit `Editing mode` by pressing the yellow pencil and saving your changes!
+You now have a dataset that is less heavy, and contains exactly the two columns you want, in the right data format.
 
 
+## IV. Building the choropleth
+
+
+## 4.1 Reclassifying the data
+
+The first step is to define, for each of these variables, how to cut the distribution into 3 categories: low, medium and high.
+
+
+**For Cars/household:**
+
+Go into your Layer Properties > Symbology tab. Pick the style `Graduated` and select your `Census_Car or van availability;Cars per household;2011` variable. We will use quantiles as classification method, with only 3 classes. Now, make note of the break points between each of those classes: `0-0.6`, `0.6-1`, `1-2.2`
+
+<img src="../../../../docs/assets/images/adv3-11.png" width="800">
+
+&nbsp; 
+
+Now go into your `Fields`, open an editing session by clicking on the yellow pencil, and click on the field calculator to calculate a new field of type `Integer`. 
+
+
+You are going to reclassify your values into three categories so that the bottom 33% car ownership values get assigned the value of 1, the middle 33% a value of 2 and the top 33% a value of 3:
+
+
+```
+CASE WHEN  "Census_Car or van availability;Cars per household;2011" <= 0.6 THEN 1
+    WHEN "Census_Car or van availability;Cars per household;2011" > 0.6 AND "Census_Car or van availability;Cars per household;2011" < 1 THEN 2
+    ELSE 3
+END
+```
+
+<img src="../../../../docs/assets/images/adv3-12.png" width="800">
+
+&nbsp; 
+
+
+**For Transport Accessibility:**
+
+For Transport Accessibility, our PTAL scores already give us an indication of the level of access. Rememebr that the data ranges from 0 to 6b and due to the deduplication of 1a/1b and 6a/6b, the data can actually be classified as follows:
+
+- 0,1,2 = Scores of 0, 1a or 1b = Poor access
+- 3, 4, 5 = Scores or 2, 3, 4 = Average access
+- 6, 7, 8 = Scores of 5, 6a, 6b = Good access
+
+Using the field calculator we can directly create a new field called `ptal`, of data type String, and enter the below expression:
+
+```
+CASE WHEN "Census_Public Transport Accessibility Levels (2014);Average Score;" <= 2 THEN 'A'
+    WHEN "Census_Public Transport Accessibility Levels (2014);Average Score;" > 2 AND "Census_Public Transport Accessibility Levels (2014);Average Score;" < 4 THEN 'B'
+    ELSE 'C'
+END
+```
+
+
+<img src="../../../../docs/assets/images/adv3-13.png" width="800">
+
+&nbsp; 
+
+
+
+## 4.2. Combining the two reclassified variables as a single bivariate class
+
+Now you can combine these two reclassified groups to come up with a combination of 3x3=9 possible options: A1, A2, A3, B1, B2, B3, C1, C2 and C3. To do so, using the field calculator create one last new field called `bivariate`, of type String. Then use the concatenate function to "paste" the values of `cars` (as a string) and `ptal` in a single new field:
+
+```
+concat("ptal",tostring("cars"))
+```
+
+<img src="../../../../docs/assets/images/adv3-14.png" width="800">
+
+&nbsp; 
+
+Save your edits by pressing the yellow pencil and saving the changes. You now have a column `bivariate` ready to use!
+
+<img src="../../../../docs/assets/images/adv3-16.png" width="800">
+
+&nbsp; 
+
+## 4.3 Symbology
+
+The final step in this process is to build your symbology. Pick one of the palettes designed by Joshua Stevenson in [this article](https://www.joshuastevens.net/cartography/make-a-bivariate-choropleth-map/):
+
+<img src="../../../../docs/assets/images/adv3-15.png" width="800">
+
+&nbsp; 
 
 
 
