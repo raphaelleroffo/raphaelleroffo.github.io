@@ -283,12 +283,24 @@ The map we obtain is in line with the hypothesis we initially formulated. In wea
 
 &nbsp; 
 
-Try replicating this analysis with other variables of your choice!
+## 4.5 Map export
+
+As a final step, try and produce a map export using the layout composer. 
+
+For the legend, you have two options:
+1) Create a 3x3 block in a graphic editing software of your choice
+2) Use the [bivariate plugin in QGIS](https://plugins.qgis.org/plugins/BivariateLegend/). Unfortunately, this plugin can be a little bit temperamental.
+3) Screencap an existing legend in your colour scheme
+
+
+Then you can use arrows and other map elements to create a beautiful map export.
+
+&nbsp; 
 
 
 &nbsp; 
 
-Congrats, you have successfully completed this tutorial!
+Congrats, you have successfully completed this tutorial! Try replicating this analysis with other variables of your choice, or pushing this analysis further.
 
 &nbsp; 
 
