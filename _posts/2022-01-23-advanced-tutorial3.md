@@ -10,7 +10,7 @@ Lecturer: Raphaëlle Roffo
 
 &nbsp; 
 
-## I. Session 2 Overview
+## I. Session 3 Overview
 
 **Download the [slides](../../../../docs/assets/pdf/advanced-session3-getec2022.pdf)**
 
@@ -287,20 +287,42 @@ The map we obtain is in line with the hypothesis we initially formulated. In wea
 
 As a final step, try and produce a map export using the layout composer. 
 
-For the legend, you have two options:
-1) Create a 3x3 block in a graphic editing software of your choice
-2) Use the [bivariate plugin in QGIS](https://plugins.qgis.org/plugins/BivariateLegend/). Unfortunately, this plugin can be a little bit temperamental.
-3) Screencap an existing legend in your colour scheme
+For the legend, I have created one legend block for each of the four colour schemes. Save them in your GIS folder by right-clicking the images below. 
+
+
+<img src="../../../../docs/assets/images/bivariate-legend-blue-red.png" width="61">
+
+<img src="../../../../docs/assets/images/bivariate-legend-green-purple.png" width="61">
+
+<img src="../../../../docs/assets/images/bivariate-legend-pink-blue.png" width="61">
+
+<img src="../../../../docs/assets/images/bivariate-legend-purple-mustard.png" width="61">
+&nbsp; 
+
+
+You can now simply import them as images in your print layout and use arrows to build a minimalistic legend.
+
+<img src="../../../../docs/assets/images/adv3-23.png" width="800">
+
+&nbsp; 
+
+If you have your own colour scheme and want to create your own, you can use the [bivariate plugin in QGIS](https://plugins.qgis.org/plugins/BivariateLegend/). If you go down that route, you will have to follow the steps used for creating the legend in [this tutorial](https://bnhr.xyz/2019/09/15/bivariate-choropleths-in-qgis.html). You may also simply use a graphic design software of your choice.
 
 
 Then you can use arrows and other map elements to create a beautiful map export.
 
-&nbsp; 
-
+<img src="../../../../docs/assets/images/adv3-23.png" width="800">
 
 &nbsp; 
 
 Congrats, you have successfully completed this tutorial! Try replicating this analysis with other variables of your choice, or pushing this analysis further.
+
+### Final note: 
+
+If you wanted to build a bivariate choropleth in R using `ggplot` and `sf`, you could do so by following this [great tutorial](https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/).
+
+
+
 
 &nbsp; 
 
