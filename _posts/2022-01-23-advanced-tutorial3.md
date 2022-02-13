@@ -250,7 +250,7 @@ Go to your `Symbology` tab and select `Categorized symbology`. Pick `bivariate` 
 
 Now our values starting with A have a low Public Transport Accessibility Level, and those ending with 1 have a low car ownership level. Whichever colour scheme you picked, we are using the bottom left corner of the colour matrix as the A1 value and the darkest, top right corner as C3.
 
-<img src="../../../../docs/assets/images/adv3-18.png" width="800">
+<img src="../../../../docs/assets/images/adv3-18.png" width="300">
 
 
 &nbsp; 
@@ -290,9 +290,9 @@ As a final step, try and produce a map export using the layout composer.
 For the legend, I have created one legend block for each of the four colour schemes. Save them in your GIS folder by right-clicking the images below. 
 
 
-<img src="../../../../docs/assets/images/bivariate-legend-blue-red.png" width="100"> . 
-<img src="../../../../docs/assets/images/bivariate-legend-green-purple.png" width="100"> . 
-<img src="../../../../docs/assets/images/bivariate-legend-pink-blue.png" width="100"> . 
+<img src="../../../../docs/assets/images/bivariate-legend-blue-red.png" width="100">
+<img src="../../../../docs/assets/images/bivariate-legend-green-purple.png" width="100">
+<img src="../../../../docs/assets/images/bivariate-legend-pink-blue.png" width="100">
 <img src="../../../../docs/assets/images/bivariate-legend-purple-mustard.png" width="100">
 &nbsp; 
 
