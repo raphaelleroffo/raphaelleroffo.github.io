@@ -290,13 +290,10 @@ As a final step, try and produce a map export using the layout composer.
 For the legend, I have created one legend block for each of the four colour schemes. Save them in your GIS folder by right-clicking the images below. 
 
 
-<img src="../../../../docs/assets/images/bivariate-legend-blue-red.png" width="61">
-
-<img src="../../../../docs/assets/images/bivariate-legend-green-purple.png" width="61">
-
-<img src="../../../../docs/assets/images/bivariate-legend-pink-blue.png" width="61">
-
-<img src="../../../../docs/assets/images/bivariate-legend-purple-mustard.png" width="61">
+<img src="../../../../docs/assets/images/bivariate-legend-blue-red.png" width="100"> . 
+<img src="../../../../docs/assets/images/bivariate-legend-green-purple.png" width="100"> . 
+<img src="../../../../docs/assets/images/bivariate-legend-pink-blue.png" width="100"> . 
+<img src="../../../../docs/assets/images/bivariate-legend-purple-mustard.png" width="100">
 &nbsp; 
 
 
