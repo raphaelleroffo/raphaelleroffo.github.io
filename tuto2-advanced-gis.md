@@ -94,11 +94,15 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 *[Class Content:](docs/assets/pdf/advanced-session4-getec2022.pdf)*
 
-- *Cartograms and impactful visualisations* 
+- *Bivariate choropleths - continued*
+- *Coursework update*
+- *Cartograms: what are they, why use them?*
+- *Isochrones: use cases*
 
 *Tutorial:*
 
-- *Building a cartogram*
+- *Building an isochrone map*
+- *(Building a cartogram - pending updates from the [cartogram3](https://github.com/austromorph/cartogram3) plugin)*
  
 
 &nbsp; 
