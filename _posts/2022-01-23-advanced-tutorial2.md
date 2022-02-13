@@ -46,42 +46,42 @@ We ended last session with a classification of the vegetation across an area spa
 
 One way to create a new class bases on this classification is to use the raster to vector conversion. This tool is available under the top Raster menu > `Conversions` > `Polygonize (Raster to Vector`. The tool will basically group together pixels with the same value and draw boundaries around them to create polygons (remember that our band has been reclassified to only have five possible values: 0, 1, 2, 3 or 4).
 
-![](../../../../docs/assets/images/adv2-1.png)
+<img src="../../../../docs/assets/images/adv2-1.png" width="800">
 
 &nbsp; 
 
 
 Because the tool requires quite a lot of computing power, it would take a long time to run on your computer - you do not have to do it. I have run it and saved the vector output as `Vectorized_Output.shp`. Turn this layer on; I've applied a categorical symbology and a green ramp to then display it.
 
-![](../../../../docs/assets/images/adv2-2.png)
+<img src="../../../../docs/assets/images/adv2-2.png" width="800">
 
 &nbsp; 
 
 
 If you zoom in and use the query tool, you will see that polygons were indeed created, but their boundaries still represent the shape of the pixels. You might also notice that in some cases the pixels are very mixed and it is difficult to see any big polygon emerge.
 
-![](../../../../docs/assets/images/adv2-3.png)
+<img src="../../../../docs/assets/images/adv2-3.png" width="800">
 
 &nbsp; 
 
 The water bodies and built-up surfaces such as Heathrow airport are however very clearly visible. We can use the `Select by attribute` tool to select all the polygons representing the Vegetation Index value of 0 = "No vegetation", and see those polygons selected in yellow: 
 
 
-![](../../../../docs/assets/images/adv2-4.png)
+<img src="../../../../docs/assets/images/adv2-4.png" width="800">
 
 &nbsp; 
 
 We can also use `Extract by attribute` to create a new layer of these polygons. For instance, let's create a new layer with the polygons representing a Dense Vegetation (value of 4 in our `VegetationClassification` layer):
 
 
-![](../../../../docs/assets/images/adv2-5.png)
+<img src="../../../../docs/assets/images/adv2-5.png" width="800">
 
 &nbsp; 
 
 You can skip this step as it may also take some time to run on your computer. The output of this extraction is a new vector layer, which we call `DenseVegetation` and you may now use in other analyses (for instance, you may want to count the surface of dense vegetation in each borough and put in in perspective with socio-economic status of the population).
 
 
-![](../../../../docs/assets/images/adv2-6.png)
+<img src="../../../../docs/assets/images/adv2-6.png" width="800">
 
 &nbsp; 
 
@@ -99,7 +99,7 @@ In this section, we are going to take a satellite image of London; a 1m resoluti
 
 You can close the `Session1` file and open a new empty file. Save the project as `Advanced-Session2`. Drag and drop the `sat.tif` file onto your canvas
 
-![](../../../../docs/assets/images/adv2-7.png)
+<img src="../../../../docs/assets/images/adv2-7.png" width="800">
 
 &nbsp; 
 
@@ -107,26 +107,26 @@ You can close the `Session1` file and open a new empty file. Save the project as
 Now, this image does not actually contain any spatial reference. In your browser if you turn on one of your basemaps (preferably `Bing VirtualEarth`), you will see that it is absolutely not placing your image in London: yours might be different but on my computer, I get this barred camera sign. Before we go any further, check your CRS: because we are using a basemap that uses Web Mercator coordinates, make sure your project CRS is indeed set to Web Mercator: EPSG:3857
 
 
-![](../../../../docs/assets/images/adv2-8.png)
+<img src="../../../../docs/assets/images/adv2-8.png" width="800">
 
 &nbsp; 
 
 You can now remove the `sat.tif` layer from your canvas, right click your basemap layer > `Zoom to layer` to find your basemap again, and zoom onto London. To get there, you can also paste `-5524,6704409` into your Coordinates and enter and `1:50000` into the scale. 
 
-![](../../../../docs/assets/images/adv2-9.png)
+<img src="../../../../docs/assets/images/adv2-9.png" width="800">
 
 &nbsp; 
 ### 4.2 Georeferencing tool
 
 In your top Raster menu, click on `Georeferencer`; a white window opens. Click on the `Open Raster` button and select your `sat.tif` file.
 
-![](../../../../docs/assets/images/adv2-10.png)
+<img src="../../../../docs/assets/images/adv2-10.png" width="800">
 
 &nbsp; 
 
 Next, click on the yelow cogwheel to open the `Transformation Settings`. We will be using a Polynomial 1 transformation type (= Affine). With this type of transformation, you will introduce a potential scale change, rotation angle, a shift on the x axis and the y-axis, and a change in the angles of your raster cells. In general, this transformation works well and tends to not overly distort the image. It also requires less Ground Control Points (GCP). Pick `Nearest neighbour` as resampling method, and EPSG:3857 as the target CRS. Youc an then click on the three dots next to `Output Raster` to specify a name and location for your new georeferenced image. You can save it in your `Advanced-Session2` folder as `ikonos_georeferenced.tif`. Finally, make sure `Load in QGIS when done` box is ticked. Press `OK`.
 
-![](../../../../docs/assets/images/adv2-11.png)
+<img src="../../../../docs/assets/images/adv2-11.png" width="800">
 
 &nbsp; 
 
@@ -136,7 +136,7 @@ Now at the bottom of your window you can see a summary of the transformation. We
 
 
 
-![](../../../../docs/assets/images/adv2-12.png)
+<img src="../../../../docs/assets/images/adv2-12.png" width="800">
 
 &nbsp; 
 
@@ -144,13 +144,13 @@ Notice that there is an important difference between the image and your basemap:
 
 I am going to place my first point on the North pillar at the base of the London Eye. To do so, click the point you have spotted. A pop-up window asks you for the coordinates; use `From map canvas` and click the point location on your basemap. The (x,y) coordinates will then automatically be populated in your Georeferencer window. Press OK.
 
-![](../../../../docs/assets/images/adv2-13.png)
+<img src="../../../../docs/assets/images/adv2-13.png" width="800">
 
 &nbsp; 
 
 A GCP table has now appeared at the bottom of your Georeferencer, and a red point marks your first point, GCP 0, on both your image and the basemap. 
 
-![](../../../../docs/assets/images/adv2-14.png)
+<img src="../../../../docs/assets/images/adv2-14.png" width="800">
 
 &nbsp; 
 
@@ -159,13 +159,13 @@ Repeat the operation a few times with points spread across your image, until you
 Notice the Mean error value at the bottom: this represents the overall error of your transformation equation. You can try and reduce the error by adding a couple more points.
 
 
-![](../../../../docs/assets/images/adv2-15.png)
+<img src="../../../../docs/assets/images/adv2-15.png" width="800">
 
 &nbsp; 
 
 Once you're happy with your GCPs, you can press the `Start georeferencing` button to launch the process and load your spatially referenced image onto your map canvas!
 
-![](../../../../docs/assets/images/adv2-16.png)
+<img src="../../../../docs/assets/images/adv2-16.png" width="800">
 
 &nbsp; 
 
@@ -173,7 +173,7 @@ Once you're happy with your GCPs, you can press the `Start georeferencing` butto
 
 Explore the angles of your image, turn your layer on and off to see whether your georeferencing is accurate. If not, you can go back to your georeferencer and edit your GCPs. You could also, if you were working with another type of image and you noticed strong gaps, consider other transformation types that model different transformations across your image (this is especially useful if you work with old maps that can have slightly distorted boundaries or coastlines compared to reality).
 
-![](../../../../docs/assets/images/adv2-17.png)
+<img src="../../../../docs/assets/images/adv2-17.png" width="800">
 
 &nbsp; 
 
@@ -187,7 +187,7 @@ As a final step, let's illustrate how you can create a vector layer uding the di
 Navigate to the coordinates (-8906,6710902) to find the large boat in the London Bridge area. In your top menu, click Layer > `Create new Geopackage layer`. 
 
 
-![](../../../../docs/assets/images/adv2-18.png)
+<img src="../../../../docs/assets/images/adv2-18.png" width="800">
 
 &nbsp; 
 
@@ -198,7 +198,7 @@ Create a database location for your geopackage (I called mine `Session2.gpkg` an
 
 You can leave the `Maximum length` field empty each time and just press `Add to Fields list` to add your field to the table. 
 
-![](../../../../docs/assets/images/adv2-19.png)
+<img src="../../../../docs/assets/images/adv2-19.png" width="800">
 
 &nbsp; 
 
@@ -206,32 +206,32 @@ Once you have the three fields ready, you can press OK. A new `Boats` layer is c
 
 
 
-![](../../../../docs/assets/images/adv2-20.png)
+<img src="../../../../docs/assets/images/adv2-20.png" width="800">
 
 &nbsp; 
 
 You can start an editing session by pressing the yellow pencil button (you can now make edits to the dataset!) - make sure you have selected `Boats` in your layer list before pressing the pencil; this is the layer you want to work on. You can then click on the green blob button to `Add Polygon feature`.
 
-![](../../../../docs/assets/images/adv2-21.png)
+<img src="../../../../docs/assets/images/adv2-21.png" width="800">
 
 &nbsp; 
 
 Draw the contours of the boat by clicking on its vertices. 
 
 
-![](../../../../docs/assets/images/adv2-22.png)
+<img src="../../../../docs/assets/images/adv2-22.png" width="800">
 
 &nbsp; 
 
 When you've positioned your last point, right click and a pop up window will ask you to fill the values of the attribute table. Leave `fid` to Autogenerate, tick the `Docked` checkbox because this boat is indeed docked, set the size to `Large` and the date to 2018-01-01. 
 
-![](../../../../docs/assets/images/adv2-23.png)
+<img src="../../../../docs/assets/images/adv2-23.png" width="800">
 
 &nbsp; 
 
 Press OK; your polygon is now part of your dataset! Try to repeat the process with another boat. If you are not satisfied with the boundaries of one of your polygons, use the `Vertex tool` to edit the position of the points!
 
-![](../../../../docs/assets/images/adv2-25.png)
+<img src="../../../../docs/assets/images/adv2-25.png" width="800">
 
 &nbsp; 
 
@@ -239,12 +239,12 @@ Press OK; your polygon is now part of your dataset! Try to repeat the process wi
 When you are done, you can press the yellow pencil button to close your editing session and save your changes.
 
 
-![](../../../../docs/assets/images/adv2-26.png)
+<img src="../../../../docs/assets/images/adv2-26.png" width="800">
 
 &nbsp; 
 Now if you open the attribute table of the `Boats` layer, you'll find that it contains the data you have just created and has generated unique id in the first column. You can always reopen the editing session and add more boats, edit or remove existing ones or their attribute table.
 
-![](../../../../docs/assets/images/adv2-27.png)
+<img src="../../../../docs/assets/images/adv2-27.png" width="800">
 
 &nbsp; 
 
