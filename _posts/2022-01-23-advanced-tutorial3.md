@@ -145,7 +145,7 @@ Now that our data is ready, it's time to explore the variables and find two vari
 
 However, if you observe your `Fields` in the `Layer Properties`, you will notice that these two fields are stored as String and are not being read by QGIS as figures. This is problematic because we cannot build a choropleth with categorical data, we need continuous, decimal numbers.
 
-You could use the Field Calculator to add new columns that are a copy of these fields, except in real numbers format. This time, try to use the `Refactor Fields` tool instead. This tool allows you to batch edit the attribute table. You can for instance choose to only keep the fields you are interested in, and save them as real numbers. 
+You could use the Field Calculator to add new columns that are a copy of these fields, except in real numbers format. This time, try to use the `Refactor Fields` tool instead. This tool allows you to batch edit the attribute table. You can for instance choose to only keep the fields you are interested in, and save them as real numbers. Make sure to keep all the fields that came from your boundary layer (fields 1 to 11), and to only remove the fields from the census that you are not interested in.
 
 <img src="../../../../docs/assets/images/adv3-9.png" width="800">
 
