@@ -69,7 +69,9 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 *Tutorial:*
 
-- **
+- *Polygonizing dense vegetation from NDVI*
+- *Georeferencing a satellite image*
+- *Digitizing new features from the georeferenced layer*
 
 
 &nbsp; 
@@ -82,7 +84,9 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 *Tutorial:*
 
-- **
+- *Refactoring fields from a large attribute table*
+- *Creating a bivariate choropleth using census data*
+- *Practice: creating a map export*
 
 &nbsp; 
 
@@ -90,11 +94,11 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 *[Class Content:](docs/assets/pdf/advanced-session4-getec2022.pdf)*
 
-- *Building cartograms to create impactful visualisations* 
+- *Cartograms and impactful visualisations* 
 
 *Tutorial:*
 
-- **
+- *Building a cartogram*
  
 
 &nbsp; 
