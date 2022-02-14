@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Session 4 - Cartograms
+title: Session 4 - Cartograms & Isochrones
 ---
 
 
