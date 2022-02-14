@@ -111,7 +111,7 @@ Another functionality in TravelTime is to generate best itineraries from a point
 
 ## V. Filtering point data based on travel time
 
-We now want to find out, within our 15min cycling isochrone from Trafalgar Square, whether there are any arts centres accessible within 10 minutes walk of Trafalgar square. We will then check which theatres are within a 10 minute walk from any of these arts centres.
+We now want to find out, within our 15min cycling isochrone from Trafalgar Square, whether there are any theatres accessible within 10 minutes walk of Trafalgar square. We will then check which art centres are within another 10 minute cycle from any of these pre-selected theatres.
 
 
 ### 5.1 Get the point data
@@ -132,23 +132,56 @@ Repeat the operation for "Theatres", also to the extent of your cycling isochron
 
 ### 5.2 Filter arts centres within 10 minutes walk of Trafalgar Square
 
-Untick the itinerary layers and zoom in a bit closer onto Trafalgar Square. In your Layers panel, make sure that your `amenity_arts_centre` layer is selected. Then move on to the QuickTime filter icon and press the down arrow to specify your filter criteria: 10minutes walk. 
+Untick the itinerary layers and zoom in a bit closer onto Trafalgar Square. In your Layers panel, make sure that your `amenity_theatre` layer is selected. Then move on to the QuickTime filter icon and press the down arrow to specify your filter criteria: 10minutes walk. 
 
 <img src="../../../../docs/assets/images/adv4-12.png" width="800">
 
 &nbsp; 
 
-Then click on the icon to get your cursor as a black cross, and click on Trafalgar Square. A new layer is generated, where the arts centre within 10 minutes walk of the point you clicked are highlighted in green, and in grey are the remaining arts centres.
+Then click on the icon to get your cursor as a black cross, and click on Trafalgar Square. A new layer is generated, where the theatres within 10 minutes walk of the point you clicked are highlighted in green, and in grey are the remaining theatres.
 
 
 <img src="../../../../docs/assets/images/adv4-13.png" width="800">
 
 &nbsp; 
 
-You could repeat the operation with the theatres. But what we want to find out next is which ones of the green arts centres have a theatre within 5 minutes walk. This could help us for instance plan out a cultural tour in the area. Another application of this algorithm would be to help us find out 
+You could repeat the operation with the arts centres. But what we want to find out next is which ones of the green theatres have an arts centre within 10 minutes walk. This could help us, for instance, plan out a cultural tour in the area.
 
 
+### 5.3 Extract pre-selected theatres
 
+To do so we first need to extract the green theatres as a new layer. By looking at the symbology definition of the Reachable/Unreachable theatres layer, we can see that the distinction is made using a field `reachable`, of value 1 if the theatre is within 10 minutes walk of Trafalgar Square and 0 if it is not. In your processing toolbox, look for `Extract by attribute`. You want to extract features where `reachable` = 1. Specify where you want to save your layer in your `Advanced-Session4` geopackage, maybe call the layer `Reachable_Theatres`, and run the tool.
+
+
+<img src="../../../../docs/assets/images/adv4-14.png" width="800">
+
+&nbsp; 
+
+You now have a new layer for the pre-selected theatres.
+
+
+### 5.4 Filter the arts centres within 10 minutes cycle of pre-selected theatres
+
+The final step is to  filter out, in our arts centres layer, the arts centres that are within 10 minutes cycle of our pre-selected theatres.
+
+To do so, we are going to use the `TimeFilter - simple` tool in TravelTime. Click on the toolbox icon to bring up the tools again and click on the TimeFilter - Simple. Specify the parameters as below to make sure you filter the arts centres within 10 minutes cycle of the pre-selected theatres:
+
+<img src="../../../../docs/assets/images/adv4-15.png" width="800">
+
+&nbsp; 
+
+You have successfully selected the arts centre within 10 minutes cycling fo our pre-selected theatres. You can now tidy up your project, save the output layers that are important to you in your geopackage, and make some edits to your symbology to make your map readable.
+
+<img src="../../../../docs/assets/images/adv4-16.png" width="800">
+
+&nbsp; 
+
+Practice exporting the map using the print layout, and you are done with this tutorial!
+
+
+### Note:
+
+Because TravelTime calls an API, you may get an error from time to time when using the `TimeFilter - Simple` tool, telling you you have exceeded the number of calls to the API. You will then need to wait an hour to be able to run the tool again; you may also need to reduce the size of the two point datasets you are trying to match by traveling distance.
 
 &nbsp; 
 
