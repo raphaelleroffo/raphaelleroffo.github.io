@@ -4,7 +4,7 @@ title: Session 4 - Cartograms & Isochrones
 ---
 
 
-**Advanced GIS  ·  Sciences Po Urban School**
+**Advanced GIS  ·  Sciences Pop Urban School**
 
 Lecturer: Raphaëlle Roffo
 
@@ -56,7 +56,7 @@ A new toolbar should now have appeared in your top toolbars (if not, you can act
 
 ### 3.2 Activate your API Key
 
-Now, click on the Configuration button. You may get a pop-up message about a master password, you can ignore that and click cancel. You should then get this window. In order for TravelTime to function properly, you need to connect to their database using their API. Click on `Get a free API Key` and you will be taken to [this page](https://docs.traveltime.com/qgis/sign-up) to register. 
+Now, click on the Configuration button. You may get a pop-up message about a master password; set a password and remember it as it may be asked to you from time to time. Next, you should then get this window. In order for TravelTime to function properly, you need to connect to their database using their API. Click on `Get a free API Key` and you will be taken to [this page](https://docs.traveltime.com/qgis/sign-up) to register. 
 
 <img src="../../../../docs/assets/images/adv4-3.png" width="800">
 
