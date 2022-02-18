@@ -111,13 +111,18 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 *[Class Content:](docs/assets/pdf/advanced-session5-getec2022.pdf)*
 
+- *Environmental Justice and GIS*
 - *Building a multi criteria analysis using GIS*
 - *Weighting criteria and working with scores*
-- *Advanced attribute table operations*
 
 *Tutorial:*
 
-- **
+- *Using the QGIS Graphical Modeler to build a replicable model*
+- *Using the high resolution Population density HDRxFacebook dataset*
+- *Defining Selection Criteria*
+- *Reclassifying data*
+- *Assigning weights to the criteria*
+- *Determining final score*
 
 
 &nbsp; 
@@ -132,7 +137,13 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 *Tutorial:*
 
-- **
+- *Using the QGIS Graphical Modeler to build a replicable model*
+- *Using the high resolution Population density HDRxFacebook dataset*
+- *Defining Selection Criteria*
+- *Reclassifying data*
+- *Assigning weights to the criteria*
+- *Determining final score*
+
 
 &nbsp; 
 

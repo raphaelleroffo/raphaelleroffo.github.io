@@ -33,7 +33,7 @@ Lecturer: Raphaëlle Roffo
 
 ### Context:
 
-This is part 2 of a tutorial in which we're exploring the theme of cycling to school (find part 1 [here](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html)). 
+This is part 2 of a tutorial in which we're exploring the theme of cycling to school (find part 1 [here](../intro-tutorial4/)). 
 
 In the context of the Covid pandemic, the question of safely getting kids to attend school has become a key element in many countries' economic recovery strategies. Taking into considerations the pressing challenges of reducing carbon emissions, walking and cycling to school represent sustainable and safe ways for children and their parents to get to school, as long as proper cycling infrastructure exists.
 
@@ -44,7 +44,7 @@ We are focusing on the accessibility to public transport score available in the 
 
 ### Data:
 
-We will pick up from where you left at the end of [Session 4](https://raphaelleroffo.github.io/intro-to-gis/intro-tutorial4.html); you can directly work from the project file `Session4-London` inside the [Session 4 geopackage](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Session4-London.gpkg). Make sure the CRS is set to `EPSG:27700` and try using a basemap of your choice from the `XYZ Tiles` section of your `Browser` panel (go back to the Session 3 tutorial for more information on how to load basemaps). I'm using `CartoDb Positron`.
+We will pick up from where you left at the end of [Session 4](../intro-tutorial4/); you can directly work from the project file `Session4-London` inside the [Session 4 geopackage](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Session4-London.gpkg). Make sure the CRS is set to `EPSG:27700` and try using a basemap of your choice from the `XYZ Tiles` section of your `Browser` panel (go back to the Session 3 tutorial for more information on how to load basemaps). I'm using `CartoDb Positron`.
 
 
 <img src="../../../../docs/assets/images/S5-01.png" width="700">
