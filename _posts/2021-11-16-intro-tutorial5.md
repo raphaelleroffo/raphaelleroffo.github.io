@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 5 Overview
 
-**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session5/Intro%20to%20GIS%20-%20session%205.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session5-glm2022.pdf)**
 
 - *Use cases; why may you need to buffer, clip, intersect?*
 - *"Crossing" multiple layers: common geoprocessing tools*

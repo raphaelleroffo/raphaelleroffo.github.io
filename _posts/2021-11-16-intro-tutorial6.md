@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 6 Overview
 
-**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session6/Intro%20to%20GIS%20-%20session%206.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session6-glm2022.pdf)**
 
 *This final session is designed as a Q&A session. Students should have designed a methodology for the final coursework and are encouraged to prepare specific questions. Students will be able to select topics to be revisited in class, or to hear about more advanced GIS techniques if they wish.*
 

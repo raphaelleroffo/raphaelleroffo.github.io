@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 4 Overview
 
-**Download the [slides](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session4/Intro%20to%20GIS%20-%20session%204.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session4-glm2022.pdf)**
 
 - *Cartographic design principles*
 - *Accessibility*
