@@ -77,8 +77,12 @@ Download the following datasets in your folder and load them onto your map canva
 
 &nbsp; 
 
-Zoom onto the London area, and save your project as `Advanced-Session5.qgz`.
+Zoom onto the London area, apply some basic styling (use singleband pseudocolour for the population density geotiff),and save your project as `Advanced-Session5.qgz`.
 
+In case you are stuck with the setup, you can also launch the project using [this geopackage](https://drive.google.com/file/d/1RZ6vlAGc4oh1sI8bmswkZsOHOK9Pk839/view?usp=sharing) + your downloaded GeoTIFF.
+
+
+<img src="../../../../docs/assets/images/adv5-0.png" width="800">
 
 &nbsp; 
 
@@ -102,6 +106,7 @@ Give a name to your model and a group (For instance, `Pocket_Park_Selection` in 
 <img src="../../../../docs/assets/images/adv5-2.png" width="800">
 
 &nbsp; 
+
 Then, click `Save as...` to save your model, then click the icon to save it to your project too. Note that if you close this window and don't find your model when you reopen that window, you can use the `Open Model...` icon to retrieve it. Remember to save your changes frequently.
 
 
@@ -109,23 +114,32 @@ Then, click `Save as...` to save your model, then click the icon to save it to y
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+
+### 3.2. Data pre-processing
+
+
+#### 3.2.1 Clipping the high resolution dataset to Greater London extent
+
+
+#### 3.2.2 
+
+<img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+<img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+<img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+<img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+<img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
