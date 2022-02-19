@@ -4,7 +4,7 @@ title: Session 4 - Cartograms & Isochrones
 ---
 
 
-**Advanced GIS  ·  Sciences Pop Urban School**
+**Advanced GIS  ·  Sciences Po Urban School**
 
 Lecturer: Raphaëlle Roffo
 

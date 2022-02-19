@@ -5,7 +5,7 @@ title: Session 5 - MCDM & Weighted Overlays (Part 1)
 ---
 
 
-**Advanced GIS  ·  Sciences Pop Urban School**
+**Advanced GIS  ·  Sciences Po Urban School**
 
 Lecturer: Raphaëlle Roffo
 
@@ -98,7 +98,7 @@ It can be accessed through yoru top menu `Processing` > `Graphical Modeler...` o
 
 &nbsp; 
 
-In the top toolbar of that window, hover over the different icons. The first set of icons help you open an existing model, save your model, save your model to your project. The second allows you to pan across / select / undo or redo actions / zoom in and out of your model overview. The next set of icons enables you to export your model as a Python script or as an image/PDF/SVG. Finally, you can find the help icon and the green triangle to run your model.
+In the top toolbar of that window, hover over the different icons. The first set of icons help you open an existing model, save your model, save your model to your project. The second allows you to pan across / select / undo or redo actions / zoom in and out of your model overview. The next set of icons enables you to export your model as a Python script or as an image/PDF/SVG. Finally, the book icon lets you write some help documentation for your model, and the green triangle can be clicked to run your model.
 
 Give a name to your model and a group (For instance, `Pocket_Park_Selection` in a `Suitability_Analysis` Group). 
 
@@ -107,10 +107,18 @@ Give a name to your model and a group (For instance, `Pocket_Park_Selection` in 
 
 &nbsp; 
 
-Then, click `Save as...` to save your model, then click the icon to save it to your project too. Note that if you close this window and don't find your model when you reopen that window, you can use the `Open Model...` icon to retrieve it. Remember to save your changes frequently.
+Then, click `Save as...` to save your model, then click the icon to save it to your project too. 
 
 
 <img src="../../../../docs/assets/images/adv5-3.png" width="800">
+
+&nbsp; 
+
+
+Note that if you close this window and don't find your model when you reopen that window, you can use the `Open Model...` icon to retrieve it. Remember to save your changes frequently.
+
+
+<img src="../../../../docs/assets/images/adv5-4.png" width="800">
 
 &nbsp; 
 
