@@ -70,7 +70,7 @@ Download the following datasets in your folder and load them onto your map canva
 
 - From your Advanced GIS Session 3, your [London LSOA layer with Census join](https://github.com/raphaelleroffo/intro-to-gis/raw/main/London-LSOA-2011Census.gpkg): We are interested in the variable `Census 2011 Dataset: % Couple household with dependent children`, because we want to maximise the number of children with access to the pocket parks
 
-- [Existing Green Infrastructure](https://data.london.gov.uk/dataset/green-and-blue-cover): We want to prioritize regeneration of brownfields that are the furthest from existing green spaces. Download the `blueandgreen_ndvi0.1.zip` file that uses a threshold of 0.1 on the NDVI to classify an area as green.
+- [Existing Open Greenspaces](https://osdatahub.os.uk/downloads/open/OpenGreenspace): We want to prioritize regeneration of brownfields that are far from existing green spaces. Download the `TQ` tile, which covers Greater London, as an ESRI Shapefile. Notice that the data folder you download contains a polygon layer (the actual open green spaces) and a point layer for the access points to those open green spaces (gates / entrance). We will actually use those points as our reference as they determine the accessibility of the green area more precisely.
 
 - [Conservation Areas](https://data.london.gov.uk/dataset/conservation_areas): Conservation Areas are subject to planning restrictions and would require additional work to get a redevelopment project approved. We need to exclude those areas from our range of possibilities. Download the geopackage file.
 
@@ -84,21 +84,51 @@ Zoom onto the London area, and save your project as `Advanced-Session5.qgz`.
 
 ## III. Data pre-processing
 
-### 3.1 The QGIS Graphic Modeler
+### 3.1 The QGIS Graphical Modeler
 
+The QGIS Graphical Modeler is the equivalent to the ESRI ArcGIS "Model builder". It allows you to clearly take inputs, run them through algorithms of your choice (= geoprocessing tools, raster analysis tools, basically anything that is available to you through your `Processing Toolbox`) and produce outputs. One advantage of the Graphical Interface is that it allows you to replicate your workflow and automate the run of your model. This is very useful, for instance, if you realise you want to change input but apply the exact same methodology. Or if you want to edit one parameter of one of your algorithms to re-run your entire analysis. It makes repeating, tweaking, iterating through a workflow much easier.
 
-
-
-
-
-
-
-
-
+It can be accessed through yoru top menu `Processing` > `Graphical Modeler...` or in your Processing Toolbox by clicking on the cogs icon > `Create new model...`. A new window opens:
 
 <img src="../../../../docs/assets/images/adv5-1.png" width="800">
 
 &nbsp; 
+
+In the top toolbar of that window, hover over the different icons. The first set of icons help you open an existing model, save your model, save your model to your project. The second allows you to pan across / select / undo or redo actions / zoom in and out of your model overview. The next set of icons enables you to export your model as a Python script or as an image/PDF/SVG. Finally, you can find the help icon and the green triangle to run your model.
+
+Give a name to your model and a group (For instance, `Pocket_Park_Selection` in a `Suitability_Analysis` Group). 
+
+
+<img src="../../../../docs/assets/images/adv5-2.png" width="800">
+
+&nbsp; 
+Then, click `Save as...` to save your model, then click the icon to save it to your project too. Note that if you close this window and don't find your model when you reopen that window, you can use the `Open Model...` icon to retrieve it. Remember to save your changes frequently.
+
+
+<img src="../../../../docs/assets/images/adv5-3.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-1.png" width="800">
+
+&nbsp; 
+
 
 
 &nbsp; 
