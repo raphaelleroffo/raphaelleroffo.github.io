@@ -86,13 +86,13 @@ In case you are stuck with the setup, you can also launch the project using [thi
 
 &nbsp; 
 
-## III. Data pre-processing
+## III. Model setup
 
 ### 3.1 The QGIS Graphical Modeler
 
 The QGIS Graphical Modeler is the equivalent to the ESRI ArcGIS "Model builder". It allows you to clearly take inputs, run them through algorithms of your choice (= geoprocessing tools, raster analysis tools, basically anything that is available to you through your `Processing Toolbox`) and produce outputs. One advantage of the Graphical Interface is that it allows you to replicate your workflow and automate the run of your model. This is very useful, for instance, if you realise you want to change input but apply the exact same methodology. Or if you want to edit one parameter of one of your algorithms to re-run your entire analysis. It makes repeating, tweaking, iterating through a workflow much easier.
 
-It can be accessed through yoru top menu `Processing` > `Graphical Modeler...` or in your Processing Toolbox by clicking on the cogs icon > `Create new model...`. A new window opens:
+It can be accessed through your top menu `Processing` > `Graphical Modeler...` or in your Processing Toolbox by clicking on the cogs icon > `Create new model...`. A new window opens:
 
 <img src="../../../../docs/assets/images/adv5-1.png" width="800">
 
@@ -123,31 +123,135 @@ Note that if you close this window and don't find your model when you reopen tha
 &nbsp; 
 
 
-### 3.2. Data pre-processing
+### 3.2. Clipping workflow for your population density raster
+
+#### 3.2.1 Add a raster input for your population density grid layer
+
+As a first step we want to clip our population density grid for children under 5 to the extent of our London LSOA layer.
+
+In your Graphical Modeler interface, click the tab `Inputs` and have a look at the available parameters. Drag a `Raster layer` onto your modeling area. Give it a descriptive name and make sure it's a mandatory input into your model.
 
 
-#### 3.2.1 Clipping the high resolution dataset to Greater London extent
+<img src="../../../../docs/assets/images/adv5-5.png" width="800">
+
+&nbsp; 
+
+#### 3.2.2 Add a vector input for your LSOA layer
 
 
-#### 3.2.2 
+In order to clip this layer to the London extent, we also need to feed the London LSOA layer into our model. In the parameters, click `Vector Layer`. Add a layer called `London LSOA` of type `Polygon`, and make sure it's a mandatory input.
+
+
+<img src="../../../../docs/assets/images/adv5-6.png" width="800">
+
+&nbsp; 
+
+Your two layers are now ready to be processed. Press the Save button (you might need to "overwrite" your existing model in its saved location - go ahead). Note that so far QGIS does not know which layers you are actually referring to, you are just creating the pipelines for your analysis.
+
+
+<img src="../../../../docs/assets/images/adv5-7.png" width="800">
+
+&nbsp; 
+
+#### 3.2.3 Clip the raster to London extent
+
+Next, click on the Algorithms section and search for "Clip raster by extent". Drag that on your modeling area, to the right of your two input layers. A pop-up window opens (make it bigger by pinching the corners of that pop up window). 
+
+- Set your Input layer to a Model Input (click on the `123` icon to change the type of input), and pick your `Great Britain Pop Denisty Raster Grid`.
+- Do the same with your Mask layer: set it as Model input `London LSOA`. 
+- Give your output a name: `London_Children_Under_Five_Pop_Density`
+- You can ignore the dependencies section for this one (_more on this in the next sections_).
+
+
+<img src="../../../../docs/assets/images/adv5-8.png" width="800">
+
+&nbsp; 
+
+Once you've pressed OK, a new box for your algorithm appears, along with a green Output box (your clipped raster layer).
+
+<img src="../../../../docs/assets/images/adv5-8.png" width="800">
+
+&nbsp; 
+
+#### 3.2.4 Try running your clipping workflow
+
+You now have a simple workflow that takes two inputs and returns one output. Let's try to run that: press the green arrow (or F5 on your keyboard). A new pop up windows appears, with three parameters for you to fill: what layer should you use as your `Great Britain Pop Denisty Raster Grid`, and which one as your `London LSOA`, and do you want to save your output on your computer? (for now just save as temporary file / scratch layer)
+
+<img src="../../../../docs/assets/images/adv5-9.png" width="800">
+
+&nbsp; 
+
+You can see that your model ran successfully and produce the outpur layer you wanted, clipped to a bounding box that represents the extent of London boundaries (a raster grid that ranges from the minimum to the maximum x and y values in the London LSOA layer). You can remove that layer and go back to your Graphical Modeler.
 
 <img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-10.png" width="800">
+
+### 3.3 Create Input layers for the remaining parameters in your pocket parks suitability analysis
+
+We need to make sure the remaining parameters in our pocket parks suitability analysis are loaded into our model. Click the `Inputs` tab and add three new `Vector layer` inputs for:
+
+- Brownfields (polygons - mandatory)
+- Greenspace Access Points (points - mandatory)
+- Conservation Areas (polygons - mandatory)
+
+<img src="../../../../docs/assets/images/adv5-11.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-10.png" width="800">
+Save your changes. Your inputs are now ready to be reclassified  so that each criteria becomes araster layer with a suitability score.
+
+<img src="../../../../docs/assets/images/adv5-12.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-10.png" width="800">
+
+
+## IV. Data pre-processing
+
+### 4.1 Brownfields reclassification
+
+0 or 1
+
+### 4.2 Conservation Areas reclassification
+
+0 or 1
+### 4.3 Children under 5 reclassification
+
+Quantiles in London
+### 4.4 Greenspace Access Points
+
+Distance layer
+
+### 4.5 LSOA
+
+Refactor tool
+Then score
+
+
+## V. Weighted overlay
+
+Assing weights
+Run
+
+<img src="../../../../docs/assets/images/adv5-.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-10.png" width="800">
+<img src="../../../../docs/assets/images/adv5-.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-.png" width="800">
+
+&nbsp; 
+
+<img src="../../../../docs/assets/images/adv5-.png" width="800">
 
 &nbsp; 
 
