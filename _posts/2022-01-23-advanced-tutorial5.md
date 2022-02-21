@@ -169,7 +169,7 @@ Next, click on the Algorithms section and search for "Clip raster by extent". Dr
 
 Once you've pressed OK, a new box for your algorithm appears, along with a green Output box (your clipped raster layer).
 
-<img src="../../../../docs/assets/images/adv5-8.png" width="800">
+<img src="../../../../docs/assets/images/adv5-9.png" width="800">
 
 &nbsp; 
 
@@ -177,13 +177,13 @@ Once you've pressed OK, a new box for your algorithm appears, along with a green
 
 You now have a simple workflow that takes two inputs and returns one output. Let's try to run that: press the green arrow (or F5 on your keyboard). A new pop up windows appears, with three parameters for you to fill: what layer should you use as your `Great Britain Pop Denisty Raster Grid`, and which one as your `London LSOA`, and do you want to save your output on your computer? (for now just save as temporary file / scratch layer)
 
-<img src="../../../../docs/assets/images/adv5-9.png" width="800">
+<img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
 You can see that your model ran successfully and produce the outpur layer you wanted, clipped to a bounding box that represents the extent of London boundaries (a raster grid that ranges from the minimum to the maximum x and y values in the London LSOA layer). You can remove that layer and go back to your Graphical Modeler.
 
-<img src="../../../../docs/assets/images/adv5-10.png" width="800">
+<img src="../../../../docs/assets/images/adv5-11.png" width="800">
 
 &nbsp; 
 
@@ -196,13 +196,13 @@ We need to make sure the remaining parameters in our pocket parks suitability an
 - Greenspace Access Points (points - mandatory)
 - Conservation Areas (polygons - mandatory)
 
-<img src="../../../../docs/assets/images/adv5-11.png" width="800">
+<img src="../../../../docs/assets/images/adv5-12.png" width="800">
 
 &nbsp; 
 
-Save your changes. Your inputs are now ready to be reclassified  so that each criteria becomes araster layer with a suitability score.
+Save your changes. Your inputs are now ready to be pre-processed to become usable as selection criteria.
 
-<img src="../../../../docs/assets/images/adv5-12.png" width="800">
+<img src="../../../../docs/assets/images/adv5-13.png" width="800">
 
 &nbsp; 
 
@@ -210,19 +210,27 @@ Save your changes. Your inputs are now ready to be reclassified  so that each cr
 
 ## IV. Data pre-processing
 
-### 4.1 Brownfields reclassification
+We are using a raster approach in this analysis so we first need to turn all of our layers into raster scores.
 
-0 or 1
+### 4.1 Brownfields 
+
+The first layer we want to reclassify is the brownfields. Basically if the site is not a brownfield we will not consider it as a possible option so we will assign those areas a value of 0. Brownfield areas will be assigned a value of 1. But because our layer is a vector polygon layer, we first need to rasterize it.
+
+
+The [help](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#gdalrasterize) page gives you more information about each parameters.
+
 
 ### 4.2 Conservation Areas reclassification
 
+We need to 
 0 or 1
 ### 4.3 Children under 5 reclassification
 
 Quantiles in London
 ### 4.4 Greenspace Access Points
 
-Distance layer
+rasterize then
+proximity Distance layer
 
 ### 4.5 LSOA
 
@@ -232,8 +240,17 @@ Then score
 
 ## V. Weighted overlay
 
-Assing weights
-Run
+### 5.1. Assign weights
+
+Assign weights
+
+### 5.2. Run model
+
+### 5.3. Notes
+
+- overview of the workflow - to be added onto reports as a good overview of the workflow
+- can export model as Python script
+- can change input layers easily as long as they're of the same type
 
 <img src="../../../../docs/assets/images/adv5-.png" width="800">
 
