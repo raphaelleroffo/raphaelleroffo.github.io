@@ -86,6 +86,12 @@ In case you are stuck with the setup, you can also launch the project using [thi
 
 &nbsp; 
 
+**Note:** By default the Conservation Areas layer does not have a CRS. Double-click on it and make sure you set it up to EPSG:27700!
+
+<img src="../../../../docs/assets/images/adv5-00.png" width="800">
+
+&nbsp; 
+
 ## III. Model setup
 
 ### 3.1 The QGIS Graphical Modeler
@@ -175,13 +181,13 @@ Once you've pressed OK, a new box for your algorithm appears, along with a green
 
 #### 3.2.4 Try running your clipping workflow
 
-You now have a simple workflow that takes two inputs and returns one output. Let's try to run that: press the green arrow (or F5 on your keyboard). A new pop up windows appears, with three parameters for you to fill: what layer should you use as your `Great Britain Pop Denisty Raster Grid`, and which one as your `London LSOA`, and do you want to save your output on your computer? (for now just save as temporary file / scratch layer)
+You now have a simple workflow that takes two inputs and returns one output. Let's try to run that: press the green arrow (or F5 on your keyboard). A new pop up windows appears, with three parameters for you to fill: what layer should you use as your `Great Britain Pop Density Raster Grid`, and which one as your `London LSOA`, and do you want to save your output on your computer? (for now just save as temporary file / scratch layer)
 
 <img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
 &nbsp; 
 
-You can see that your model ran successfully and produce the outpur layer you wanted, clipped to a bounding box that represents the extent of London boundaries (a raster grid that ranges from the minimum to the maximum x and y values in the London LSOA layer). You can remove that layer and go back to your Graphical Modeler.
+You can see that your model ran successfully and produced the outpur layer you wanted, clipped to a bounding box that represents the extent of London boundaries (a raster grid that ranges from the minimum to the maximum x and y values in the London LSOA layer). You can remove that layer and go back to your Graphical Modeler.
 
 <img src="../../../../docs/assets/images/adv5-11.png" width="800">
 
@@ -214,29 +220,84 @@ We are using a raster approach in this analysis so we first need to turn all of 
 
 ### 4.1 Brownfields 
 
-The first layer we want to reclassify is the brownfields. Basically if the site is not a brownfield we will not consider it as a possible option so we will assign those areas a value of 0. Brownfield areas will be assigned a value of 1. But because our layer is a vector polygon layer, we first need to rasterize it.
+The first layer we want to reclassify is the brownfields. Basically if the site is not a brownfield we will not consider it as a possible option so we will assign those areas a value of 0. Brownfield areas will be assigned a value of 1. Because our layer is a vector polygon layer, we first need to rasterize it. We will "burn" the value 1 where brownfields are located and the value 0 elsewhere.
 
 
 The [help](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#gdalrasterize) page gives you more information about each parameters.
 
 
-### 4.2 Conservation Areas reclassification
+In your algorithm tab, search for the tool `Rasterize (vector to raster)`. Use the following parameters (and for your output extent: `Calculate from Layer` > Pick your Brownfield layer).
 
-We need to 
-0 or 1
-### 4.3 Children under 5 reclassification
+<img src="../../../../docs/assets/images/adv5-14.png" width="800">
 
-Quantiles in London
-### 4.4 Greenspace Access Points
+&nbsp; 
 
-rasterize then
-proximity Distance layer
+Let's check that your tool is running properly. To do so, save your model and run it. You can also right click the Clip tool and temporarily deactivate it, that way you are only running your rasterize tool and not the entire model.
 
-### 4.5 LSOA
+When you run the model, you get a new `brownfields_rasterized` layer on your map canvas. Double-click it and in the symbology, set the min value to 0, max value to 1 and the colour ramp to be white to black (that way your brownfield areas will be in black and the rest in white). 
 
+<img src="../../../../docs/assets/images/adv5-15.png" width="800">
+
+&nbsp; 
+
+You can also choose, in the `Transparency` tab, to untick the box `No data value 0`. When this box is ticked, it makes the raster cells are equal to 0 transparent. If you untick it, it makes them white.
+
+<img src="../../../../docs/assets/images/adv5-16.png" width="800">
+
+&nbsp; 
+
+You can now check on your canvas that the rasterized output does match your original vector layer by toggling it on and off. This is good, so we can go back to our model.
+
+<img src="../../../../docs/assets/images/adv5-17.png" width="800">
+
+&nbsp; 
+
+#### Troubleshooting:
+
+/!\ When you run this tool you may (or may not) run into an error in red. This is generated when you have exceeded the amount of data held in memory. You can try saving your changes, closing QGIS and reopening it and you should now be able to run the tool smoothly.
+
+### 4.2 Conservation Areas
+
+We want to run a similar process with the conservation areas, except this time we want to exclude from our analysis the areas that _are_ conservation areas. So this time we will burn the value 0 if a raster cell is in a conservation area, and the value 1 otherwise.
+
+Drag the `Rasterize (vector to raster)` tool onto your modeling area and fill it using the parameters below:
+
+<img src="../../../../docs/assets/images/adv5-18.png" width="800">
+
+&nbsp; 
+
+Again if you want to get a sense check of whether your tool runs as intended you can run your model (maybe deactivating the other algorithms for now) and explore the layer produced. Set the min value to 0, the max to 1, and maybe the colour scale to be from Black to White:
+
+<img src="../../../../docs/assets/images/adv5-19.png" width="800">
+
+&nbsp; 
+
+It all seems good, let's move on to the next layer.
+
+
+### 4.3 Greenspace Access Points
+
+Repeat the process of rasterization for your greenspace access points. Here we burn the value 1 on each of the access points, and 0 everywhere else. Pick the greenspace access points layer extent as your output extent.
+
+<img src="../../../../docs/assets/images/adv5-20.png" width="800">
+
+&nbsp; 
+
+You can again do a sense check of whether your tool is working properly by running that algorithm. The layer produced will be almost exclusively filled with 0 values, but you have to be very very zoomed in onto your greenspace access points to find the cells with a value of 1.
+
+<img src="../../../../docs/assets/images/adv5-21.png" width="800">
+
+&nbsp; 
+
+### 4.4 LSOA
+
+For your LSOA layer, the process is a bit more tedious. We first
 Refactor tool
 Then score
 
+### 4.5 Children under 5 reclassification
+
+Quantiles in London
 
 ## V. Weighted overlay
 
@@ -247,6 +308,7 @@ Assign weights
 ### 5.2. Run model
 
 ### 5.3. Notes
+
 
 - overview of the workflow - to be added onto reports as a good overview of the workflow
 - can export model as Python script
