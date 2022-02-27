@@ -37,17 +37,17 @@ Lecturer: Raphaëlle Roffo
 &nbsp; 
 ### 2.2 Context
 
-Suitability analysis (aka Site Selection) is a very common and powerful type of GIS analysis. The goal of a suitability analysis is to identify the most optimal place for something to be located. The most common approach to suitability analysis consists in overlaying multiple layers representing different criteria each, assigning them relative weights, and recombine those criteria into a single suitability score.
+Suitability analysis (aka Site Selection) is a very common and powerful type of GIS analysis. The goal of a suitability analysis is to identify the most optimal place for something to be located. The most common approach to suitability analysis is raster-based and consists in overlaying multiple layers representing different criteria each, assigning them relative weights, and recombine those criteria into a single suitability score.
 
 London population is set to increase from 9.03 million in 2021 to 10.11 million by 2036 (source: Greater London Authority). How can we ensure decent standards of living for this additional million dwellers ? 
 
 Research suggests that proximity to green spaces has a strong positive impact on communities’ physical and mental health. In particular, outdoor playgrounds have been proven to increase children’s capabilities and to significantly improve their behavioural and social skills (Brussoni et al, 2017). As seen with the Covid-19 lockdowns, living within walking distance from such parks seems all the more important to the wellbeing of urban communities and especially young children with no access to a private garden.
 
-We also observe that land allocation in central London is not always optimal, with a considerable amount of brownfield  (land that was previously developed but is no longer in use), which is not optimal from an economic, social and environmental perspective.
+We also observe that land allocation in central London is not always optimal, with a considerable amount of brownfield  (land that was previously developed but is no longer in use). This is not optimal from an economic, social and environmental perspective.
 
 Literature suggests that conversion of brownfield into green spaces is a very efficient way to lower soil pollution and tap into formerly unutilized land to generate positive social impact on local communities. (Vitiello, 2008; Grenstein & Sungu-Eryilmaz, 2004; Adorjàn et al, 2015).
 
-Our research objective consists in identifying brownfields that are suitable for regeneration into pocket parks with playground facilities, with the purpose of having the greater positive impact on children.
+**In this tutorial, our research objective consists in identifying brownfields that are suitable for regeneration into pocket parks with playground facilities, with the purpose of having the greater positive impact on children.**
 
 
 &nbsp; 
@@ -68,7 +68,7 @@ Download the following datasets in your folder and load them onto your map canva
 
 - [High Resolution Population Density - Children under 5](https://data.humdata.org/dataset/united-kingdom-high-resolution-population-density-maps-demographic-estimates): Download the `Children Under 5` geotiff dataset, because we want to maximise the number of children with access to the pocket parks. You can learn more about the [methodology here](https://dataforgood.facebook.com/dfg/tools/high-resolution-population-density-maps#methodology).
 
-- From your Advanced GIS Session 3, your [London LSOA layer with Census join](https://github.com/raphaelleroffo/intro-to-gis/raw/main/London-LSOA-2011Census.gpkg): We are interested in the variable `Census 2011 Dataset: % Couple household with dependent children`, because we want to maximise the number of children with access to the pocket parks
+- From your Advanced GIS Session 3, your [London LSOA layer with Census join](https://github.com/raphaelleroffo/intro-to-gis/raw/main/London-LSOA-2011Census.gpkg): We are interested in the variable `Census_Child Benefit;Total Number of Families Claiming Benefit;2013`, because we want to maximise the number of children from low income familities with access to the pocket parks.
 
 - [Existing Open Greenspaces](https://osdatahub.os.uk/downloads/open/OpenGreenspace): We want to prioritize regeneration of brownfields that are far from existing green spaces. Download the `TQ` tile, which covers Greater London, as an ESRI Shapefile. Notice that the data folder you download contains a polygon layer (the actual open green spaces) and a point layer for the access points to those open green spaces (gates / entrance). We will actually use those points as our reference as they determine the accessibility of the green area more precisely.
 
@@ -86,7 +86,7 @@ In case you are stuck with the setup, you can also launch the project using [thi
 
 &nbsp; 
 
-**Note:** By default the Conservation Areas layer does not have a CRS. Double-click on it and make sure you set it up to EPSG:27700!
+**Note:** By default the Conservation Areas layer may not have a CRS. Double-click on it and make sure you set it up to EPSG:27700!
 
 <img src="../../../../docs/assets/images/adv5-00.png" width="800">
 
@@ -214,13 +214,13 @@ Save your changes. Your inputs are now ready to be pre-processed to become usabl
 
 
 
-## IV. Data pre-processing
+## IV. Data pre-processing & reclassification
 
 We are using a raster approach in this analysis so we first need to turn all of our layers into raster scores.
 
 ### 4.1 Brownfields 
 
-The first layer we want to reclassify is the brownfields. Basically if the site is not a brownfield we will not consider it as a possible option so we will assign those areas a value of 0. Brownfield areas will be assigned a value of 1. Because our layer is a vector polygon layer, we first need to rasterize it. We will "burn" the value 1 where brownfields are located and the value 0 elsewhere.
+The first layer we want to reclassify is the brownfields. **Our criteria here is simple: is a pixel in or out of a brownfield**. If the site is not a brownfield we will not consider it as a possible option so we will assign those areas a value of 0. Brownfield areas will be assigned a value of 1. Because our layer is a vector polygon layer, we first need to rasterize it. We will "burn" the value 1 on pixels that overlap the brownfields, and the value 0 elsewhere.
 
 
 The [help](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#gdalrasterize) page gives you more information about each parameters.
@@ -258,9 +258,9 @@ You can now check on your canvas that the rasterized output does match your orig
 
 ### 4.2 Conservation Areas
 
-We want to run a similar process with the conservation areas, except this time we want to exclude from our analysis the areas that _are_ conservation areas. So this time we will burn the value 0 if a raster cell is in a conservation area, and the value 1 otherwise.
+We want to run a similar process with the conservation areas, except this time **our criteria is that we want to exclude from our analysis the areas that _are_ conservation areas.** This means that this time we will burn the value 0 if a raster cell overlaps a conservation area, and the value 1 otherwise.
 
-Drag the `Rasterize (vector to raster)` tool onto your modeling area and fill it using the parameters below:
+Drag the `Rasterize (vector to raster)` tool onto your modeling area and fill it using the parameters below. Note that you can also give it a more descriptive name such as "Rasterize Conservation Areas":
 
 <img src="../../../../docs/assets/images/adv5-18.png" width="800">
 
@@ -277,27 +277,159 @@ It all seems good, let's move on to the next layer.
 
 ### 4.3 Greenspace Access Points
 
-Repeat the process of rasterization for your greenspace access points. Here we burn the value 1 on each of the access points, and 0 everywhere else. Pick the greenspace access points layer extent as your output extent.
+Our greenspace access points criteria is a bit more elaborate: In the London Plan (Greater London Authority, 2016), small open spaces (less than 2 ha) have a catchment area of less than 400m. This means that if residents already have access to a greenspace within 400m, they might not be our priority target for providing an additional pocket park. Besides, using an average 4km per hour average walking speed for children (Muller, 2008), we can consider that residents living between 400m and 700m of a greenspace access point are still within 10minutes walk of a greenspace, but beyond 700m the distance becomes difficult to manage, especially with children. This is why our final criteria is;
+
+- **We exclude entirely (score of 0) areas located within 200m of an existing greenspace access point,**
+- **We assign a score of 1 to areas between 200 and 400m,**
+- **We assign a score of 2 for 400-700m**
+- **We assign a score of 3 for areas beyond 700m of an existing greenspace access point**
+
+
+#### 4.3.1 Rasterize the layer
+
+Repeat the process of rasterization for your greenspace access points. Here we burn the value 1 on each of the access points, and 0 everywhere else. Pick the **LSOA layer** extent as your output extent, so that we reduce the extent of the layer to Greater London. We also use a pixel size of 1, to prevent a major slowdown in running the next algorithm. You can also change the Description, for instance to  "Rasterize greenspaces".
 
 <img src="../../../../docs/assets/images/adv5-20.png" width="800">
 
 &nbsp; 
 
-You can again do a sense check of whether your tool is working properly by running that algorithm. The layer produced will be almost exclusively filled with 0 values, but you have to be very very zoomed in onto your greenspace access points to find the cells with a value of 1.
+You can again do a sense check of whether your tool is working properly by running that algorithm (if you do so, make sure to specify a name for your output layer in the bottom parameters of your rasterize tool). The layer produced will be almost exclusively filled with 0 values, but you have to be very very zoomed in onto your greenspace access points to find the cells with a value of 1.
 
 <img src="../../../../docs/assets/images/adv5-21.png" width="800">
 
 &nbsp; 
 
+#### 4.3.2 Proximity Analysis
+
+Our selection criteria here is not just about the access gates though, but rather **the distance to a greenspace access point**. So one additional pre-processing step we need to take here is to use the Proximity tool to derive the distance from each access point (the raster equivalent of a buffer). This tool will look at each pixel of value 1 (access point) in the input layer, derive the distance to each of the other pixels, and then for each pixel of value 0, assign it the distance to the nearest access point (nearest pixel of value 1).
+
+<img src="../../../../docs/assets/images/adv5-22.png" width="800">
+
+&nbsp; 
+
+Note that you can also at this stage add a dependency; if the previous step of rasterizing greenspace access points did not run properly, then this step should not be run.
+
+<img src="../../../../docs/assets/images/adv5-23.png" width="800">
+
+&nbsp; 
+
+
+#### 4.3.3 Reclassification
+
+The next step is to reclassify the distance layer into the categories we have defined previously:
+
+- **0-200: 0**
+- **200-400: 1**
+- **400-700: 2**
+- **> 700m: 3**
+
+Look for the `Reclassify by table` algorithm and fill it using the below parameters: we want to use the output of the Proximity map as input to this step, and we will define the reclassification table the same way that we did for the NDVI tutorial. Make sure to note the Proximity step as a dependency.
+
+<img src="../../../../docs/assets/images/adv5-24.png" width="800">
+
+&nbsp; 
+
+Your table should look like this:
+
+<img src="../../../../docs/assets/images/adv5-25.png" width="800">
+
+&nbsp; 
+
+
 ### 4.4 LSOA
 
-For your LSOA layer, the process is a bit more tedious. We first
-Refactor tool
-Then score
+For your LSOA layer, we need to:
 
-### 4.5 Children under 5 reclassification
+1) Use the Refactor tool to make sure our `Census_Child Benefit;Total Number of Families Claiming Benefit;2013` variable is of the right data type (real number) instead of string.
 
-Quantiles in London
+2) Rasterize your layer and assign the value of our census variable value in any given LSOA to the cells in that LSOA
+
+3) Reclassify our data (but first we need to have a think about which class breaks we want to use)
+
+#### 4.4.1 Refactoring
+
+Because we want to explore the distribution of the variable on our map canvas, we will do this step directly on  our dataset. Use the method of your choice (field calculator or refactoring tool) to transform your `Census_Child Benefit;Total Number of Families Claiming Benefit;2013` variable into a field of type `Real`.
+
+
+<img src="../../../../docs/assets/images/adv5-26.png" width="800">
+
+&nbsp; 
+
+
+#### 4.4.2 Distribution and class breaks identification
+
+Make sure you save your edits and exit the edit session by clicking on the yellow pencil button. Then, navigate to your symbology and load your variable in the Graduated symbology. Look at the Histogram and load the values. The data is more or less normally distributed, and you clearly identify blocks around the mean and +/-1 standard deviation around the mean. 
+
+<img src="../../../../docs/assets/images/adv5-27.png" width="800">
+
+&nbsp; 
+
+We will use the Jenks method that precisely takes those values as class breaks. Note down the values of the breaks: 0; 120 ; 200 ; 285 ; 780.
+
+<img src="../../../../docs/assets/images/adv5-28.png" width="800">
+
+&nbsp; 
+
+
+#### 4.4.3 Rasterize data
+
+Now, go back to your Graphical modeler. We need to rasterize the census dataset, and use our modified `Total Number of Families Claiming Benefit;2013` field (in my case, it's called `Total benefit families` for short) to burn the pixel values. Make sure to remove the 0 from the parameter below (a fixed value to burn):
+
+<img src="../../../../docs/assets/images/adv5-29.png" width="800">
+
+&nbsp; 
+
+#### 4.4.4 Reclassification
+
+Finally, we will take the output of this previous step and reclassify the values into 4 categories, the ones we identified earlier in step `4.4.2` when looking at the distribution of our variable. Open the `Reclassify by table` tool:
+
+<img src="../../../../docs/assets/images/adv5-30.png" width="800">
+
+&nbsp; 
+
+Make sure you set up your table like this:
+
+<img src="../../../../docs/assets/images/adv5-31.png" width="800">
+
+&nbsp; 
+
+We are done with the census layer!
+
+### 4.5 Children under 5
+
+This dataset is already a raster data - in the right format. We only need to reclassify it. To figure out the best class breaks, we can explore the layer that was clipped to London extent (you may not have kept it, it's ok you can simply read this step). When looking at the histogram, it is difficult to come up with clear values for our class breaks. 
+
+<img src="../../../../docs/assets/images/adv5-32.png" width="800">
+
+&nbsp; 
+
+Instead, we can use the singleband pseudocolour symbology to split our distribution into quantiles. We will use the values 0-0.2, 0.2-0.4, 0.4-0.6 and 0.6-62 as our class breaks for the reclassification. This way, we have a score of 0 for 25% of all areas that have the least number of children under 5, a score of 1 for the next 25%, a score of 2 for the next 25% and a score of 3 for the top 25% areas with the most children under 5.
+
+<img src="../../../../docs/assets/images/adv5-33.png" width="800">
+
+&nbsp; 
+
+In your graphical modeler, open a new `Reclassify by table` tool and fill the parameters so that it takes the output of the clipped population grid as input:
+
+<img src="../../../../docs/assets/images/adv5-34.png" width="800">
+
+&nbsp; 
+
+Make sure your table uses the values determined above:
+
+<img src="../../../../docs/assets/images/adv5-35.png" width="800">
+
+&nbsp; 
+
+
+
+**We are now done with the data pre-processing and reclassification steps! Your model should look like this** (don't ehsitate to mode the functions around for clarity):
+
+
+<img src="../../../../docs/assets/images/adv5-36.png" width="800">
+
+&nbsp; 
+
 
 ## V. Weighted overlay
 
