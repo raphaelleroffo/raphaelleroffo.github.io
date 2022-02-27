@@ -86,11 +86,24 @@ In case you are stuck with the setup, you can also launch the project using [thi
 
 &nbsp; 
 
-**Note:** By default the Conservation Areas layer may not have a CRS. Double-click on it and make sure you set it up to EPSG:27700!
+### 2.5 Set up the right CRS
+
+
+By default the Conservation Areas layer may not have a CRS. Double-click on this layer to access its properties > `Source` and make sure you set it up to EPSG:27700!
 
 <img src="../../../../docs/assets/images/adv5-00.png" width="800">
 
 &nbsp; 
+
+Next, and this is **absolutely crucial for the rest of the analysis**, you need to reproject the raster dataset so that its CRS is set to British National Grid (EPSG:27700). QGIS does this on the fly for you so it appears like the layer is in the right CRS, but for the processing we are going to go through you need to change it for good. In your processing toolbox, look for the tool `Warp (reproject)` in GDAL's Raster Projections toolbox.
+
+Set up the tool parameters so that you reproject from WGS84 to British National Grid. It may take a bit of time to run (if your computer is slow, you can simply download this Geotiff copy I made from the reprojected layer)
+
+<img src="../../../../docs/assets/images/adv5-000.png" width="800">
+
+&nbsp; 
+
+
 
 ## III. Model setup
 
@@ -470,7 +483,7 @@ Make sure to select all layers as references (the smallest cell resolution will 
 
 ### 5.3. Run Model
 
-Make sure youv'e saved all your edits! Before you run your model, it may be a good idea to save a different copy of this model (`Save As...`), then in this copy you can delete all the extra layers that are being produced at intermediate stages of your model, whcih would take up more memory.
+Make sure you've saved all your edits! Before you run your model, it may be a good idea to save a different copy of this model (`Save As...`), then in this copy you can delete all the extra layers that are being produced at intermediate stages of your model, whcih would take up more memory.
 
 
 <img src="../../../../docs/assets/images/adv5-38.png" width="800">
