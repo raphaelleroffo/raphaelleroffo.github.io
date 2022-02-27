@@ -483,7 +483,7 @@ Make sure to select all layers as references (the smallest cell resolution will 
 
 ### 5.3. Run Model
 
-Make sure you've saved all your edits! Before you run your model, it may be a good idea to save a different copy of this model (`Save As...`), then in this copy you can delete all the extra layers that are being produced at intermediate stages of your model, whcih would take up more memory.
+Make sure you've saved all your edits! Before you run your model, it may be a good idea to save a different copy of this model (`Save As...`) that still contains all the intermediate layer outputs. Then in your second copy you can delete all the extra layers that are being produced at intermediate stages of your model, which would take up more memory. Run that!
 
 
 <img src="../../../../docs/assets/images/adv5-38.png" width="800">
@@ -491,7 +491,7 @@ Make sure you've saved all your edits! Before you run your model, it may be a go
 &nbsp; 
 
 
-You have successfully completed your weighted overlay! Nox, have a look at the output:
+You have successfully completed your weighted overlay! In the final session (session 6), we will explore the outputs of the model together
 
 
 
@@ -502,7 +502,7 @@ You have successfully completed your weighted overlay! Nox, have a look at the o
 ### Notes
 
 
-- This workflow is unfortunately extremely greedy in terms of memory, due to the raster processing. If you are experiencing issues, you can try reducing the resolution (set a larger pixel size).
+- This workflow is unfortunately extremely greedy in terms of memory, due to the raster processing. If you are experiencing issues, you can try reducing the resolution (set a larger pixel size). It's ok if you are not able to run the model ultimately - in the final tutorial we summarize the main findings from the model outputs, and go through the actual selecxtion process based on the final score.
 - The snapshot of the entire workflow can be exported as an image or a pdf; if you build up a complex analysis it's a good idea to include this in the methodology section of your report.
 - You can also export your model as a Python script
 - One of the big advantages of using the Graphical Modeler is that you can change input layers easily, as long as they're of the same data type. This means you can replicate an analysis from one city to the next very easily (as long as you're careful with the CRS).
