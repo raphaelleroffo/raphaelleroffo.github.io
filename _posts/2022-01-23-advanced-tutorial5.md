@@ -338,13 +338,15 @@ Your table should look like this:
 
 ### 4.4 LSOA
 
-For your LSOA layer, we need to:
+For your LSOA layer, our criteria is derived from the number of familities claiming benefits in each given LSOA. **We want to identify the LSOAs with most families in this situation and attribute those areas a higher score**, in order to prioritize the creation of a new pocket park in more deprived areas. Areas with the lowest number of families needing social benefit will get a lower score, as we consider them to be less of a priority.
+
+To do so, we first need to:
 
 1) Use the Refactor tool to make sure our `Census_Child Benefit;Total Number of Families Claiming Benefit;2013` variable is of the right data type (real number) instead of string.
 
 2) Rasterize your layer and assign the value of our census variable value in any given LSOA to the cells in that LSOA
 
-3) Reclassify our data (but first we need to have a think about which class breaks we want to use)
+3) Reclassify our data in the appropriate number of categories (but first we need to have a think about which class breaks we want to use)
 
 #### 4.4.1 Refactoring
 
@@ -397,7 +399,9 @@ We are done with the census layer!
 
 ### 4.5 Children under 5
 
-This dataset is already a raster data - in the right format. We only need to reclassify it. To figure out the best class breaks, we can explore the layer that was clipped to London extent (you may not have kept it, it's ok you can simply read this step). When looking at the histogram, it is difficult to come up with clear values for our class breaks. 
+This dataset is already a raster data - in the right format. **Our criteria for this variable is that we want to prioritize areas with a high density of children under 5. Areas with the highest number of children will be attributed a high score, and areas with few hildren a low score.** To come up with this reclassificaiton, we first need to figure out the best class breaks. This can be done by exploring the population density layer that was clipped to London extent (you may not have kept it, it's ok you can simply read this step to understand the approach). 
+
+When looking at the histogram, it is difficult to come up with clear values for our class breaks. 
 
 <img src="../../../../docs/assets/images/adv5-32.png" width="800">
 
@@ -433,36 +437,64 @@ Make sure your table uses the values determined above:
 
 ## V. Weighted overlay
 
+
+Finally, we can now build our weighted overlay by combining our 5 criteria into a single score.
 ### 5.1. Assign weights
 
-Assign weights
+We can now assign a weight to each of out criteria. Brownfield is not assigned a weight because it's the condition for a site to even be considered as a potential site.
 
-### 5.2. Run model
+We decide to lower the weight of the conservation areas score and existing distance to greenspace access points (20% each), and to give a higher weight of 30% each to our two social variables:
 
-### 5.3. Notes
+| Criteria                               | Weight |
+|----------------------------------------|--------|
+| Brownfields                            |   Necessary     |
+| Conservation Areas                     | 0.2    |
+| Distance to Greenspace Access Points   | 0.2    |
+| Number of Families Claiming Benefit    | 0.3   |
+| Population Density of Children under 5 | 0.3    |
 
 
-- overview of the workflow - to be added onto reports as a good overview of the workflow
-- can export model as Python script
-- can change input layers easily as long as they're of the same type
+### 5.2. Weighted overlay
 
-<img src="../../../../docs/assets/images/adv5-.png" width="800">
+To get our final score, open the QGIS Raster Calculator algorithm (/!\ not the gdal or saga ones!) in the graphical modeler. The raster operation we write translates the weights above: We want to first check whether the Brownfields pixels do not have a value of 0 (aka: that we are not outside of the brownfield polygons); if it is the case then we sum up all the other variables, multiplying them by their weight.
 
-&nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-.png" width="800">
+Make sure to select all layers as references (the smallest cell resolution will be used as default output), to set the CRS to British National Grid, and yoru output extent to the LSOA layer extent. Name the final output that will be produced, and you can also set up where it will be saved n your computer.
 
-&nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-.png" width="800">
-
-&nbsp; 
-
-<img src="../../../../docs/assets/images/adv5-.png" width="800">
+<img src="../../../../docs/assets/images/adv5-37.png" width="800">
 
 &nbsp; 
 
-<img src="../../../../docs/assets/images/adv5-.png" width="800">
+
+
+### 5.3. Run Model
+
+Make sure youv'e saved all your edits! Before you run your model, it may be a good idea to save a different copy of this model (`Save As...`), then in this copy you can delete all the extra layers that are being produced at intermediate stages of your model, whcih would take up more memory.
+
+
+<img src="../../../../docs/assets/images/adv5-38.png" width="800">
+
+&nbsp; 
+
+
+You have successfully completed your weighted overlay! Nox, have a look at the output:
+
+
+
+<img src="../../../../docs/assets/images/adv5-39.png" width="800">
+
+&nbsp; 
+
+### Notes
+
+
+- This workflow is unfortunately extremely greedy in terms of memory, due to the raster processing. If you are experiencing issues, you can try reducing the resolution (set a larger pixel size).
+- The snapshot of the entire workflow can be exported as an image or a pdf; if you build up a complex analysis it's a good idea to include this in the methodology section of your report.
+- You can also export your model as a Python script
+- One of the big advantages of using the Graphical Modeler is that you can change input layers easily, as long as they're of the same data type. This means you can replicate an analysis from one city to the next very easily (as long as you're careful with the CRS).
+
+
 
 &nbsp; 
 
