@@ -97,7 +97,7 @@ By default the Conservation Areas layer may not have a CRS. Double-click on this
 
 Next, and this is **absolutely crucial for the rest of the analysis**, you need to reproject the raster dataset so that its CRS is set to British National Grid (EPSG:27700). QGIS does this on the fly for you so it appears like the layer is in the right CRS, but for the processing we are going to go through you need to change it for good. In your processing toolbox, look for the tool `Warp (reproject)` in GDAL's Raster Projections toolbox.
 
-Set up the tool parameters so that you reproject from WGS84 to British National Grid. It may take a bit of time to run (if your computer is slow, you can simply download this Geotiff copy I made from the reprojected layer)
+Set up the tool parameters so that you reproject from WGS84 to British National Grid. It may take a bit of time to run (if your computer is slow, you can simply download the Geotiff copy I made from the reprojected layer on the course Google Drive)
 
 <img src="../../../../docs/assets/images/adv5-000.png" width="800">
 
