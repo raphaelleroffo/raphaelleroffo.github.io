@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Session 5 - MCDM & Weighted Overlays (Part 1)
+title: Session 5 - MCDA & Weighted Overlays
 
 ---
 
@@ -37,7 +37,9 @@ Lecturer: Raphaëlle Roffo
 &nbsp; 
 ### 2.2 Context
 
-Suitability analysis (aka Site Selection) is a very common and powerful type of GIS analysis. The goal of a suitability analysis is to identify the most optimal place for something to be located. The most common approach to suitability analysis is raster-based and consists in overlaying multiple layers representing different criteria each, assigning them relative weights, and recombine those criteria into a single suitability score.
+Suitability analysis (aka Site Selection) is a very common and powerful type of GIS analysis. The goal of a suitability analysis is to identify the most optimal place for something to be located. The most common approach to suitability analysis is raster-based and consists in overlaying multiple layers representing different criteria each, assigning them relative weights, and recombining those criteria into a single suitability score.
+
+Let's consider this scenario:
 
 London population is set to increase from 9.03 million in 2021 to 10.11 million by 2036 (source: Greater London Authority). How can we ensure decent standards of living for this additional million dwellers ? 
 
@@ -79,7 +81,7 @@ Download the following datasets in your folder and load them onto your map canva
 
 Zoom onto the London area, apply some basic styling (use singleband pseudocolour for the population density geotiff),and save your project as `Advanced-Session5.qgz`.
 
-In case you are stuck with the setup, you can also launch the project using [this geopackage](https://drive.google.com/file/d/1RZ6vlAGc4oh1sI8bmswkZsOHOK9Pk839/view?usp=sharing) + your downloaded GeoTIFF.
+In case you are stuck with the setup, you can also launch the project using [this geopackage](https://drive.google.com/file/d/1RZ6vlAGc4oh1sI8bmswkZsOHOK9Pk839/view?usp=sharing) + your downloaded population dataset GeoTIFF.
 
 
 <img src="../../../../docs/assets/images/adv5-0.png" width="800">
@@ -95,14 +97,27 @@ By default the Conservation Areas layer may not have a CRS. Double-click on this
 
 &nbsp; 
 
-Next, and this is **absolutely crucial for the rest of the analysis**, you need to reproject the raster dataset so that its CRS is set to British National Grid (EPSG:27700). QGIS does this on the fly for you so it appears like the layer is in the right CRS, but for the processing we are going to go through you need to change it for good. In your processing toolbox, look for the tool `Warp (reproject)` in GDAL's Raster Projections toolbox.
+Next, and this is **absolutely crucial for the rest of the analysis**, you need to reproject the raster dataset so that its CRS is set to British National Grid (EPSG:27700). When you add a layer onto your map canvas that is set to a different CRS, QGIS does this on the fly for you so it appears like the layer is in the correct CRS. However, when we use the modeling tool that we are going to use in the next section, you technically don't go through the step of adding the layer onto your canvas, so you need to have your layers all set the proper CRS "for good" (not just on the fly). In other words, we are going to save a copy of this dataset, reprojected in the British National Grid CRS.
 
-Set up the tool parameters so that you reproject from WGS84 to British National Grid. It may take a bit of time to run (if your computer is slow, you can simply download the Geotiff copy I made from the reprojected layer on the course Google Drive)
+In your processing toolbox, look for the tool `Warp (reproject)` in GDAL's Raster Projections toolbox (if you wanted to reproject a *vector* layer you'd use the `Vector general` > `Reproject Layer` tool).
+
+Set up the tool parameters so that you reproject your population grid raster from WGS84 to British National Grid. Take this opportunity to use the Advanced Parameters to reduce the size of the dataset by using a High Compression profile. This will perform an algorithm that will reduce the size of your raster dataset without compromising on the resolution or level of details.
 
 <img src="../../../../docs/assets/images/adv5-000.png" width="800">
 
 &nbsp; 
 
+Make sure to set a location to save your file as GeoTIFF. When you run the tool, it may raise some warning messages in red - that's ok, wait for the tool to run completely.
+
+<img src="../../../../docs/assets/images/adv5-001.png" width="800">
+
+&nbsp; 
+
+If you explore the layer that was just created, you may notice that the size of your dataset was reduced from 107Mb to 382kb, and that the dataset now comes in British National Grid (EPSG27700).
+
+<img src="../../../../docs/assets/images/adv5-002.png" width="800">
+
+&nbsp; 
 
 
 ## III. Model setup
@@ -111,7 +126,7 @@ Set up the tool parameters so that you reproject from WGS84 to British National 
 
 The QGIS Graphical Modeler is the equivalent to the ESRI ArcGIS "Model builder". It allows you to clearly take inputs, run them through algorithms of your choice (= geoprocessing tools, raster analysis tools, basically anything that is available to you through your `Processing Toolbox`) and produce outputs. One advantage of the Graphical Interface is that it allows you to replicate your workflow and automate the run of your model. This is very useful, for instance, if you realise you want to change input but apply the exact same methodology. Or if you want to edit one parameter of one of your algorithms to re-run your entire analysis. It makes repeating, tweaking, iterating through a workflow much easier.
 
-It can be accessed through your top menu `Processing` > `Graphical Modeler...` or in your Processing Toolbox by clicking on the cogs icon > `Create new model...`. A new window opens:
+It can be accessed through your top menu `Processing` > `Graphical Modeler...` **or** in your Processing Toolbox by clicking on the cogs icon > `Create new model...`. Either way, a new window opens:
 
 <img src="../../../../docs/assets/images/adv5-1.png" width="800">
 
@@ -194,7 +209,7 @@ Once you've pressed OK, a new box for your algorithm appears, along with a green
 
 #### 3.2.4 Try running your clipping workflow
 
-You now have a simple workflow that takes two inputs and returns one output. Let's try to run that: press the green arrow (or F5 on your keyboard). A new pop up windows appears, with three parameters for you to fill: what layer should you use as your `Great Britain Pop Density Raster Grid`, and which one as your `London LSOA`, and do you want to save your output on your computer? (for now just save as temporary file / scratch layer)
+You now have a simple workflow that takes two inputs and returns one output. Let's try to run that: press the green arrow (or F5 on your keyboard). A new pop up windows appears, with three parameters for you to fill: what layer should you use as your `Great Britain Pop Density Raster Grid`, and which one as your `London LSOA`, and do you want to save your output on your computer? (for now it's ok to just save as temporary file / scratch layer, because we are testing the outputs of that step in our model)
 
 <img src="../../../../docs/assets/images/adv5-10.png" width="800">
 
@@ -239,7 +254,7 @@ The first layer we want to reclassify is the brownfields. **Our criteria here is
 The [help](https://docs.qgis.org/3.16/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#gdalrasterize) page gives you more information about each parameters.
 
 
-In your algorithm tab, search for the tool `Rasterize (vector to raster)`. Use the following parameters (and for your output extent: `Calculate from Layer` > Pick your Brownfield layer).
+In your algorithm tab, search for the tool `Rasterize (vector to raster)`. Use the following parameters to burn 1 where the brownfields are and 0 elsewhere. Note that the resolution parameters will determine the size of your pixels: here 10 meters (meters are the georeferenced unit in projected coordinate reference systems like British National Grid). Make sure to pick your London LSOA layer for your output extent using `Calculate from Layer`.
 
 <img src="../../../../docs/assets/images/adv5-14.png" width="800">
 
@@ -247,7 +262,7 @@ In your algorithm tab, search for the tool `Rasterize (vector to raster)`. Use t
 
 Let's check that your tool is running properly. To do so, save your model and run it. You can also right click the Clip tool and temporarily deactivate it, that way you are only running your rasterize tool and not the entire model.
 
-When you run the model, you get a new `brownfields_rasterized` layer on your map canvas. Double-click it and in the symbology, set the min value to 0, max value to 1 and the colour ramp to be white to black (that way your brownfield areas will be in black and the rest in white). 
+If you try to run the model, you will get a new `brownfields_rasterized` layer on your map canvas, but the symbology is probably off. Double-click it and in the symbology, set the min value to 0, max value to 1 and the colour ramp to be white to black. This ensures your brownfield areas (pixels of value 1) are represented in black and the rest in white).
 
 <img src="../../../../docs/assets/images/adv5-15.png" width="800">
 
@@ -267,7 +282,7 @@ You can now check on your canvas that the rasterized output does match your orig
 
 #### Troubleshooting:
 
-/!\ When you run this tool you may (or may not) run into an error in red. This is generated when you have exceeded the amount of data held in memory. You can try saving your changes, closing QGIS and reopening it and you should now be able to run the tool smoothly.
+/!\ When you run this tool you may (or may not) run into a memory error in red that signals you've hit a memory limit on your computer. This is generated when you have exceeded the amount of data held in memory. You can try saving your changes, closing QGIS and reopening it and you should now be able to run the tool smoothly.
 
 ### 4.2 Conservation Areas
 
