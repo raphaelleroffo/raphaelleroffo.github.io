@@ -12,7 +12,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 1 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/advanced-session1-getec2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/advanced-session1-glm2022.pdf)**
 
 - *Course overview and objectives*
 - *Raster data in GIS*
@@ -45,7 +45,7 @@ Now, using QGIS, we are able to calculate this ratio at the level of each pixel,
 
 ## IV. Sourcing the data
 
-Visit [https://ers.cr.usgs.gov/login](hhttps://ers.cr.usgs.gov/login) and create a new account. Once you've successfully created an account and are logged in, go to the [Earth Explorer page](https://earthexplorer.usgs.gov). This is one of many platforms from which you can download public satellite data, for free.
+Visit [https://ers.cr.usgs.gov/login](https://ers.cr.usgs.gov/login) and create a new account. Once you've successfully created an account and are logged in, go to the [Earth Explorer page](https://earthexplorer.usgs.gov). This is one of many platforms from which you can download public satellite data, for free.
 
 We are interested in London. By default, the map is centered on Siouxville in the US, but scroll out and navigate to the UK, then zoom onto London, roughly to this extent:
 

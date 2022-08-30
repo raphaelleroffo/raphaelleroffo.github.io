@@ -10,6 +10,7 @@ title: Tutorials - Intro to GIS
 * GETEC Masters - Fall Semester 2020
 * GETEC Masters - Fall Semester 2021
 * GLM Masters - Spring Semester 2022
+* GETEC Masters - Fall Semester 2022
 
 
 
@@ -39,7 +40,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 ### [Session 1: What is GIS?](_posts/2021-11-16-intro-tutorial1.md)
 
 
-*[Class Content:](docs/assets/pdf/intro-session1-glm2022.pdf)*
+*[Class Content:](docs/assets/pdf/intro-session1-getec2022.pdf)*
 
 - *Course overview and objectives*
 - *GIS as a field of research and a tool*

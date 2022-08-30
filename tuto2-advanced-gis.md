@@ -9,6 +9,8 @@ title: Tutorials - Advanced GIS
 
 * GETEC Masters - Spring Semester 2021
 * GETEC Masters - Spring Semester 2022
+* GLM Masters - Fall Semester 2022
+* GETEC Masters - Spring Semester 2023
 
 
 This course is open sourced under an MIT license. I hope you enjoy learning GIS and exploring the QGIS software! You are also more than welcome to use this material for teaching; however if you do so, please make sure to credit my work :)
@@ -49,7 +51,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 ### [Session 1: Introduction and Raster Analysis](_posts/2022-01-23-advanced-tutorial1.md)
 
 
-*[Class Content:](docs/assets/pdf/advanced-session1-getec2022.pdf)*
+*[Class Content:](docs/assets/pdf/advanced-session1-glm2022.pdf)*
 
 - *Course overview and objectives*
 - *Raster data in GIS*
