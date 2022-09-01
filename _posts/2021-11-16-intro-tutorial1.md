@@ -37,14 +37,14 @@ Lecturer: Raphaëlle Roffo
 
 Visit [https://qgis.org/en/site/forusers/download.html](https://qgis.org/en/site/forusers/download.html)
 
-Download the long-term release (most stable) version for your OS. This is a stable and relatively bug-free version as opposed to the latest release in which new features were introduced but you may find some bugs.
+You will be offered the option to download the most recent release or the stable (long-term) release. Pick the long-term release because it will be the most stable version, and download the installer for your OS. The long-term release means it is a stable and relatively bug-free version as opposed to the latest release in which new features were introduced but hasn't been tested by too many users yet to find out every potential bug.
 
 **MacOS:**
 
 <img src="../../../../docs/assets/images/MacOS_download.png" width="700">
 
 You may get an error message as the app was not downloaded through the AppStore. You can override the security settings by following [this method](https://support.apple.com/en-sg/HT202491).
-If you own an old Mac, you may need to download an older version of QGIS. If you are unable to download 3.16, try downloading one of the 2.18 releases from [this page](https://qgis.org/downloads/macOS/)
+If you own an old Mac, you may need to download an older version of QGIS. If you are unable to download the long-term release, try downloading one of the 2.18 releases from [this page](https://qgis.org/downloads/macOS/).
 
 **Windows users:** download the QGIS Standalone installer, you won't need the OSGeo4W setup for your usage.
 
