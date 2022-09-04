@@ -58,7 +58,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 2: Sourcing and loading data into GIS](_posts/2021-11-16-intro-tutorial2.md)
 
-*[Class Content:](docs/assets/pdf/intro-session2-glm2022.pdf)*
+*[Class Content:](docs/assets/pdf/intro-session2-getec2022.pdf)*
 - *Navigating data types (vector and raster) and common data formats (.shp, .geojson, .csv, PostGIS, etc)*
 - *Where to source data and what to look for (metadata, etc)*
 - *Exploring the data structure of typical spatial formats using GeoDa*

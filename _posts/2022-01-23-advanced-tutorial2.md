@@ -12,7 +12,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 2 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/advanced-session2-getec2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/advanced-session2-glm2022.pdf)**
 
 - *Some raster dataset examples*
 - *Georeferencing: use cases*
