@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 3 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/intro-session3-glm2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session3-getec2022.pdf)**
 
 - *Understanding the attribute table*
 - *Querying data based on their attributes*
