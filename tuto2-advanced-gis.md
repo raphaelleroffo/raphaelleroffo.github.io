@@ -80,7 +80,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 3: Bivariate choropleths](_posts/2022-01-23-advanced-tutorial3.md)
 
-*[Class Content:](docs/assets/pdf/advanced-session3-getec2022.pdf)*
+*[Class Content:](docs/assets/pdf/advanced-session3-glm2022.pdf)*
 
 - *Analysing relative trends using bivariate choropleths*
 

@@ -12,7 +12,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 3 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/advanced-session3-getec2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/advanced-session3-glm2022.pdf)**
 
 - *Additional raster dataset examples*
 - *Bivariate choropleths*
