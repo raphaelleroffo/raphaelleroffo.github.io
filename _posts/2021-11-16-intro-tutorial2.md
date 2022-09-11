@@ -164,7 +164,7 @@ More on that next week when we work with the attribute table and perform table j
 
 ## VI. Exporting data / Saving in a different format and different CRS
 
-Let's imagine you want to export data in GeoJSON to play with it in kepler.gl ([Kepler only lets you load CSV of GeoJSON, in WGS84](https://docs.kepler.gl/docs/user-guides/b-kepler-gl-workflow/a-add-data-to-the-map#geojson)).
+Let's imagine you want to export data in GeoJSON to play with it in kepler.gl ([Kepler only lets you load CSV or GeoJSON, in WGS84](https://docs.kepler.gl/docs/user-guides/b-kepler-gl-workflow/a-add-data-to-the-map#geojson)).
 
 **Leave your CRS as it is for now**; the conversion will happen as we export a copy of your dataset. Now, right click on your polygon layer > `Export` > `Save features as...`
 
