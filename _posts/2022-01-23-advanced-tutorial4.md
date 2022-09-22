@@ -12,7 +12,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 4 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/advanced-session4-getec2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/advanced-session4-glm2022.pdf)**
 
 - *Bivariate choropleths - continued*
 - *Coursework update*
@@ -26,7 +26,7 @@ Lecturer: Raphaëlle Roffo
 ### Goals:
 
 - Building an isochrone map
-- (Building a cartogram - pending updates from the [cartogram3](https://github.com/austromorph/cartogram3) plugin)
+- Building a cartogram - see slides directly)
 
 
 &nbsp; 

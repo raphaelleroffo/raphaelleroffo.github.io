@@ -96,7 +96,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 4: Cartographic design](_posts/2021-11-16-intro-tutorial4.md)
 
-*[Class Content:](docs/assets/pdf/intro-session4-glm2022.pdf)*
+*[Class Content:](docs/assets/pdf/intro-session4-getec2022.pdf)*
 
 - *Kepler.gl tutorial: quick off-the-shelf data visualisation*
 - *Styling a map: basemap choice, preferred symbologies, class breaks definition, scale*

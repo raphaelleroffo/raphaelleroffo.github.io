@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 4 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/intro-session4-glm2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session4-getec2022.pdf)**
 
 - *Cartographic design principles*
 - *Accessibility*
