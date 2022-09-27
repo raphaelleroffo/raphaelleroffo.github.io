@@ -164,7 +164,7 @@ Click `Classify` to load the Types values into your legend. Note that you can up
 <img src="../../../../docs/assets/images/S4-19.png" width="700">
 
 
-By default, QGIS has a assigned random colours to each point. You can also choose a specific colour ramp from the many available by clicking on the `Color Ramp` dropdown arrow. Because we are using categorical variables here, we prefer to avoid using a sequential palette which would imply some form of order among the values (there is no order here, they're just three different values). 
+By default, QGIS has assigned random colours to each point. You can also choose a specific colour ramp from the many available by clicking on the `Color Ramp` dropdown arrow. Because we are using categorical variables here, we prefer to avoid using a sequential palette which would imply some form of order among the values (there is no order here, they're just three different values). 
 
 <img src="../../../../docs/assets/images/S4-20.png" width="700">
 
