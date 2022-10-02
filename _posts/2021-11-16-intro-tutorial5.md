@@ -15,7 +15,6 @@ Lecturer: Raphaëlle Roffo
 
 - *Use cases; why may you need to buffer, clip, intersect?*
 - *"Crossing" multiple layers: common geoprocessing tools*
-- *...*
 
 &nbsp; 
 
@@ -49,7 +48,7 @@ We will pick up from where you left at the end of [Session 4](../intro-tutorial4
 
 <img src="../../../../docs/assets/images/S5-01.png" width="700">
 
-**Please also download the geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session5/Session5.gpkg) to access a completed version of this tutorial. **
+**Please also download the geopackage for this session [here](https://github.com/raphaelleroffo/intro-to-gis/raw/main/Session5/Session5.gpkg) to access a completed version of this tutorial.**
 
 &nbsp; 
 
@@ -136,7 +135,7 @@ Note that if we did not have official "instructions" on how to define class brea
 
 &nbsp; 
 
-We would alternate the different methods and get back to the histogram to get a preview of which sections of the distribution get assigned which colour.
+Note: when you try to figure out the class break method, you can try out the candidates you have in mind and get back to the histogram to get a preview of the class break projected onto the histogram. You can also use `Apply` to preview what it looks like on the map.
 
 <img src="../../../../docs/assets/images/S5-08.png" width="700">
 
