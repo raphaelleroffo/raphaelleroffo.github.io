@@ -240,7 +240,7 @@ Double-click your `Cycleway` layer to open your `Layer properties` and the `Symb
 
 <img src="../../../../docs/assets/images/S4-26.png" width="700">
 
-We also can't use `Graduated` symbology _(In fact, QGIS may even crash if you try to use `Graduated` symbology because it doesn't have values to work with)_ because our fields contain `string` values (text), as you can see by clicking in the `Fields` tab :
+We also can't use `Graduated` symbology _(In fact, QGIS wouldn't let us)_ because our fields contain `string` values (text), as you can see by clicking in the `Fields` tab :
 
 <img src="../../../../docs/assets/images/S4-27.png" width="700">
 
@@ -373,7 +373,7 @@ You're almost there! Make sure your layers are in the right order.
 
 A useful feature of QGIS is the Spatial bookmarks, which allow you to "bookmark" certain zoom areas. Right click your `London Schools` layer and select `Zoom to layer`. We'll bookmark this view first.
 
-Select the menu `View` > ` New Spatial Bookmark…`, (or press `Ctrl+B` `⌘ + B `) to open the Bookmark Editor dialog. Give it the name `Greater-London` and save it in the` Project bookmarks`. By saving it here instead of in the `User bookmarks`, you save it in the project file itself and it will be available to otehr users if you share this file. 
+Select the menu `View` > `New Spatial Bookmark…`, (or press `Ctrl+B` / `⌘ + B `) to open the Bookmark Editor dialog. Give it the name `Greater-London` and save it in the `Project bookmarks`. By saving it here instead of in the `User bookmarks`, you save it in the project file itself and it will be available to otehr users if you share this file. 
 
 <img src="../../../../docs/assets/images/S4-61.png" width="700">
 
