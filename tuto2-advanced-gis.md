@@ -111,7 +111,7 @@ Working in groups of 2 or 3, students will use one or more advanced GIS techniqu
 
 ### [Session 5: Weighted overlays and MCDM](_posts/2022-01-23-advanced-tutorial5.md)
 
-*[Class Content:](docs/assets/pdf/advanced-session5-getec2022.pdf)*
+*[Class Content:](docs/assets/pdf/advanced-session5-glm2022.pdf)*
 
 - *Environmental Justice and GIS*
 - *Building a multi criteria analysis using GIS*

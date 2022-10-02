@@ -13,7 +13,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 5 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/advanced-session5-getec2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/advanced-session5-glm2022.pdf)**
 
 - *Environmental Justice and GIS*
 - *Building a multi criteria analysis using GIS*

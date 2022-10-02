@@ -116,7 +116,7 @@ Working in groups of 2 or 3, students will be provided a dataset to explore and 
 
 ### [Session 5: Working with vector data: geoprocessing](_posts/2021-11-16-intro-tutorial5.md)
 
-*[Class Content:](docs/assets/pdf/intro-session5-glm2022.pdf)*
+*[Class Content:](docs/assets/pdf/intro-session5-getec2022.pdf)*
 
 - *What are geoprocessing tools?*
 - *Crossing multiple layers: common geoprocessing tools*

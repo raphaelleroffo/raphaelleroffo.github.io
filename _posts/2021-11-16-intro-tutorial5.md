@@ -11,7 +11,7 @@ Lecturer: Raphaëlle Roffo
 
 ## I. Session 5 Overview
 
-**Download the [slides](../../../../docs/assets/pdf/intro-session5-glm2022.pdf)**
+**Download the [slides](../../../../docs/assets/pdf/intro-session5-getec2022.pdf)**
 
 - *Use cases; why may you need to buffer, clip, intersect?*
 - *"Crossing" multiple layers: common geoprocessing tools*
